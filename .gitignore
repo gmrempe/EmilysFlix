@@ -17,18 +17,21 @@
 /storage/*
 !/storage/.keep
 
-/node_modules
+node_modules/
 /yarn-error.log
 
 /public/assets
 /public/packs
 /public/packs-test
+
+bundle.js
+bundle.js.map
 .byebug_history
+.DS_Store
+npm-debug.log
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-package.json
-Gemfile.lock
 
 /log/*
 /tmp/*
