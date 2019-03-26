@@ -1,11 +1,13 @@
-import { connect } from "react-router-dom";
+import React from 'react';
+import { connect } from "react-redux";
 import SessionForm from './session-form'
 import { login } from "../actions/session_actions";
+import { Link } from "react-router-dom";
 
 const msp = state => ({
-    user: {email: state.currentUser},
     formType: "Sign In",
-    errors: state.errors
+    errors: state.errors.session,
+    link: <Link to={`/signup`}>Sign Up</Link>
 });
 
 const mdp = dispatch => ({

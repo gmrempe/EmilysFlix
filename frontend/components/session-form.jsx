@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+
 
 class SessionForm extends React.Component {
 
@@ -9,11 +9,11 @@ class SessionForm extends React.Component {
             email: "",
             password: ""
         };
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange() {
-
+    handleChange(field) {
+        return(e) => this.setState({[field]: e.currentTarget.value})
     }
 
     handleSubmit(e) {
@@ -22,37 +22,39 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
 
-    componentDidMount() {
-
-    }
-
-    componentDidUpdate() {
-
+    renderErrors() {
+       return( 
+        <ul>
+            {this.props.errors.map((error, i) => (
+                <li key={i}>
+                    {error}
+                </li>   
+            ))}
+        </ul>
+        );
     }
 
     render() {
-        if(formType === 'Sign Up') {
-            const header = <Link to={/login}>Sign In</Link>
-        } else {
-            const header = <Link to={/signup}>Sign Up</Link>
-        }
-
+        
         return (
             <section>
                 <header>
-                    {header}
+                    {this.props.link}
                 </header>
 
-                <form>
+                {this.renderErrors()}
+
+                <form onSubmit={this.handleSubmit}>
+                        
                     <label>
-                        <input type="text" onChange={this.handleChange("email")} value="email"/>
+                        <input type="text" onChange={this.handleChange("email")} value={this.state.email}/>
                     </label>
 
                     <label>
-                        <input type="password" onChange={this.handleChange("password")} value="password"/>
+                        <input type="password" onChange={this.handleChange("password")} value={this.state.password}/>
                     </label>
 
-                    <button type="submit" onSubmit={this.handleSubmit} >{this.props.formType}</button>
+                    <input type="submit" value={this.props.formType}/>
                 </form>
             </section>
         )
