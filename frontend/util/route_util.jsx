@@ -13,11 +13,21 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => (
 );
 
 const Protected = ({ component: Component, path, loggedIn, exact }) => (
-    <Route path={path} exect={exact} render={(props) => (
+    <Route path={path} exact={exact} render={(props) => (
         loggedIn ? (
             <Component {...props} />
         ) : (
             <Redirect to="/this-is-emilysflix" />
+        )
+    )} />
+);
+
+const Landing = ({ component: Component, path, loggedIn, exact }) => (
+    <Route path={path} exact={exact} render={(props) => (
+        !loggedIn ? (
+            <Component {...props} />
+        ) : (
+            <Redirect to="/browse" />
         )
     )} />
 );
@@ -28,3 +38,4 @@ const msp = state => {
 
 export const AuthRoute = withRouter(connect(msp, null)(Auth));
 export const ProtectedRoute = withRouter(connect(msp, null)(Protected));
+export const LandingRoute = withRouter(connect(msp, null)(Landing));

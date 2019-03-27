@@ -1,18 +1,23 @@
 import React from 'react';
 import LoginFormContainer from './session/login_container';
 import SignupFormContainer from './session/signup_container';
-import {Route, Link} from "react-router-dom";
-import {AuthRoute, ProtectedRoute} from '../util/route_util';
-import Splash from "./splash/splash";
+import {Route, Link, Switch} from "react-router-dom";
+import {AuthRoute, ProtectedRoute, LandingRoute} from '../util/route_util';
+import SplashContainer from "./splash/splash";
+import Browse from "./browse/browse";
 
 const App = () => (
     <div>
-        <h1>Welcome to EmilysFlix</h1>
+        <Switch>
+            <AuthRoute exact path="/login" component={LoginFormContainer}/>
+            <AuthRoute exact path="/signup" component={SignupFormContainer}/>
+            <ProtectedRoute path="/browse" component={Browse}/>
+            <LandingRoute path="/" component={SplashContainer}/>
+            {/* <Route path="/this-is-emilysflix" component={Splash}/> */}
+        </Switch>
+        <footer>
 
-        <AuthRoute exact path="/login" component={LoginFormContainer}/>
-        <AuthRoute exact path="/signup" component={SignupFormContainer}/>
-        {/* <ProtectedRoute exact path="/browse" component={}/> */}
-        <Route path="/this-is-emilysflix" component={Splash}/>
+        </footer>
     </div>
 );
 

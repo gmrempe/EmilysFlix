@@ -1,0 +1,47 @@
+body {
+    background-image: url(/assets/landingpage.jpg);
+}
+
+.landing > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 30%;
+}
+
+.landing > h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.landing > button {
+    display: flex-end;
+    background-color: red;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.landing > .signup-button {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.landing > .signin-button {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
