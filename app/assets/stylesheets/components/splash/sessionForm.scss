@@ -8,30 +8,25 @@
 .session > header > p {
     color: #E50914;
     font-family: 'Bebas Neue';
-    font-size: 300%;
+    font-size: 350%;
     font-weight: bold;
     text-shadow: 10px;
-
+    padding: 15px;
 }
 
 .session-center {
     display: flex;
     justify-content: center;
-    // align-items: center;
     height: 850px;
 }
 
 .session-form {
     background-color: rgba(0,0,0,0.75);
     height: 660px;
-    width: 450px;
+    width: 400px;
     border-radius: 4px;
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 70px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
 }
 
 .session-form > form {
@@ -48,38 +43,81 @@
     justify-content: center;
     align-items: center;
     width: 350px;
-    padding: 8px;
-    margin: 5px;
+    padding: 15px;
+    margin-left: 12px;
+    margin-top: 30px;
     opacity: 1.0;
 }
 
 .session-form > h3 {
     opacity: 1.0;
     font-size: 38px;
+    margin-left: 12px;
 }
 
-.session-form > ul {
-    color: red;
+.session-form > ul > li {
+    color: rgb(238, 133, 14);
     opacity: 1.0;
+    margin-left: 12px;
 }
 
 .session-form > p {
     opacity: 1.0;
-    color: lightgray;
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 320px;
+    margin-left: 12px;
+
+}
+
+.session-form > p > .signup-tag:hover {
+    text-decoration: underline;
 }
 
 .email {
-    background-color: rgb(49, 47, 47);
+    background: #333;
     width: 350px;
     margin: 10px;
+    margin-left: 12px;
     padding: 15px;
     border-radius: 4px;
 }
 
+.email > input:focus {
+    background-color: #454545;
+}
+
+.email:focus-within {
+    background-color: #454545;
+}
+
 .password {
-    background: rgb(49, 47, 47);
+    background: #333;
     width: 350px;
     margin: 10px;
+    margin-left: 12px;
     padding: 15px;
     border-radius: 4px;
+}
+
+.password > input:focus {
+    background-color: #454545;
+}
+
+.password:focus-within {
+    background-color: #454545;
+}
+
+.session-form > nav {
+    background-color: #E50914;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 10px;
 }
