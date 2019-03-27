@@ -1,17 +1,18 @@
 import React from 'react';
-import LoginFormContainer from './login_container.jsx';
-import SignupFormContainer from './signup_container.jsx';
+import LoginFormContainer from './session/login_container';
+import SignupFormContainer from './session/signup_container';
 import {Route, Link} from "react-router-dom";
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
-import Splash from "./splash";
+import Splash from "./splash/splash";
 
 const App = () => (
     <div>
         <h1>Welcome to EmilysFlix</h1>
 
-        <Route path="this-is-emilysflix" component={Splash}/>
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
         <AuthRoute exact path="/signup" component={SignupFormContainer}/>
+        {/* <ProtectedRoute exact path="/browse" component={}/> */}
+        <Route path="/this-is-emilysflix" component={Splash}/>
     </div>
 );
 

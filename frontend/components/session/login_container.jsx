@@ -1,17 +1,17 @@
 import React from 'react';
 import { connect } from "react-redux";
-import SessionForm from "./session-form";
-import { signup } from "../actions/session_actions";
+import SessionForm from './session_form'
+import { login } from "../../actions/session_actions";
 import { Link } from "react-router-dom";
 
 const msp = state => ({
-    formType: "Sign Up",
+    formType: "Sign In",
     errors: state.errors.session,
-    link: <Link to={`/login`}>Sign In</Link>
+    link: <Link to={`/signup`}>Sign Up</Link>
 });
 
 const mdp = dispatch => ({
-    processForm: user => dispatch(signup(user))
+    processForm: user => dispatch(login(user))
 });
 
 export default connect(msp, mdp)(SessionForm);

@@ -2,14 +2,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Route, withRouter, Redirect} from 'react-router-dom';
 
-const Auth = ({component: Component, path, loggedIn, exact}) => (
-    <Route path={path} exect={exact} render={(props) => (
+const Auth = ({ component: Component, path, loggedIn, exact }) => (
+    <Route path={path} exact={exact} render={(props) => (
         !loggedIn ? (
-        <Component {...props} />
+            <Component {...props} />
         ) : (
-        <Redirect to="this-is-emilysflix" />
-        )
-    )}/>
+                <Redirect to="/this-is-emilysflix" />
+            )
+    )} />
 );
 
 const Protected = ({ component: Component, path, loggedIn, exact }) => (
@@ -17,15 +17,14 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
         loggedIn ? (
             <Component {...props} />
         ) : (
-            <Redirect to="/" />
+            <Redirect to="/this-is-emilysflix" />
         )
     )} />
 );
 
-
-const msp = state => ({
-    loggedIn: Boolean(state.session.id)
-});
+const msp = state => {
+    return { loggedIn: Boolean(state.session.id) };
+};
 
 export const AuthRoute = withRouter(connect(msp, null)(Auth));
 export const ProtectedRoute = withRouter(connect(msp, null)(Protected));
