@@ -23,7 +23,7 @@ class Splash extends React.Component {
                 <h1 >See what's next.</h1>
                 <h2 >WATCH ANYWHERE. CANCEL ANYTIME.</h2>
         
-                <Link className="signup-button" to="/signup">TRY 30 DAYS FREE ></Link>
+                <Link className="signup-button" to="/signup">TRY 30 DAYS FREE</Link>
                 <br/>
                 <button onClick={this.handleLogin}>Demo Sign In</button>
             </div>

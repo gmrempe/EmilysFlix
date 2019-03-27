@@ -6,23 +6,33 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    font-size: 325%;
+    font-weight: 100%;
     position: absolute;
-    top: 30%;
+    top: 28%;
+    right: 30%;
+    text-shadow: 3px;
 }
 
 .landing > h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    text-shadow: 3px;
+    position: absolute;
+    top: 36%;
+    right: 32%;
 }
 
 .landing > button {
     display: flex-end;
     background-color: red;
     border-radius: 7px;
-    padding: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 45%;
+    right: 45%;
+    margin: 5px;
 }
 
 .landing > .signup-button {
@@ -30,7 +40,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 175px;
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    padding: 10px;
 }
 
 .landing > .signin-button {
@@ -38,10 +52,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 75px;
     border-radius: 5px;
     position: absolute;
     right: 5px;
     top: 5px;
+    padding: 10px;
 }
 
