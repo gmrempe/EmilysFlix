@@ -4,16 +4,15 @@ import { Link, withRouter} from "react-router-dom";
 class Splash extends React.Component {
     constructor(props) {
         super(props);
-        // this.handleLogin = this.handleLogin.bind(this);
+        this.handleLogin = this.handleLogin.bind(this);
     }
 
     
-    // handleLogin(e) {
-    //     const user = { email: "Saitama", password: "#OnePunch" };
-    //     debugger
-    //     this.props.login(user);
-    //     this.props.history.push('/browse');
-    // }
+    handleLogin() {
+        const user = { email: "Saitama", password: "#OnePunch" };
+        this.props.login(user);
+        this.props.history.push('/browse');
+    }
     
 
     render() {

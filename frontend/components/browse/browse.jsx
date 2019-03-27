@@ -1,5 +1,4 @@
 import React from 'react';
-import { logout } from "../../actions/session_actions";
 import { withRouter } from 'react-router-dom';
 
 class Browse extends React.Component {
@@ -10,10 +9,8 @@ class Browse extends React.Component {
     }
 
 
-    handleLogout(e) {
-        e.preventDefault();
-        // debugger
-        logout();
+    handleLogout() {
+        this.props.logout();
         this.props.history.push('/')
     }
 

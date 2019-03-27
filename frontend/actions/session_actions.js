@@ -22,12 +22,14 @@ export const receiveSessionErrors = (errors) => ({
 //asynch thunk actions
 
 export const signup = (user) => dispatch => (
-    SessionAPIUtil.signup(user).then(currentUser => dispatch(receiveCurrentUser(currentUser)),
+    SessionAPIUtil.signup(user).then(
+        currentUser => dispatch(receiveCurrentUser(currentUser)),
         error => dispatch(receiveSessionErrors(error.responseJSON)))
 );
 
 export const login = (user) => dispatch => (
-    SessionAPIUtil.login(user).then(user => dispatch(receiveCurrentUser(user)),
+    SessionAPIUtil.login(user).then(
+        user => dispatch(receiveCurrentUser(user)),
         error => dispatch(receiveSessionErrors(error.responseJSON)))
 );
 
