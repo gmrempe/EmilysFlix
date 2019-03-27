@@ -30,16 +30,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 325%;
+    font-size: 85px;
     font-weight: 100%;
-    text-shadow: 5px;
+    text-shadow: 5px, 5px, black;
 }
 
 .landing-elements > h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 5px;
+    text-shadow: 5px, 5px, black;
+    font-size: 25px;
 }
 
 .landing-elements > button {
@@ -50,15 +51,17 @@
 
 .landing-elements > .signup-button {
     background-color: #E50914;
+    font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 175px;
+    width: 350px;
     padding: 10px;
     margin: 5px;
+    margin-top: 50px;
 }
 
-.landing > .signin-button {
+.landing > .background-image-wrapper > .signin-button {
     background-color: #E50914;
     display: flex;
     justify-content: center;
@@ -66,8 +69,8 @@
     width: 75px;
     border-radius: 5px;
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 50px;
+    top: 30px;
     padding: 10px;
 }
 

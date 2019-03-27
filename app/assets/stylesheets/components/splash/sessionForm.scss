@@ -4,8 +4,11 @@
     height: 900px;
 }
 
+.background-image-wrapper {
+    background-image: radial-gradient(ellipse, transparent, black 85%)
+}
 
-.session > header > p {
+.session > .background-image-wrapper > header > p {
     color: #E50914;
     font-family: 'Bebas Neue';
     font-size: 350%;

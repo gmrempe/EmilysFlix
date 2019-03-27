@@ -22,6 +22,10 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
 
+    home() {
+        this.props.history.push('/');
+    }
+
     renderErrors() {
        return( 
         <ul>
@@ -38,42 +42,43 @@ class SessionForm extends React.Component {
         
         return (
             <div className="session">
-                <header>
-                    <p>EMILYSFLIX</p>
-                </header>
+                <div className="background-image-wrapper">
+                    <header>
+                        <p className="logo">EMILYSFLIX</p>
+                    </header>
 
-                <div className="session-center">
-                    <section className="session-form">
-                        <h3>{this.props.formType}</h3>
+                    <div className="session-center">
+                        <section className="session-form">
+                            <h3>{this.props.formType}</h3>
 
-                        {this.renderErrors()}
+                            {this.renderErrors()}
 
-                        <form onSubmit={this.handleSubmit}>
-                                
-                            <label className="email">
-                                <input 
-                                type="text" 
-                                onChange={this.handleChange("email")}
-                                placeholder="Email" 
-                                value={this.state.email}/>
-                            </label>
+                            <form onSubmit={this.handleSubmit}>
+                                    
+                                <label className="email">
+                                    <input 
+                                    type="text" 
+                                    onChange={this.handleChange("email")}
+                                    placeholder="Email" 
+                                    value={this.state.email}/>
+                                </label>
 
-                            <label className="password">
-                                <input 
-                                type="password" 
-                                onChange={this.handleChange("password")} 
-                                placeholder="Password"
-                                value={this.state.password}/>
-                            </label>
-                            <input type="submit" value={this.props.formType}/>
-                        </form>
+                                <label className="password">
+                                    <input 
+                                    type="password" 
+                                    onChange={this.handleChange("password")} 
+                                    placeholder="Password"
+                                    value={this.state.password}/>
+                                </label>
+                                <input type="submit" value={this.props.formType}/>
+                            </form>
 
 
-                        {this.props.link}
-                    </section>  
+                            {this.props.link}
+                        </section>  
+                    </div>
                 </div>
             </div>
-
         )
     }
 }

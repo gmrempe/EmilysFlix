@@ -19,7 +19,10 @@ class Browse extends React.Component {
             <header className='main-header'>
                 <h1 className='logo' >EMILYSFLIX</h1>
                 <button className='signout-button' onClick={this.handleLogout}>Sign Out</button>
+
+                <h2>You made it!</h2>
             </header>
+
         )
     }
 }
