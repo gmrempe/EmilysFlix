@@ -68,9 +68,8 @@ class SessionForm extends React.Component {
                             <input type="submit" value={this.props.formType}/>
                         </form>
 
-                        <p>
-                            {this.props.link}
-                        </p>
+
+                        {this.props.link}
                     </section>  
                 </div>
             </div>
