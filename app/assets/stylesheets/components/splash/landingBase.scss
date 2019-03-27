@@ -2,49 +2,46 @@ body {
     background-image: url(/assets/landingpage.jpg);
 }
 
-.landing > h1 {
+
+.landing-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+.landing-elements  > h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 325%;
     font-weight: 100%;
-    position: absolute;
-    top: 28%;
-    right: 30%;
     text-shadow: 3px;
 }
 
-.landing > h2 {
+.landing-elements > h2 {
     display: flex;
     justify-content: center;
     align-items: center;
     text-shadow: 3px;
-    position: absolute;
-    top: 36%;
-    right: 32%;
 }
 
-.landing > button {
+.landing-elements > button {
     display: flex-end;
     background-color: red;
-    border-radius: 7px;
     padding: 10px;
-    position: absolute;
-    top: 45%;
-    right: 45%;
-    margin: 5px;
+    // margin: px;
 }
 
-.landing > .signup-button {
+.landing-elements > .signup-button {
     background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 175px;
-    position: absolute;
-    top: 40%;
-    right: 40%;
     padding: 10px;
+    margin: 5px;
 }
 
 .landing > .signin-button {

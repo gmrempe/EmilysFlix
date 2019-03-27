@@ -20,12 +20,13 @@ class Splash extends React.Component {
         return (
             <div className="landing">
                 <Link className="signin-button" to="/login">Sign In</Link>
-                <h1 >See what's next.</h1>
-                <h2 >WATCH ANYWHERE. CANCEL ANYTIME.</h2>
-        
-                <Link className="signup-button" to="/signup">TRY 30 DAYS FREE</Link>
-                <br/>
-                <button onClick={this.handleLogin}>Demo Sign In</button>
+                <div className="landing-elements">
+                    <h1 >See what's next.</h1>
+                    <h2 >WATCH ANYWHERE. CANCEL ANYTIME.</h2>
+            
+                    <Link className="signup-button" to="/signup">TRY 30 DAYS FREE</Link>
+                    <button onClick={this.handleLogin}>Demo Sign In</button>
+                </div>
             </div>
         )
     }
