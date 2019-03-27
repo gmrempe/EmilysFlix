@@ -1,0 +1,49 @@
+.session {
+    background-image: url(/assets/landing_page.jpg);
+    font-family: 'Bebas Neue';
+    height: 700px;
+}
+
+
+.session > header > p {
+    color: #E50914;
+    font-family: 'Bebas Neue';
+    font-size: 150%;
+    font-weight: bold;
+    text-shadow: 10px;
+
+}
+
+.session-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+}
+
+.session-form {
+    background-color: black;
+    opacity: 0.7;
+    height: 600px;
+    width: 450px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.session-form > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.session-form > form > input[type="submit"] {
+    background-color: #E50914;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    padding: 10px;
+    margin: 5px;
+}
