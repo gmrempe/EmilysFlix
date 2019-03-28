@@ -21,7 +21,7 @@ class Splash extends React.Component {
                 <div className='background-image-wrapper'>
                     <Link className="signin-button" to="/login">Sign In</Link>
                     <div className="landing-content">
-                            <img className="logo" src='/assets/logo.png' alt="logo"/>
+                            <img className="logo" src={window.logo} alt="logo"/>
                         <div className="landing-elements">
                             <h1 >See what’s next.</h1>
                             <h2 >WATCH ANYWHERE. CANCEL ANYTIME.</h2>
