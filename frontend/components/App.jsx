@@ -7,7 +7,7 @@ import SplashContainer from "./splash/splash_container";
 import BrowseContainer from "./browse/browse_container";
 
 const App = () => (
-    <div>
+    <div className='content-main'>
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>

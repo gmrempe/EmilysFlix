@@ -1,9 +1,10 @@
-.session {
-    background-image: image-url('landing_page.jpg');
+.content-main {
+    background-image: image-url('landing_page_background.jpg');
+  
 }
 
-.background-image-wrapper {
-    background-image: radial-gradient(ellipse, transparent, black 85%);
+.background-image-wrapper-2 {
+    background-color: rgba(0,0,0, 0.45);
     height: 1000px;
 }
 
@@ -13,7 +14,9 @@
 
 .session-center {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 923px;
 }
 
@@ -45,7 +48,7 @@
     width: 285px;
     border-radius: 4px;
     padding: 15px;
-    margin-top: 43px;
+    margin-top: 40px;
     opacity: 1.0;
 }
 
@@ -64,6 +67,12 @@
     opacity: 1.0;
 }
 
+.session-form > form > label > ul > li {
+    color: rgb(238, 133, 14);
+    opacity: 1.0;
+    padding-bottom: 3px;
+}
+
 .session-form > p {
     opacity: 1.0;
     color: gray;
@@ -80,6 +89,7 @@
     height: 51px;
     margin-bottom: 16px;
     align-content: flex-start;
+    padding-bottom: 4px;
 }
 .email > input {
     background: #333;
@@ -131,11 +141,38 @@
 .session-footer {
     display: flex;
     flex-direction: column;
+    justify-content: left;
+    background-color: rgba(0,0,0,0.75);
+    height: 200px;  
+    width: 100%;
+    margin-top: 90px;  
+    padding: 30px;
 }
 
 .session-footer > nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 600px;
+    width: 55%;
+    margin: 46px;
+    font-size: 13px;
+}
+
+.session-footer > nav > div:hover {
+    text-decoration: underline;
+}
+.session-footer > nav:last-child {
+    // padding-left: 5px;
+}
+
+.session-footer > div {
+    color: #999999;
+    margin-left: 46px;
+}
+.session-footer > nav > div {
+    color: #999999;
+}
+
+.session-footer > div:first-child {
+    margin-top: 3px;
 }
