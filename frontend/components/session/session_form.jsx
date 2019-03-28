@@ -118,6 +118,7 @@ class SessionForm extends React.Component {
 
                             {this.props.link}
                         </section>  
+                    </div>
                         <div className="session-footer">
                             <div>Questions? Call 1-555-555-5555</div>
                             <nav>
@@ -127,7 +128,6 @@ class SessionForm extends React.Component {
                             </nav>
                             <div>English</div>
                         </div>
-                    </div>
                 </div>
             </div>
         )

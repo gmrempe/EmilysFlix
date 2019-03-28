@@ -1,23 +1,22 @@
 .content-main {
     background-image: image-url('landing_page_background.jpg');
-  
+    background-size: 200%;
 }
 
 .background-image-wrapper-2 {
     background-color: rgba(0,0,0, 0.45);
-    height: 1000px;
+    height: 100%;
 }
 
-.background-image-wrapper > header > .logo {
-    margin-left: 40px;
+header {
+    margin-left: 20px;
 }
 
 .session-center {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 923px;
+    height: 760px;
 }
 
 .session-form {
@@ -171,7 +170,6 @@
     background-color: rgba(0,0,0,0.75);
     height: 100%;  
     width: 100%;
-    margin-top: 90px;  
     padding: 30px;
 }
 
@@ -203,6 +201,7 @@
 .session-footer > div:last-child {
     border: 1px solid #999999;
     border-radius: 2px;
+    background-color: #000;
     width: 115px;
     height: 25px;
     font-size: 13px;
