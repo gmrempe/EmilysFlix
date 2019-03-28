@@ -117,8 +117,7 @@ class SessionForm extends React.Component {
                                     type="password" 
                                     onChange={this.handleChange("password")} 
                                     placeholder="Password"
-                                    max="60"
-                                    pattern=".{6,}"
+                                    pattern=".{6,60}"
                                     title="Your password must contain between 4 and 60 characters."
                                     id="password"
                                     />
