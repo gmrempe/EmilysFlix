@@ -86,7 +86,6 @@ header {
 
 .email {
     height: 51px;
-    margin-bottom: 16px;
     align-content: flex-start;
     padding-bottom: 4px;
 }
@@ -107,28 +106,43 @@ header {
     background-color: #454545;
 }
 
+
+.email > #email {
+    &:invalid:not(:placeholder-shown) {
+        & ~ .form-email-message{
+            display: inline;
+            margin: 3px 0px 3px 0px;
+        }
+    }
+}
+
 .email > input:invalid,
 .password > input:invalid {
-    -webkit-appearance: none;
     border-bottom: 3px solid rgb(238, 133, 14);
 }
 
-.error {
-    color: rgb(238, 133, 14);
-    opacity: 1.0;
-    padding-bottom: 3px;
+.password > #password {
+    &:invalid:not(:placeholder-shown) {
+        & ~ .form-password-message{
+            display: inline;
+            margin: 3px 0px 3px 0px;
+        }
+    }
 }
 
-.password {
-    display: flex;
+.form-password-message,
+.form-email-message {
+    display: none;
+    color: rgb(238, 133, 14);
+    transition: 0.28s;
 }
 
 .password > #password {
     background: #333;
-    width: 230px;
+    width: 275px;
     height: 35px;
     font-size: 16px;
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 4px;
     padding: 16px 20px 0;
 }
 
@@ -143,11 +157,12 @@ header {
     color: #8c8c8c;
     font-size: 12px;
     width: 35px;
-    height: 35px;
+    height: 0px;
     padding: 8px;
-    background: #333;
     border-radius: 0px 4px 4px 0px;
-
+    position: relative;
+    left: 264px;
+    top: 36px;
 }
 
 .session-form > nav {
@@ -180,10 +195,6 @@ header {
     width: 55%;
     margin: 46px;
     font-size: 13px;
-}
-
-.session-footer > nav > div:hover {
-    text-decoration: underline;
 }
 
 .session-footer > div {

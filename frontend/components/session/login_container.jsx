@@ -13,10 +13,11 @@ const msp = state => ({
 const mdp = dispatch => ({
     processForm: user => dispatch(login(user)),
     clearErrors: currentUser => dispatch(receiveCurrentUser(currentUser)),
-    link: (<p>New to Emilysflix? 
-        <Link to={`/signup`} 
+    link: (<p>New to Emilysflix? <Link to={`/signup`} 
         onClick={currentUser => dispatch(receiveCurrentUser(currentUser))} 
-        className="signup-tag"> Sign up now</Link>.
+        className="signup-tag">
+        Sign up now
+        </Link>.
         </p>)
 });
 

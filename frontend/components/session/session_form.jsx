@@ -13,10 +13,6 @@ class SessionForm extends React.Component {
         this.showPassword = this.showPassword.bind(this);
     }
 
-    handleChange(field) {
-        return(e) => this.setState({[field]: e.currentTarget.value})
-    }
-
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
@@ -35,6 +31,7 @@ class SessionForm extends React.Component {
         } else {
             pass.type = "password";
         }
+        this.togglePassShow(pass.type);
     }
 
     renderErrors(type) {
@@ -58,6 +55,21 @@ class SessionForm extends React.Component {
                 ))}
             </ul>
         )
+    }
+
+    togglePassShow(type) {
+    const print = document.getElementById("show-toggle");
+        if (type === "password") {
+            print.value = "SHOW";
+        } else {
+            print.value = "HIDE";
+        }
+    }
+
+    handleChange(field) {
+        return (e) => (
+            this.setState({ [field]: e.currentTarget.value })
+        )  
     }
 
     render() {
@@ -84,31 +96,33 @@ class SessionForm extends React.Component {
                                     placeholder="Email" 
                                     value={this.state.email}
                                     name="email"
-                                    min="5"
+                                    pattern=".{5,}"
                                     title="Please enter a valid email."
                                     id="email"
-                                    />
-                                    <span className="error" aria-live="polite" ></span>
+                                    /> 
+                                    <div className="form-email-message">Please enter a valid email.</div>
                                     {this.renderErrors("E")}
                                 </label>
 
+                                <input
+                                    className="show-toggle"
+                                    id="show-toggle"
+                                    type="text"
+                                    onClick={this.showPassword}
+                                    value="SHOW"
+                                    readOnly
+                                />
                                 <label className="password">
                                     <input 
                                     type="password" 
                                     onChange={this.handleChange("password")} 
                                     placeholder="Password"
                                     max="60"
-                                    min="6"
+                                    pattern=".{6,}"
                                     title="Your password must contain between 4 and 60 characters."
                                     id="password"
                                     />
-                                    <input
-                                        className="show-toggle"
-                                        type="text"
-                                        onClick={this.showPassword}
-                                        value="SHOW"
-                                        readOnly
-                                    />
+                                    <div className="form-password-message">Your password must contain between 4 and 60 characters.</div>
                                 </label>
                                     {this.renderErrors("P")}
 
