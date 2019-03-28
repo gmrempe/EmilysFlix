@@ -95,7 +95,7 @@
     background: #333;
     width: 275px;
     height: 35px;
-    line-height: 50px;
+    font-size: 16px;
     border-radius: 4px;
     padding: 16px 20px 0;
 }
@@ -104,25 +104,47 @@
     background-color: #454545;
 }
 
-.email:focus-within {
+.email> input:focus-within {
     background-color: #454545;
 }
 
-.password > input {
+.password {
+    display: flex;
+}
+
+.password > #password {
     background: #333;
-    width: 275px;
+    width: 230px;
     height: 35px;
-    line-height: 50px;
-    border-radius: 4px;
+    font-size: 16px;
+    border-radius: 4px 0px 0px 4px;
     padding: 16px 20px 0;
 }
 
-.password > input:focus {
+.password > #password:focus {
     background-color: #454545;
 }
 
-.password:focus-within {
+.password > #password:focus-within {
     background-color: #454545;
+}
+.password > .show-toggle:focus {
+    background-color: #454545;
+}
+
+.password > .show-toggle:focus-within {
+    background-color: #454545;
+}
+
+.show-toggle {
+    color: #8c8c8c;
+    font-size: 12px;
+    width: 35px;
+    height: 35px;
+    padding: 8px;
+    background: #333;
+    border-radius: 0px 4px 4px 0px;
+
 }
 
 .session-form > nav {

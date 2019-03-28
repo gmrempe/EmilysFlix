@@ -10,15 +10,11 @@ class SessionForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.home = this.home.bind(this);
-        this.clearErrors = this.clearErrors.bind(this);
+        this.showPassword = this.showPassword.bind(this);
     }
 
     handleChange(field) {
         return(e) => this.setState({[field]: e.currentTarget.value})
-    }
-
-    clearErrors() {
-        this.props.clearErrors(user);
     }
 
     handleSubmit(e) {
@@ -30,6 +26,15 @@ class SessionForm extends React.Component {
 
     home() {
         this.props.history.push('/');
+    }
+
+    showPassword() {
+        const pass = document.getElementById("password");
+        if (pass.type === "password") {
+            pass.type = "text";
+        } else {
+            pass.type = "password";
+        }
     }
 
     renderErrors(type) {
@@ -77,7 +82,12 @@ class SessionForm extends React.Component {
                                     type="text" 
                                     onChange={this.handleChange("email")}
                                     placeholder="Email" 
-                                    value={this.state.email}/>
+                                    value={this.state.email}
+                                    min="5"
+                                    id="email"
+                                    required
+                                    title={"Please enter a valid email."}
+                                    />
                                     {this.renderErrors("E")}
                                 </label>
 
@@ -86,9 +96,20 @@ class SessionForm extends React.Component {
                                     type="password" 
                                     onChange={this.handleChange("password")} 
                                     placeholder="Password"
-                                    size="40"
-                                    value={this.state.password}/>
+                                    max="60"
+                                    min="6"
+                                    required
+                                    title={"Your password must contain between 4 and 60 characters."}
+                                    id="password"
+                                    />
                                     {this.renderErrors("P")}
+                                    <input
+                                        className="show-toggle"
+                                        type="text"
+                                        onClick={this.showPassword}
+                                        value="SHOW"
+                                        readOnly
+                                        />
                                 </label>
 
                                 <input type="submit" value={this.props.formType}/>
