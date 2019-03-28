@@ -74,20 +74,21 @@ class SessionForm extends React.Component {
                             <h1>{this.props.formType}</h1>
 
 
-                            <form onSubmit={this.handleSubmit}>
+                            <form noValidate onSubmit={this.handleSubmit}>
                                     
                                     {this.renderErrors("I")}
                                 <label className="email">
                                     <input 
-                                    type="text" 
+                                    type="email" 
                                     onChange={this.handleChange("email")}
                                     placeholder="Email" 
                                     value={this.state.email}
+                                    name="email"
                                     min="5"
+                                    title="Please enter a valid email."
                                     id="email"
-                                    required
-                                    title={"Please enter a valid email."}
                                     />
+                                    <span className="error" aria-live="polite" ></span>
                                     {this.renderErrors("E")}
                                 </label>
 
@@ -98,8 +99,7 @@ class SessionForm extends React.Component {
                                     placeholder="Password"
                                     max="60"
                                     min="6"
-                                    required
-                                    title={"Your password must contain between 4 and 60 characters."}
+                                    title="Your password must contain between 4 and 60 characters."
                                     id="password"
                                     />
                                     <input
@@ -125,7 +125,7 @@ class SessionForm extends React.Component {
                                 <div>Terms of Use</div>
                                 <div>Privacy Statement</div>
                             </nav>
-                            {/* <div>English</div> */}
+                            <div>English</div>
                         </div>
                     </div>
                 </div>

@@ -108,6 +108,18 @@
     background-color: #454545;
 }
 
+.email > input:invalid,
+.password > input:invalid {
+    -webkit-appearance: none;
+    border-bottom: 3px solid rgb(238, 133, 14);
+}
+
+.error {
+    color: rgb(238, 133, 14);
+    opacity: 1.0;
+    padding-bottom: 3px;
+}
+
 .password {
     display: flex;
 }
@@ -121,17 +133,9 @@
     padding: 16px 20px 0;
 }
 
-.password > #password:focus {
-    background-color: #454545;
-}
-
-.password > #password:focus-within {
-    background-color: #454545;
-}
-.password > .show-toggle:focus {
-    background-color: #454545;
-}
-
+.password > #password:focus,
+.password > #password:focus-within,
+.password > .show-toggle:focus,
 .password > .show-toggle:focus-within {
     background-color: #454545;
 }
@@ -165,7 +169,7 @@
     flex-direction: column;
     justify-content: left;
     background-color: rgba(0,0,0,0.75);
-    height: 200px;  
+    height: 100%;  
     width: 100%;
     margin-top: 90px;  
     padding: 30px;
@@ -194,4 +198,15 @@
 
 .session-footer > div:first-child {
     margin-top: 3px;
+}
+
+.session-footer > div:last-child {
+    border: 1px solid #999999;
+    border-radius: 2px;
+    width: 115px;
+    height: 25px;
+    font-size: 13px;
+    text-align: center;
+    padding-top: 8px;
+    margin-left: 46px;
 }
