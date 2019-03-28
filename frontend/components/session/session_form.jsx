@@ -66,7 +66,7 @@ class SessionForm extends React.Component {
             <div className="session">
                 <div className="background-image-wrapper-2">
                     <header>
-                        <img className="logo" onClick={this.home} src='/assets/logo.png' alt="logo" />
+                        <img className="logo" onClick={this.home} src={window.logo} alt="logo" />
                     </header>
 
                     <div className="session-center">
@@ -102,15 +102,15 @@ class SessionForm extends React.Component {
                                     title={"Your password must contain between 4 and 60 characters."}
                                     id="password"
                                     />
-                                    {this.renderErrors("P")}
                                     <input
                                         className="show-toggle"
                                         type="text"
                                         onClick={this.showPassword}
                                         value="SHOW"
                                         readOnly
-                                        />
+                                    />
                                 </label>
+                                    {this.renderErrors("P")}
 
                                 <input type="submit" value={this.props.formType}/>
                             </form>
