@@ -1,64 +1,78 @@
 .landing {
     background-image: image-url('landing_page.jpg');
-    font-family: 'Bebas Neue';
+    height: 1000px;
 }
 
 .landing-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 700px;
+    height: 821px;
 }
 
 .landing-content > p {
     color: #E50914;
-    font-family: 'Bebas Neue';
     font-size: 50px;
     font-weight: bold;
-    text-shadow: 10px;
+}
+
+.logo {
+    margin-top: 25px;
+    height: 50px;
 }
 
 .landing-elements {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 700px;
+    height: 850px;
 }
 
 .landing-elements  > h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 85px;
-    font-weight: 100%;
-    text-shadow: 5px, 5px, black;
+    line-height: 1.1em;
+    font-size: 60px;
+    font-weight: 700;
+    text-shadow: 1px, 1px, 10px, #000;
+    margin-top: 120px;
 }
 
 .landing-elements > h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 5px, 5px, black;
-    font-size: 25px;
+    text-shadow: 1px, 1px, black;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 30px;
 }
 
 .landing-elements > button {
     display: flex-end;
     background-color: #E50914;
+    font-size: 15px;
     padding: 10px;
 }
 
 .landing-elements > .signup-button {
     background-color: #E50914;
-    font-size: 25px;
+    font-size: 24px;
+    font-weight: 400;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    width: 350px;
-    padding: 10px;
-    margin: 5px;
-    margin-top: 50px;
+    line-height: 1em;
+    letter-spacing: 1.9px; 
+    padding: 24px 40px;
+    margin: 15px;
+    margin-top: 40px;
+}
+
+.fas.fa-chevron-right {
+    margin-left: .5em;
 }
 
 .landing > .background-image-wrapper > .signin-button {
@@ -67,10 +81,15 @@
     justify-content: center;
     align-items: center;
     width: 75px;
-    border-radius: 5px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: Helvetica;
+    color: rgba(245, 245, 245, 0.877);
+    text-shadow: none;
     position: absolute;
-    right: 50px;
-    top: 30px;
-    padding: 10px;
+    right: 3%;
+    top: 20px;
+    padding: 7px 4px;
 }
 

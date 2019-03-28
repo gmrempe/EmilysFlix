@@ -1,35 +1,29 @@
 .session {
     background-image: image-url('landing_page.jpg');
-    font-family: 'Bebas Neue';
-    height: 900px;
 }
 
 .background-image-wrapper {
-    background-image: radial-gradient(ellipse, transparent, black 85%)
+    background-image: radial-gradient(ellipse, transparent, black 85%);
+    height: 1000px;
 }
 
-.session > .background-image-wrapper > header > p {
-    color: #E50914;
-    font-family: 'Bebas Neue';
-    font-size: 350%;
-    font-weight: bold;
-    text-shadow: 10px;
-    padding: 15px;
+.background-image-wrapper > header > .logo {
+    margin-left: 40px;
 }
 
 .session-center {
     display: flex;
     justify-content: center;
-    height: 850px;
+    height: 923px;
 }
 
 .session-form {
     background-color: rgba(0,0,0,0.75);
-    height: 660px;
-    width: 400px;
+    height: 558px;
+    width: 314px;
     border-radius: 4px;
-    margin-top: 5px;
-    padding: 70px;
+    margin-top: 12px;
+    padding: 60px 68px 40px;
 }
 
 .session-form > form {
@@ -45,46 +39,50 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 350px;
+    font-weight: 700px;
+    font-size: 16px;
+    width: 285px;
+    border-radius: 4px;
     padding: 15px;
-    margin-left: 12px;
-    margin-top: 30px;
+    margin-top: 43px;
     opacity: 1.0;
 }
 
-.session-form > h3 {
+.session-form > h1 {
     opacity: 1.0;
-    font-size: 38px;
-    margin-left: 12px;
+    font-size: 32px;
+    font-weight: 700;
+    margin-block-start: 0.67em;
+    margin-top: 0px;
+    margin-bottom: 28px;
+
 }
 
 .session-form > ul > li {
     color: rgb(238, 133, 14);
     opacity: 1.0;
-    margin-left: 12px;
 }
 
 .session-form > p {
     opacity: 1.0;
     color: gray;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 320px;
-    margin-left: 12px;
-
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 264px;
 }
 
 .session-form > p > .signup-tag:hover {
     text-decoration: underline;
 }
 
-.email {
+.email > input {
     background: #333;
-    width: 350px;
-    margin: 10px;
-    margin-left: 12px;
-    padding: 15px;
+    width: 275px;
+    height: 35px;
+    line-height: 50px;
+    margin-bottom: 16px;
     border-radius: 4px;
+    padding: 16px 20px 0;
 }
 
 .email > input:focus {
@@ -95,13 +93,13 @@
     background-color: #454545;
 }
 
-.password {
+.password > input {
     background: #333;
-    width: 350px;
-    margin: 10px;
-    margin-left: 12px;
-    padding: 15px;
+    width: 275px;
+    height: 35px;
+    line-height: 50px;
     border-radius: 4px;
+    padding: 16px 20px 0;
 }
 
 .password > input:focus {
@@ -123,4 +121,16 @@
     right: 5px;
     top: 5px;
     padding: 10px;
+}
+
+.session-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.session-footer > nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
 }

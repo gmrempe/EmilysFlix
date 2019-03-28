@@ -44,12 +44,12 @@ class SessionForm extends React.Component {
             <div className="session">
                 <div className="background-image-wrapper">
                     <header>
-                        <p className="logo">EMILYSFLIX</p>
+                        <img className="logo" src='/assets/logo.png' alt="logo" />
                     </header>
 
                     <div className="session-center">
                         <section className="session-form">
-                            <h3>{this.props.formType}</h3>
+                            <h1>{this.props.formType}</h1>
 
                             {this.renderErrors()}
 
@@ -76,6 +76,15 @@ class SessionForm extends React.Component {
 
                             {this.props.link}
                         </section>  
+                    </div>
+                    <div className="session-footer">
+                        <div>Questions? Call 1-555-555-5555</div>
+                        <nav>
+                            <div>Gift Card Terms</div>
+                            <div>Terms of Use</div>
+                            <div>Privacy Statement</div>
+                        </nav>
+                        <div>English</div>
                     </div>
                 </div>
             </div>
