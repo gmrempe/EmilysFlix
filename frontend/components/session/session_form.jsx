@@ -51,9 +51,9 @@ class SessionForm extends React.Component {
                         <section className="session-form">
                             <h1>{this.props.formType}</h1>
 
-                            {this.renderErrors()}
 
                             <form onSubmit={this.handleSubmit}>
+                                {this.renderErrors()}
                                     
                                 <label className="email">
                                     <input 

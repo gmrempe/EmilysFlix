@@ -28,7 +28,7 @@ class Splash extends React.Component {
 
                             <span className="signup-button">
                                 <Link to="/signup">WATCH FREE FOR 30 DAYS</Link>
-                                <i class="fas fa-chevron-right"></i>
+                                <i className="fas fa-chevron-right"></i>
                             </span>
 
                             <button onClick={this.handleLogin}>Demo Sign In</button>
