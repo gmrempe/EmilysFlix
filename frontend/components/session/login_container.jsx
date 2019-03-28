@@ -16,8 +16,7 @@ const mdp = dispatch => ({
     link: (<p>New to Emilysflix? 
         <Link to={`/signup`} 
         onClick={currentUser => dispatch(receiveCurrentUser(currentUser))} 
-        className="signup-tag">
-        Sign up now</Link>.
+        className="signup-tag"> Sign up now</Link>.
         </p>)
 });
 
