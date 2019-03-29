@@ -6,7 +6,6 @@ import selectAllVideos from "../../reducers/selectors";
 
 const msp = state => ({
     videos: selectAllVideos(state)
-    // images: state.images
 })
 
 const mdp = dispatch => ({

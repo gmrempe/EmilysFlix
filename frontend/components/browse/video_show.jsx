@@ -14,7 +14,7 @@ const VideoShow = (video) => (
                 {video.description}
             </span>
             <nav>
-                <Link to={`/watch/${video.id}`}></Link>
+                <Link to={`/watch/${video.id}`}>play</Link>
                 <button className="myList-videoShow">MY LIST</button>
                 <button className="like-videoShow">like</button>
                 <button className="dislike-videoShow">dislike</button>

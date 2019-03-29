@@ -1,15 +1,13 @@
 class Api::VideosController < ApplicationController
 
-
-
     def index
         @videos = Video.all
-        render "api/videos"
+        render :index
     end
 
     def show
-        @video = Video.find_by(id: params[:id])
-        render "api/videos/#{@video.id}"
+        @video = Video.find(params[:id])
+        render :show
     end
     
 end
