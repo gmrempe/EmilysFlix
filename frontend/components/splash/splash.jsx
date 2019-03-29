@@ -9,7 +9,7 @@ class Splash extends React.Component {
 
     
     handleLogin() {
-        const user = { email: "Saitama", password: "#OnePunch" };
+        const user = { email: "Saitama@gmail.com", password: "#OnePunch" };
         this.props.login(user);
         this.props.history.push('/browse');
     }
