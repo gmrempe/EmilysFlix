@@ -7,18 +7,17 @@ import { Link } from "react-router-dom";
 
 const msp = state => ({
     formType: "Sign Up",
-    errors: state.errors.session
+    errors: state.errors.session,
+    link: <nav>
+        <Link to={`/login`}
+        >Sign In
+        </Link>
+        </nav>
 });
 
 const mdp = dispatch => ({
     processForm: user => dispatch(signup(user)),
-    clearErrors: currentUser => dispatch(receiveCurrentUser(currentUser)),
-    link: <nav>
-        <Link to={`/login`}
-        onClick={currentUser => dispatch(receiveCurrentUser(currentUser))}
-        >Sign In
-        </Link>
-        </nav>
+    clearErrors: currentUser => dispatch(receiveCurrentUser(currentUser))
 });
 
 export default connect(msp, mdp)(SessionForm);

@@ -1,0 +1,25 @@
+
+.main-header > nav {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.main-header > nav > div:first-child > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header > nav > div:first-child > ul > li {
+    padding: 10px;
+    color: #e5e5e5;
+    font-size: 12px;
+}
+
+.main-header > nav > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

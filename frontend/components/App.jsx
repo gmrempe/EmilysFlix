@@ -8,6 +8,7 @@ import BrowseContainer from "./browse/browse_container";
 
 const App = () => (
     <div className='content-main'>
+  
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>

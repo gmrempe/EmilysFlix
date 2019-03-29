@@ -2,11 +2,13 @@
     background-color: #E50914;
 }
 
-.main-header > h1 {
-    color: #E50914;
+.main-header {
+    background-color: #141414;
+    width: 100%;
 }
 
-.main-header > h2 {
-    background-color: black;
-    font-size: 30px;
+.logo-main {
+    width: 100px;
+    height: 30px;
+    margin: 20px;
 }

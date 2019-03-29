@@ -17,10 +17,24 @@ class Browse extends React.Component {
     render() {
         return (
             <header className='main-header'>
-                <h1 className='logo' >EMILYSFLIX</h1>
-                <button className='signout-button' onClick={this.handleLogout}>Sign Out</button>
-
-                <h2>You made it!</h2>
+                <nav>
+                    <div>
+                        <img className='logo-main' src={window.logo} alt="logo"/>
+                        <ul>
+                            <li>Home</li>
+                            <li>TV Shows</li>
+                            <li>Movies</li>
+                            <li>Recently Added</li>
+                            <li>My List</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div className="search-bar"></div>
+                        <div className="notifications-icon"></div>
+                        <div className="menu"></div>
+                    </div>
+                </nav>
+                <button className='Sign out of Emilysflix' onClick={this.handleLogout}>Sign Out</button>
             </header>
 
         )
