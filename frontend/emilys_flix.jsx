@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.dispatch = store.dispatch
     // window.login = SessionAPIUtil.login
     // window.signup = SessionAPIUtil.signup
-    window.logout = SessionAPIUtil.logout
+    // window.logout = SessionAPIUtil.logout
     //TESTS
 
     ReactDOM.render(<Root store={store} />, root)
