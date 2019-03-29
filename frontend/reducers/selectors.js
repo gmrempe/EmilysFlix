@@ -1,0 +1,1 @@
+export const selectAllVideos = state => Object.values(state.entities.videos);

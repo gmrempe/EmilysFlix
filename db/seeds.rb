@@ -8,3 +8,5 @@
 
 
 User.create(email: "Saitama@gmail.com", password: "#OnePunch")
+
+Video.create(title: "Bird walking", video_url: "https://s3.amazonaws.com/emilysflix-dev/Pexels+Videos+1550669.mp4", rating: "G", creator: "Herwin Hayman", yr: "2015", description: "A bird walks on grass", image_url: "https://s3.amazonaws.com/emilysflix-dev/Screen+Shot+2019-03-29+at+11.53.28+AM.png")
