@@ -39,22 +39,22 @@ class Browse extends React.Component {
                             </ul>
                         </div>
                         <div className='header-icons'>
-                            <form id="search-bar">
-                                <input type="search" placeholder="Title,people,genres"/>
-                            </form>
-                            {/* <i className="fas fa-search"></i> */}
+                            <button id="search-bar">
+                                    <i className="fas fa-search"></i>
+                                    <input id="search-bar-input" maxlength="80" type="search" name="search"/>
+                            </button>
                             <div className="nav-menu">
                                 <img onMouseOver={this.handleHover} onMouseOut={this.handleHoverO} id="avatar" src={window.avatar}/>
                                 {/* <i className="fas fa-sort-down"></i> */}
+                                <ul id="header-menu" className="header-dropdown">
+                                    <li>Manage Profiles</li>
+                                    <li>Account</li>
+                                    <li className='Sign out' onClick={this.handleLogout}>Sign Out of Emilysflix</li>
+                                </ul>
                             </div>
                         </div>
                     </nav>
                 </header>
-                <ul id="header-menu" className="header-dropdown">
-                    <li>Manage Profiles</li>
-                    <li>Account</li>
-                    <li className='Sign out' onClick={this.handleLogout}>Sign Out of Emilysflix</li>
-                </ul>
             </div>
 
         )
