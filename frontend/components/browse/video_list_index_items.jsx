@@ -10,15 +10,19 @@ class VideoListIndexItems extends React.Component {
     }
 
     render() {
-        const {videos } = this.props;
-
+        const videos = this.props.videos.map(video => <VideoIndexItem key={video.id} video={video} />)
+        // debugger
         return(
-            <section>List Title
-                <button className="slider-left">slide left</button>
-                <ul>
-                    {videos.map(video => <VideoIndexItem key={video.id} video={video}/>)}
-                </ul>
-                <button className="slider-right">slide right</button>
+            <section className="video-list-wrapper">
+                <h2>List Title</h2>
+                <div className="video-list">
+                    <button className="slider-left">slide left</button>
+                    <ul>
+                        {/* <li>im a video</li> */}
+                        {videos}
+                    </ul>
+                    <button className="slider-right">slide right</button>
+                </div>
             </section>
         );
     }

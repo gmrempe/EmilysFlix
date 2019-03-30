@@ -1,0 +1,40 @@
+#root {
+    background-color: #141414;
+}
+
+.video-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 130px;
+    padding: 20px;
+}
+
+.video-list-wrapper > h2 {
+    font-size: 1.4vw;
+    color: #e5e5e5;
+}
+
+.video-list {
+    background-color: transparent;
+    height: 130px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.video-list > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.video-list > ul > li {
+    height: 100%;
+    width: 175px;
+}
+
+.video-list > button {
+    z-index: 3;
+}

@@ -25,7 +25,6 @@ class Browse extends React.Component {
     render() {
         return (
             <div className="header-wrapper">
-
                 <header className='main-header'>
                     <nav>
                         <div>
@@ -41,7 +40,7 @@ class Browse extends React.Component {
                         <div className='header-icons'>
                             <button id="search-bar">
                                     <i className="fas fa-search"></i>
-                                    <input id="search-bar-input" maxlength="80" type="search" name="search"/>
+                                    <input id="search-bar-input" maxLength="80" type="search" name="search"/>
                             </button>
                             <div className="nav-menu">
                                 <img onMouseOver={this.handleHover} onMouseOut={this.handleHoverO} id="avatar" src={window.avatar}/>

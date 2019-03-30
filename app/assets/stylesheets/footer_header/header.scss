@@ -1,13 +1,12 @@
 .main-header {
-    // background-color: transparent;
-    background-color: rgb(211, 132, 132);
+    background-color: transparent;
     height: 41px;
     z-index: 2;
 }
 
 .header-wrapper {
-    background-color: black;
-    height: 300px;
+    background-color: transparent;
+    height: 100%;
 }
 
 .main-header > nav {
@@ -65,9 +64,9 @@
     margin-right: 35px;
 }
 
-.fa-search{
+.search-bar > i {
     text-shadow: 0 1px 1px rgba(0,0,0,.3);
-    width: 45px;
+    // width: 45px;
     height: auto;
     margin-left: 6px;
 }
@@ -124,4 +123,8 @@
 .header-dropdown > li {
     margin: 5px;
     padding: 5px;
+}
+
+@media only screen and (max-width: 860px) {
+//browse dropdown
 }
