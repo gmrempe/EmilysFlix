@@ -14,13 +14,13 @@ class Browse extends React.Component {
         this.props.history.push('/')
     }
 
-    handleHover() {
-        const menu = document.getElementById("header-menu").style.zIndex = 3;
-    }
+    // handleHover() {
+    //     const menu = document.getElementById("header-menu").style.zIndex = 3;
+    // }
 
-    handleHoverO() {
-        const menu = document.getElementById("header-menu").style.zIndex = -1;
-    }
+    // handleHoverO() {
+    //     const menu = document.getElementById("header-menu").style.zIndex = -1;
+    // }
 
     render() {
         return (
@@ -29,13 +29,16 @@ class Browse extends React.Component {
                     <nav>
                         <div>
                             <img className='logo-main' src={window.logo} alt="logo"/>
-                            <ul>
-                                <li>Home</li>
-                                <li>TV Shows</li>
-                                <li>Movies</li>
-                                <li>Recently Added</li>
-                                <li>My List</li>
-                            </ul>
+                            <div className="browse-dropdown">
+                                <h3 className="browse-dropdown-header">Browse</h3>
+                                <ul className="browse-dropdown-header-content">
+                                    <li>Home</li>
+                                    <li>TV Shows</li>
+                                    <li>Movies</li>
+                                    <li>Recently Added</li>
+                                    <li>My List</li>
+                                </ul>
+                            </div>
                         </div>
                         <div className='header-icons'>
                             <button id="search-bar">
@@ -43,7 +46,7 @@ class Browse extends React.Component {
                                     <input id="search-bar-input" maxLength="80" type="search" name="search"/>
                             </button>
                             <div className="nav-menu">
-                                <img onMouseOver={this.handleHover} onMouseOut={this.handleHoverO} id="avatar" src={window.avatar}/>
+                                <img id="avatar" src={window.avatar}/>
                                 {/* <i className="fas fa-sort-down"></i> */}
                                 <ul id="header-menu" className="header-dropdown">
                                     <li>Manage Profiles</li>

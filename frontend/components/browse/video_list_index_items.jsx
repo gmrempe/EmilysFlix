@@ -5,9 +5,9 @@ import VideoIndexItem from './video_index_item';
 class VideoListIndexItems extends React.Component {
 
 
-    componentDidMount() {
-        this.props.fetchAllVideos();
-    }
+    // componentDidMount() {
+    //     this.props.fetchAllVideos();
+    // }
 
     render() {
         const videos = this.props.videos.map(video => <VideoIndexItem key={video.id} video={video} />)
