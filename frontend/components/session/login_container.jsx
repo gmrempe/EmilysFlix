@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const msp = state => ({
     formType: "Sign In",
     errors: state.errors.session,
-    link: (<p>New to Emilysflix? <Link to={`/signup`} 
+    link: (<p>New to Emilysflix? <Link to={`/`} 
         className="signup-tag">
         Sign up now
         </Link>.

@@ -76,6 +76,19 @@ class SessionForm extends React.Component {
         )  
     }
 
+    handleFocus() {
+        const showPasswordButton = document.getElementById("show-toggle").style.opacity = 1;
+    }
+    
+    handleInput() {
+        let password = document.getElementById("password-placeholder").style.top = "20px";
+        let password2 = document.getElementById("password-placeholder").style.fontSize = "11px";
+    }
+    handleEmailInput() {
+        let email = document.getElementById("email-placeholder").style.top = "20px";
+        let email2 = document.getElementById("email-placeholder").style.fontSize = "11px";
+    }
+
     render() {
         
         return (
@@ -92,12 +105,12 @@ class SessionForm extends React.Component {
 
                             <form noValidate onSubmit={this.handleSubmit}>
                                     
-                                    {this.renderErrors("I")}
-                                <label className="email">
+                                <label htmlFor="email" className="email"> 
+                                    <span id="email-placeholder">Email</span>
                                     <input 
                                     type="email" 
                                     onChange={this.handleChange("email")}
-                                    placeholder="Email" 
+                                    onInput={this.handleEmailInput}
                                     value={this.state.email}
                                     name="email"
                                     pattern=".{5,}"
@@ -116,11 +129,13 @@ class SessionForm extends React.Component {
                                     value="SHOW"
                                     readOnly
                                 />
-                                <label className="password">
+                                <label htmlFor="password" className="password">
+                                    <span id="password-placeholder">Password</span>
                                     <input 
                                     type="password" 
                                     onChange={this.handleChange("password")} 
-                                    placeholder="Password"
+                                    onFocus={this.handleFocus}
+                                    onInput={this.handleInput}
                                     pattern=".{6,60}"
                                     title="Your password must contain between 4 and 60 characters."
                                     id="password"

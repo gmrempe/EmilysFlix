@@ -64,12 +64,14 @@ header {
 .session-form >form > ul > li {
     color: rgb(238, 133, 14);
     opacity: 1.0;
+    font-size: 13px;
 }
 
 .session-form > form > label > ul > li {
     color: rgb(238, 133, 14);
     opacity: 1.0;
     padding-bottom: 3px;
+    font-size: 13px;
 }
 
 .session-form > p {
@@ -122,7 +124,7 @@ header {
 }
 
 .password > #password {
-    &:invalid:not(:placeholder-shown) {
+    &:invalid {
         & ~ .form-password-message{
             display: inline;
             margin: 3px 0px 3px 0px;
@@ -130,11 +132,22 @@ header {
     }
 }
 
+#email-placeholder,
+#password-placeholder {
+    position: relative;
+    font-size: 16px;
+    top: 35px;
+    left: 20px;
+	color: #8c8c8c;
+	transition: all .15s ease-in-out 0s;
+}
+
 .form-password-message,
 .form-email-message {
     display: none;
     color: rgb(238, 133, 14);
     transition: 0.28s;
+    font-size: 13px;
 }
 
 .password > #password {
@@ -146,14 +159,13 @@ header {
     padding: 16px 20px 0;
 }
 
-.password > #password:focus,
 .password > #password:focus-within,
-.password > .show-toggle:focus,
 .password > .show-toggle:focus-within {
     background-color: #454545;
 }
 
 .show-toggle {
+    opacity: 0;
     color: #8c8c8c;
     font-size: 12px;
     width: 35px;
@@ -162,7 +174,7 @@ header {
     border-radius: 0px 4px 4px 0px;
     position: relative;
     left: 264px;
-    top: 36px;
+    top: 53px;
 }
 
 .session-form > nav {
