@@ -14,28 +14,48 @@ class Browse extends React.Component {
         this.props.history.push('/')
     }
 
+    handleHover() {
+        const menu = document.getElementById("header-menu").style.zIndex = 3;
+    }
+
+    handleHoverO() {
+        const menu = document.getElementById("header-menu").style.zIndex = -1;
+    }
+
     render() {
         return (
-            <header className='main-header'>
-                <nav>
-                    <div>
-                        <img className='logo-main' src={window.logo} alt="logo"/>
-                        <ul>
-                            <li>Home</li>
-                            <li>TV Shows</li>
-                            <li>Movies</li>
-                            <li>Recently Added</li>
-                            <li>My List</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div className="search-bar"></div>
-                        <div className="notifications-icon"></div>
-                        <div className="menu"></div>
-                    </div>
-                </nav>
-                <button className='Sign out of Emilysflix' onClick={this.handleLogout}>Sign Out</button>
-            </header>
+            <div className="header-wrapper">
+
+                <header className='main-header'>
+                    <nav>
+                        <div>
+                            <img className='logo-main' src={window.logo} alt="logo"/>
+                            <ul>
+                                <li>Home</li>
+                                <li>TV Shows</li>
+                                <li>Movies</li>
+                                <li>Recently Added</li>
+                                <li>My List</li>
+                            </ul>
+                        </div>
+                        <div className='header-icons'>
+                            <form id="search-bar">
+                                <input type="search" placeholder="Title,people,genres"/>
+                            </form>
+                            {/* <i className="fas fa-search"></i> */}
+                            <div className="nav-menu">
+                                <img onMouseOver={this.handleHover} onMouseOut={this.handleHoverO} id="avatar" src={window.avatar}/>
+                                {/* <i className="fas fa-sort-down"></i> */}
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+                <ul id="header-menu" className="header-dropdown">
+                    <li>Manage Profiles</li>
+                    <li>Account</li>
+                    <li className='Sign out' onClick={this.handleLogout}>Sign Out of Emilysflix</li>
+                </ul>
+            </div>
 
         )
     }

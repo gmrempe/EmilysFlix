@@ -3,5 +3,5 @@ class Video < ApplicationRecord
     validates :video_url, uniqueness: true
 
     has_one_attached :video
-    has_one_attached :photo
+    # has_one_attached :photo
 end

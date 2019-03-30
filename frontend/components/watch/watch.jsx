@@ -12,7 +12,7 @@ class Watch extends React.Component {
         return (
             <div>
                 <Link to="/browse">Back to Browse</Link>
-                <video width="" height="" controls autoPlay>
+                <video width="100%" height="auto" controls preload autoPlay>
                     <source src={this.props.video.videoUrl} type="video/mp4"/>
                     Your browser does not support this video file.
                 </video>

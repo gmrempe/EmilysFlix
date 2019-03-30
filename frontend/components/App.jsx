@@ -7,25 +7,23 @@ import SplashContainer from "./splash/splash_container";
 import BrowseContainer from "./browse/browse_container";
 import VideoListIndexContainer from "./browse/video_list_index";
 import WatchContainer from "./watch/watch_container";
+import Header from "./browse/browse_container";
 // import VideoContainer from "./watch/video_container";
 
 const App = () => (
-    <div className='content-main'>
-  
-        <Switch>
-            <AuthRoute exact path="/login" component={LoginFormContainer}/>
-            <AuthRoute exact path="/signup" component={SignupFormContainer}/>
-            {/* <ProtectedRoute exact path="/browse" component={VideoListIndexContainer}/> */}
-            <ProtectedRoute exact path="/browse" component={BrowseContainer}/>
-            <ProtectedRoute exact path="/watch/:video_id" component={WatchContainer}/>
-            {/* <ProtectedRoute exact path="/watch/:video-id" component={VideoContainer}/> */}
-            <LandingRoute path="/" component={SplashContainer}/>
-            {/* <Route path="/this-is-emilysflix" component={Splash}/> */}
-        </Switch>
-        <footer>
-
-        </footer>
-    </div>
+        window.currentUser ? <Header/> : "",
+        <div className='content-main'>
+            <Switch>
+                <AuthRoute exact path="/login" component={LoginFormContainer}/>
+                <AuthRoute exact path="/signup" component={SignupFormContainer}/>
+                {/* <ProtectedRoute exact path="/browse" component={VideoListIndexContainer}/> */}
+                <ProtectedRoute exact path="/browse" component={BrowseContainer}/>
+                <ProtectedRoute exact path="/watch/:video_id" component={WatchContainer}/>
+                {/* <ProtectedRoute exact path="/watch/:video-id" component={VideoContainer}/> */}
+                <LandingRoute path="/" component={SplashContainer}/>
+                {/* <Route path="/this-is-emilysflix" component={Splash}/> */}
+            </Switch>
+        </div>
 );
 
 export default App;
