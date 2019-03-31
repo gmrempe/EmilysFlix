@@ -5,23 +5,31 @@ import VideoIndexItem from './video_index_item';
 class VideoListIndexItems extends React.Component {
 
 
-    // componentDidMount() {
-    //     this.props.fetchAllVideos();
-    // }
+    componentDidMount() {
+        this.props.fetchAllVideos();
+    }
+
+    handleLeftSlide() {
+
+    }
+
+    handleRightSlide() {
+
+    }
+
 
     render() {
         const videos = this.props.videos.map(video => <VideoIndexItem key={video.id} video={video} />)
-        // debugger
+
         return(
             <section className="video-list-wrapper">
                 <h2>List Title</h2>
                 <div className="video-list">
-                    <button className="slider-left">slide left</button>
+                    <i className="fas fa-chevron-left slider-left" onClick={this.handleLeftSlide}></i>
                     <ul>
-                        {/* <li>im a video</li> */}
                         {videos}
                     </ul>
-                    <button className="slider-right">slide right</button>
+                    <i className="fas fa-chevron-right slider-right" onClick={this.handleRightSlide}></i>
                 </div>
             </section>
         );

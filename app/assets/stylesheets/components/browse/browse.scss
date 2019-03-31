@@ -11,7 +11,7 @@
 }
 
 .video-list-wrapper > h2 {
-    font-size: 1.4vw;
+    font-size: 17px;
     color: #e5e5e5;
 }
 
@@ -19,7 +19,7 @@
     background-color: transparent;
     height: 130px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .video-list > ul {
@@ -32,9 +32,17 @@
 
 .video-list > ul > li {
     height: 100%;
-    width: 175px;
+    width: 200px;
 }
 
-.video-list > button {
+.video-list > i {
+    background: transparent;
     z-index: 3;
+    display: flex;
+    align-items: center;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    width: 20px;
 }

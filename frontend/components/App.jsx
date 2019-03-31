@@ -14,7 +14,7 @@ const header = window.currentUser ? <Header/> : null
 
 const App = () => (
     <div>
-        <Header/>
+        <Header />
         <div className='content-main'>
             <Switch>
                 <AuthRoute exact path="/login" component={LoginFormContainer}/>
