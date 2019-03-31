@@ -6,6 +6,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    display: none;
 }
 
 .video-index-buttons {
@@ -15,11 +16,12 @@
     align-items: flex-end;
     width: 385px;
     height: 185px;
-    z-index: -1;
+    margin-bottom: 13px;
+    z-index: 2;
 }
 
 .video-index-bottom {
-    z-index: -1;
+    z-index: 2;
     display: flex;
     justify-content: center;
 }
@@ -47,16 +49,13 @@
     width: 400px;
     height: auto;
     transition: .5s;
+    cursor: pointer;
 }
 
-.video-index-item:hover .video-index-buttons {
+.video-index-item:hover .video-index-button-wrapper {
     z-index: 2;  
-    transition: .9s; 
-}
-
-.video-index-item:hover .video-index-bottom {
-    z-index: 2;  
-    transition: .9s; 
+    transition: 1.2s;
+    display: block;
 }
 
 .video-index-wrapper {
@@ -64,9 +63,6 @@
 }
 
 .fa-play-circle {
-    // background-color: rgba(0,0,0,.3);
-    // color: #E50914;
-    // border: #fff;
     width: 40px;
 }
 

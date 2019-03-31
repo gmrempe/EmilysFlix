@@ -2,15 +2,19 @@ import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 
 class Watch extends React.Component {
+    constructor(props) {
+        super(props)
+        this.handleClick = this.handleClick.bind(this);
+    }
 
     componentDidMount() {
-        
+        // debugger
         this.props.fetchVideo(this.props.match.params.video_id)
     }
 
     handleClick() {
-        const video = document.getElementById("video-watch")
-        const pause = document.getElementById("pause")
+        // const video = document.getElementById("-")
+        // const pause = document.getElementById("pause")
         
         if(video.paused) {
             video.play();
@@ -21,16 +25,17 @@ class Watch extends React.Component {
     }
 
     render() {
+        // debugger
         return (
-            <div id="movie">
-                <Link to="/browse">Back to Browse</Link>
-                <video id="video-watch" controls autoPlay>
+            <div className="movie">
+                <Link className="back-to-browse" to="/browse">Back to Browse</Link>
+                <video controls>
                     <source src={this.props.video.videoUrl} type="video/mp4"/>
                 </video>
-                <div>
+                {/* <div>
                     <h3>{this.props.video.title}</h3>
-                    <button id="pause" onClick={this.handleClick}>play</button>
-                </div>
+                    <button className="pause" onClick={this.handleClick}>play</button>
+                </div> */}
             </div>
         )
     }

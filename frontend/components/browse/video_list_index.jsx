@@ -14,6 +14,8 @@ const VideoListIndex = () => (
         </video> */}
         <ul>
             <VideoListIndexItems/>
+            {/* <VideoListIndexItems/>
+            <VideoListIndexItems/> */}
         </ul>
     </div>
 )

@@ -48,11 +48,14 @@ class Browse extends React.Component {
                             <div className="nav-menu">
                                 <img id="avatar" src={window.avatar}/>
                                 {/* <i className="fas fa-sort-down"></i> */}
-                                <ul id="header-menu" className="header-dropdown">
-                                    <li>Manage Profiles</li>
-                                    <li>Account</li>
-                                    <li className='Sign out' onClick={this.handleLogout}>Sign Out of Emilysflix</li>
-                                </ul>
+                                <div className="header-dropdown-items">
+                                    <i className="fas fa-sort-up"></i>
+                                    <ul id="header-menu" className="header-dropdown">
+                                        <li>Manage Profiles</li>
+                                        <li>Account</li>
+                                        <li className='Sign out' onClick={this.handleLogout}>Sign Out of Emilysflix</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </nav>

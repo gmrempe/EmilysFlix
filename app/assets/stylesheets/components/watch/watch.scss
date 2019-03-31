@@ -1,38 +1,29 @@
-#movie {
+.movie {
     position: absolute;
     min-width: 100%;
     min-height: 100%;
+    background-color: #000;
     right: 0;
     bottom: 0;
 }
 
-#movie > Link {
+.movie > .back-to-browse {
     position: absolute;
     top: 25px;
     left: 25px;
     color: #fff;
+    z-index: 4;
+    background-color: transparent;
 }
 
-#movie > div > h3 {
-    position: fixed;
-    bottom: 15px;
-    background: transparent;
-    color: #fff;
-    width: 100%;
-}
-
-#movie > div > button {
-  width: 35px;
-  height: auto;
-  font-size: 18px;
-  padding: 10px;
-  background: transparent;
-  color: #fff;
-  cursor: pointer;
-}
-
-#movie > button:hover {
+.movie > .back-to-browse:hover {
   transition: .3s;
-  width: 50px;
+  width: 575px;
   height: auto;
+}
+
+.movie > video {
+  min-width: 100%;
+  min-height: auto;
+  z-index: 3;
 }

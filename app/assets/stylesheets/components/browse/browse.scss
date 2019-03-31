@@ -40,6 +40,15 @@
     z-index: 3;
     display: flex;
     align-items: center;
+    opacity: 0;
+}
+
+.video-list:hover .slider-left {
+    opacity: 1;
+}
+
+.video-list:hover .slider-right {
+    opacity: 1;
 }
 
 .fa-chevron-left,
