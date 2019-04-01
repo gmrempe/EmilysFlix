@@ -9,8 +9,9 @@ const msp = state => {
     }
 }
 
-const mdp = dispatch => ({
-    fetchAllVideos: videos => dispatch(fetchAllVideos(videos))
+const mdp = (dispatch, ownProps) => ({
+    fetchAllVideos: videos => dispatch(fetchAllVideos(videos)),
+    onVideoShowClick: ownProps.onVideoShowClick
 })
 
 export default connect(msp, mdp)(VideoListIndexItems);

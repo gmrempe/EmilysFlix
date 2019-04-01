@@ -5,6 +5,11 @@ class Watch extends React.Component {
     constructor(props) {
         super(props)
         this.handleClick = this.handleClick.bind(this);
+        this.handleBackClick = this.handleBackClick.bind(this);
+    }
+
+    handleBackClick() {
+        this.props.history.push('/browse');
     }
 
     handleClick() {
@@ -22,11 +27,11 @@ class Watch extends React.Component {
     render() {
         return (
             <div className="movie">
-                <div className="back-to-browse-wrapper">
+                <div className="back-to-browse-wrapper" onClick={this.handleBackClick}>
                     <i className="fas fa-arrow-left fa-2x"></i>
                     <Link className="back-to-browse" to="/browse">Back to Browse</Link>
                 </div>
-                <video controls autoplay>
+                <video controls autoPlay>
                     <source src={this.props.video.videoUrl} type="video/mp4"/>
                 </video>
                 {/* <div>

@@ -3,8 +3,18 @@ import VideoShow from "./video_show";
 
 
 
-const msp = (state, ownProps) => ({
-    video: ownProps.video
-})
+const msp = (state, ownProps) => {
+    // debugger
+    return {
+    video: ownProps.video || {},
+}
+}
 
-export default connect(msp, null)(VideoShow);
+const mdp = (dispatch, ownProps) => {
+    // debugger
+    return {
+        
+    }
+}
+
+export default connect(msp, mdp)(VideoShow);

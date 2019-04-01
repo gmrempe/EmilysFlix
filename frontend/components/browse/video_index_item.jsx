@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, withRouter} from "react-router-dom";
-import VideoShowContainer from './show/video_show_container';
+// import VideoShowContainer from './show/video_show_container';
 
 class VideoIndexItem extends React.Component {
 
@@ -29,11 +29,13 @@ class VideoIndexItem extends React.Component {
     }
 
     handleVideoShow() {
-        
     }
 
     render() {
         const video = this.props.video
+        const onVideoShowClick = this.props.onVideoShowClick
+        // debugger
+        
         return (
             <li className="video-index-item">
                 <div className="video-index-button-wrapper">
@@ -51,7 +53,7 @@ class VideoIndexItem extends React.Component {
                             <button className="myList-videoShow">mylist</button>
                         </div>
                     </div>
-                    <button className="video-index-bottom" onClick={this.handleVideoShow}>
+                    <button className="video-index-bottom" onClick={onVideoShowClick(video)}>
                         <i className="fas fa-chevron-down fs-lg"></i>
                     </button>
                 </div>

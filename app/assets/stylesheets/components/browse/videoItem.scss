@@ -22,9 +22,10 @@
 }
 
 .video-index-bottom {
-    z-index: 2;
+    z-index: 3;
     display: flex;
     justify-content: center;
+    // display: none;
 }
 
 .video-index-bottom > i {
@@ -32,7 +33,8 @@
     width: 400px;
     display: flex;
     justify-content: center;
-    z-index: 3;
+    // z-index: 3;
+    // display: none;
 }
 
 .video-index-left {
@@ -41,6 +43,7 @@
     justify-content: flex-end;
     margin-left: 3px;
     z-index: 3;
+    // display: none;
 }
 
 .video-index-right {
@@ -55,21 +58,21 @@
 .video-index-item:hover {
     min-width: 400px;
     height: auto;
-    transition-delay: 1s;
+    // transition-delay: 1s;
     transition-duration: 1s;
     cursor: pointer;
 }
 
-.video-index-item:hover .video-index-button-wrapper {
-    transition-delay: 1s;
-    transition-duration: 1s;
-    display: block;
+@keyframes video-buttons {
+    from {opacity:0;}
+    to {opacity:1;}
 }
-
-.video-index-bottom:focus .videoShow  {
+.video-index-item:hover .video-index-button-wrapper {
+    animation-name: video-buttons;
+    // animation-delay: 1s;
+    animation-duration: 3s;
     display: block;
-    width: 100%;
-    background-color: red;
+    z-index: 1;
 }
 
 .video-index-bottom:focus .video-index-item {
@@ -79,6 +82,10 @@
 
 .video-index-wrapper {
     position: relative;
+}
+
+.vsc-controller {
+    display:none;
 }
 
 .fa-play-circle {

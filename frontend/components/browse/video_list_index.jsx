@@ -5,16 +5,14 @@ const VideoListIndex = () => (
 
     <div className="browse-main">
         <div className='hero'>
-            <video autoPlay mute={true}
-                className="hero-video"> {/*Banner video from Pexels */}
+            {/* <video autoPlay mute={true}
+                className="hero-video"> {/*Banner video from Pexels
                 <source src={window.hero} type="video/mp4"/>
-            </video>
+            </video> */}
         </div>
         <div className="after-hero">
             <ul>
                 <VideoListIndexItemsContainer/>
-                {/* <VideoListIndexItemsContainer/> */}
-                {/* <VideoListIndexItemsContainer/> */}
             </ul>
         </div>
     </div>
