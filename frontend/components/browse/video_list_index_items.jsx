@@ -20,7 +20,6 @@ class VideoListIndexItems extends React.Component {
 
     render() {
         const videos = this.props.videos.map(video => <VideoIndexItem key={video.id} video={video} />)
-
         return(
             <section className="video-list-wrapper">
                 <h2>List Title</h2>

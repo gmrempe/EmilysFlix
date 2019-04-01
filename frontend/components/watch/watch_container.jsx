@@ -1,7 +1,5 @@
 import { connect } from 'react-redux';
 import Watch from './watch';
-import {fetchVideo} from '../../actions/video_actions';
-
 
 const msp = (state, ownProps) => {
     const videos = state.entities.videos;
@@ -11,9 +9,5 @@ const msp = (state, ownProps) => {
         }
     }
 }
-
-// const mdp = dispatch => ({
-//     fetchVideo: videoId => dispatch(fetchVideo(videoId))
-// })
 
 export default connect(msp, null)(Watch);
