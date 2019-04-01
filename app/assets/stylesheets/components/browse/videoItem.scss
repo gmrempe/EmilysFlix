@@ -28,6 +28,7 @@
 
 .video-index-bottom > i {
     height: 20px;
+    z-index: 3;
 }
 
 .video-index-left {
@@ -35,6 +36,7 @@
     flex-direction: column;
     justify-content: flex-end;
     margin-left: 3px;
+    z-index: 3;
 }
 
 .video-index-right {
@@ -43,6 +45,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: space-around;
+    z-index: 3;
 }
 
 .video-index-item:hover {
@@ -53,10 +56,10 @@
 }
 
 .video-index-item:hover .video-index-button-wrapper {
-    z-index: 2;  
-    transition: 1.2s;
     display: block;
+    transition: 1.2s;
 }
+
 
 .video-index-wrapper {
     position: relative;

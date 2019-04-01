@@ -29,7 +29,7 @@ class VideoIndexItem extends React.Component {
     }
 
     handleVideoShow() {
-        
+
     }
 
     handleHover() {
@@ -41,7 +41,7 @@ class VideoIndexItem extends React.Component {
     render() {
         const video = this.props.video
         return (
-            <li className="video-index-item" onMouseOver={this.handleHover} onClick={this.handlePlayClick}>
+            <li className="video-index-item" onMouseOver={this.handleHover}>
                 <div className="video-index-button-wrapper">
                     <div className="video-index-buttons">
                         <div className="video-index-left">
@@ -61,7 +61,7 @@ class VideoIndexItem extends React.Component {
                         <i className="fas fa-chevron-down" onClick={this.handleVideoShow}></i>
                     </div>
                 </div>
-                <div className="video-index-wrapper">
+                <div className="video-index-wrapper" onClick={this.handlePlayClick}>
                     <video width="100%" height="auto" poster={video.imageUrl}>
                         <source src={video.videoUrl} type="video/mp4"/>
                     </video>

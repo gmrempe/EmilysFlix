@@ -7,6 +7,7 @@ import SplashContainer from "./splash/splash_container";
 import VideoListIndexContainer from "./browse/video_list_index_items_container";
 import WatchContainer from "./watch/watch_container";
 import Header from "./browse/browse_container";
+import Footer from './browse/footer';
 // import VideoContainer from "./watch/video_container";
 // import BrowseContainer from "./browse/browse_container";
 
@@ -27,6 +28,7 @@ const App = () => (
                 {/* <Route path="/this-is-emilysflix" component={Splash}/> */}
             </Switch>
         </div>
+        <Footer />
     </div>
 );
 

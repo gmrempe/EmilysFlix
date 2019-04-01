@@ -1,0 +1,40 @@
+.main-footer {
+    margin-top: 100px;
+    background-color: #141414;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+     
+}
+
+.main-footer > ul {
+    columns: 4;
+    padding: 8px;
+    width: 80%;
+}
+
+.main-footer > ul > li {
+    color: #999999;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.main-footer > div {
+    color: #999999;
+    margin: 10px;
+
+}
+
+.main-footer > div:last-child {
+    border: 1px solid #999999;
+    border-radius: 2px;
+    width: 115px;
+    height: 25px;
+    font-size: 13px;
+    text-align: center;
+    padding-top: 9px;
+
+}

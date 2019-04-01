@@ -4,13 +4,16 @@ import {fetchVideo} from '../../actions/video_actions';
 
 
 const msp = (state, ownProps) => {
-    return {
-        video: state.entities.videos[ownProps.match.params.video_id] || {}
+    const videos = state.entities.videos;
+    for(let i=0; i < videos.length; i++) {
+        if(videos[i].id == ownProps.match.params.video_id) {
+            return {video: videos[i]};
+        }
     }
 }
 
-const mdp = dispatch => ({
-    fetchVideo: videoId => dispatch(fetchVideo(videoId))
-})
+// const mdp = dispatch => ({
+//     fetchVideo: videoId => dispatch(fetchVideo(videoId))
+// })
 
-export default connect(msp, mdp)(Watch);
+export default connect(msp, null)(Watch);

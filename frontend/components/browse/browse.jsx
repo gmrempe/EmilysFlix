@@ -6,8 +6,12 @@ class Browse extends React.Component {
     constructor(props) {
         super(props);
         this.handleLogout = this.handleLogout.bind(this)
+        this.handleLogoClick = this.handleLogoClick.bind(this)
     }
 
+    handleLogoClick() {
+        this.props.history.push('/')
+    }
 
     handleLogout() {
         this.props.logout();
@@ -28,7 +32,7 @@ class Browse extends React.Component {
                 <header className='main-header'>
                     <nav>
                         <div>
-                            <img className='logo-main' src={window.logo} alt="logo"/>
+                            <img className='logo-main' src={window.logo} onClick={this.handleLogoClick} alt="logo"/>
                             <div className="browse-dropdown">
                                 <h3 className="browse-dropdown-header">Browse</h3>
                                 <ul className="browse-dropdown-header-content">
@@ -42,7 +46,7 @@ class Browse extends React.Component {
                         </div>
                         <div className='header-icons'>
                             <button id="search-bar">
-                                    <i className="fas fa-search"></i>
+                                    <i className="fas fa-search fa-lg"></i>
                                     <input id="search-bar-input" maxLength="80" type="search" name="search"/>
                             </button>
                             <div className="nav-menu">

@@ -7,11 +7,6 @@ class Watch extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    componentDidMount() {
-        // debugger
-        this.props.fetchVideo(this.props.match.params.video_id)
-    }
-
     handleClick() {
         // const video = document.getElementById("-")
         // const pause = document.getElementById("pause")
@@ -25,11 +20,13 @@ class Watch extends React.Component {
     }
 
     render() {
-        // debugger
         return (
             <div className="movie">
-                <Link className="back-to-browse" to="/browse">Back to Browse</Link>
-                <video controls>
+                <div className="back-to-browse-wrapper">
+                    <i className="fas fa-arrow-left fa-2x"></i>
+                    <Link className="back-to-browse" to="/browse">Back to Browse</Link>
+                </div>
+                <video controls autoplay>
                     <source src={this.props.video.videoUrl} type="video/mp4"/>
                 </video>
                 {/* <div>

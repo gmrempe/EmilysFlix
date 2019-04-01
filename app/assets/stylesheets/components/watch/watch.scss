@@ -1,29 +1,39 @@
 .movie {
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    background-color: #000;
-    right: 0;
-    bottom: 0;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #000;
+  right: 0;
+  bottom: 0;
 }
 
-.movie > .back-to-browse {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    color: #fff;
-    z-index: 4;
-    background-color: transparent;
+.movie > .back-to-browse-wrapper {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #fff;
+  z-index: 4;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.movie > .back-to-browse:hover {
-  transition: .3s;
-  width: 575px;
-  height: auto;
+.back-to-browse {
+  font-size: 10px;
+  margin-left: 15px;
+  display: none;
+}
+
+.back-to-browse-wrapper:hover .back-to-browse {
+  transition: 3s;
+  display: inline;
+  font-size: 17px;
 }
 
 .movie > video {
-  min-width: 100%;
-  min-height: auto;
+  width: 100%;
+  height: auto;
   z-index: 3;
 }
