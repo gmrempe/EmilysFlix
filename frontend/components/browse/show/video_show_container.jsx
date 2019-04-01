@@ -1,19 +1,10 @@
-import { connect } from "react-router-dom";
+import { connect } from "react-redux";
 import VideoShow from "./video_show";
 
 
 
-// const msp = (state, ownProps) => {
-//     const videos = state.entities.videos;
-//     for(let i = 0; i<videos.length; i++) {
-//         if(videos[i].id == ownProps.match.params.video_id) {
-//         return { video: videos[i] };
-//         }
-//     }
-// }
+const msp = (state, ownProps) => ({
+    video: ownProps.video
+})
 
-// const mdp = dispatch => {
-
-// }
-
-// export default connect(msp, mdp)(VideoShow);
+export default connect(msp, null)(VideoShow);

@@ -3,18 +3,20 @@ import VideoListIndexItemsContainer from "./video_list_index_items_container";
 
 const VideoListIndex = () => (
 
-    <div>
+    <div className="browse-main">
         <div className='hero'>
-            <video autoPlay
+            <video autoPlay mute={true}
                 className="hero-video"> {/*Banner video from Pexels */}
                 <source src={window.hero} type="video/mp4"/>
             </video>
         </div>
-        <ul>
-            <VideoListIndexItemsContainer/>
-            <VideoListIndexItemsContainer/>
-            <VideoListIndexItemsContainer/>
-        </ul>
+        <div className="after-hero">
+            <ul>
+                <VideoListIndexItemsContainer/>
+                {/* <VideoListIndexItemsContainer/> */}
+                {/* <VideoListIndexItemsContainer/> */}
+            </ul>
+        </div>
     </div>
 )
 

@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const VideoShow = (video) => (
+const VideoShow = (props) => {
+    const video = props.video;
+    return (
     <div className="videoShow">
         <div>
             <h1>{video.title}</h1>
@@ -26,6 +28,6 @@ const VideoShow = (video) => (
             <button>mute</button>
         </div>
     </div>
-)
+)}
 
 export default VideoShow;

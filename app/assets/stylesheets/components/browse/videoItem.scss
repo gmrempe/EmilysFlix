@@ -1,5 +1,6 @@
 .video-index-item {
-    width: 100%;
+    min-width: 250px;
+    border: 2px solid #000; 
 }
 
 .video-index-button-wrapper {
@@ -28,6 +29,9 @@
 
 .video-index-bottom > i {
     height: 20px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
     z-index: 3;
 }
 
@@ -49,15 +53,27 @@
 }
 
 .video-index-item:hover {
-    width: 400px;
+    min-width: 400px;
     height: auto;
-    transition: .5s;
+    transition-delay: 1s;
+    transition-duration: 1s;
     cursor: pointer;
 }
 
 .video-index-item:hover .video-index-button-wrapper {
+    transition-delay: 1s;
+    transition-duration: 1s;
     display: block;
-    transition: 1.2s;
+}
+
+.video-index-bottom:focus .videoShow  {
+    display: block;
+    width: 100%;
+    background-color: red;
+}
+
+.video-index-bottom:focus .video-index-item {
+    border: 1px solid #fff;
 }
 
 

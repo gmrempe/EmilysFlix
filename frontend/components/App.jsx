@@ -14,7 +14,7 @@ const header = window.currentUser ? <Header/> : null
 
 const App = () => (
     <div>
-        <Header />
+        <Route exact path="/browse" component={Header}/>
         <div className='content-main'>
             <Switch>
                 <AuthRoute exact path="/login" component={LoginFormContainer}/>
@@ -26,7 +26,7 @@ const App = () => (
                 {/* <Route path="/this-is-emilysflix" component={Splash}/> */}
             </Switch>
         </div>
-        <Footer />
+        <Route exact path="/browse" component={Footer} />
     </div>
 );
 

@@ -1,14 +1,14 @@
 import React from 'react';
 import {Link, withRouter} from "react-router-dom";
-
+import VideoShowContainer from './show/video_show_container';
 
 class VideoIndexItem extends React.Component {
 
     constructor(props) {
         super(props)
         this.handlePlayClick = this.handlePlayClick.bind(this)
-        this.handleHover = this.handleHover.bind(this)
-        this.handleSoundClick = this.handleSoundClick.bind(this)
+        // this.handleHover = this.handleHover.bind(this)
+        // this.handleSoundClick = this.handleSoundClick.bind(this)
     }
 
     handlePlayClick() {
@@ -29,19 +29,13 @@ class VideoIndexItem extends React.Component {
     }
 
     handleVideoShow() {
-
-    }
-
-    handleHover() {
-        const runVideo = $(this.props.video, this).get(0);
-        // debugger
-        // runVideo.play();
+        
     }
 
     render() {
         const video = this.props.video
         return (
-            <li className="video-index-item" onMouseOver={this.handleHover}>
+            <li className="video-index-item">
                 <div className="video-index-button-wrapper">
                     <div className="video-index-buttons">
                         <div className="video-index-left">
@@ -57,9 +51,9 @@ class VideoIndexItem extends React.Component {
                             <button className="myList-videoShow">mylist</button>
                         </div>
                     </div>
-                    <div className="video-index-bottom">
-                        <i className="fas fa-chevron-down" onClick={this.handleVideoShow}></i>
-                    </div>
+                    <button className="video-index-bottom" onClick={this.handleVideoShow}>
+                        <i className="fas fa-chevron-down fs-lg"></i>
+                    </button>
                 </div>
                 <div className="video-index-wrapper" onClick={this.handlePlayClick}>
                     <video width="100%" height="auto" poster={video.imageUrl}>
