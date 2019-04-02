@@ -5,17 +5,10 @@ import { Link, withRouter} from "react-router-dom";
 class VideoShow extends React.Component  {
     constructor(props) {
         super(props)
-        this.state = {
-            show: "true"
-        }
         this.handleVideoPlay=this.handleVideoPlay.bind(this);
-        this.handleVideoShowClose=this.handleVideoShowClose.bind(this);
         this.handleVideoShowSound = this.handleVideoShowSound.bind(this);
     }
 
-    handleVideoShowClose() {
-        this.setState({show: "false"})  // todo : Component only mounts once!
-    }
 
     handleVideoPlay() {
         this.props.history.push(`/watch/${this.props.video.id}`)
@@ -34,8 +27,10 @@ class VideoShow extends React.Component  {
 
     render() {
     const video = this.props.video;
-
-    if (video && this.state.show === "true"){
+    const toggleVideoShowClick = this.props.toggleVideoShowClick;
+        // debugger
+   
+        if (video)  {
         return (
         <div className="videoShow">
             <div className="video-show-buttons">
@@ -66,7 +61,7 @@ class VideoShow extends React.Component  {
                     <div>Creators: {video.creator}</div>
                 </div>
                 <div className="video-show-buttons-right">
-                    <button className="videoShow-close" onClick={this.handleVideoShowClose}>
+                    <button className="videoShow-close" onClick={toggleVideoShowClick(null)}>
                         <i className="fas fa-times fa-2x"></i>
                     </button>
                     <button className="soundButton" onClick={this.handleVideoShowSound}>

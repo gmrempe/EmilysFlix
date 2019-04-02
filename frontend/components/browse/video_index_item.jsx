@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link, withRouter} from "react-router-dom";
-// import VideoShowContainer from './show/video_show_container';
 
 class VideoIndexItem extends React.Component {
 
@@ -15,26 +14,22 @@ class VideoIndexItem extends React.Component {
         this.props.history.push(`/watch/${this.props.video.id}`);
     }
 
-    handleSoundClick() {
-        const video = document.getElementById(this.props.video.id)
-        const muteButton = addEventListener("click", () => {
-            if (video.muted === false) {
-                video.muted = true
-                muteButton.classList = "fas fa-volume-mute"
-            } else {
-                video.muted = false
-                muteButton.classList = "fas fa-volume-up"
-            }
-        })
-    }
-
-    handleVideoShow() {
-    }
+    // handleSoundClick() {
+    //     const video = document.getElementById(this.props.video.id)
+    //     const muteButton = addEventListener("click", () => {
+    //         if (video.muted === false) {
+    //             video.muted = true
+    //             muteButton.classList = "fas fa-volume-mute"
+    //         } else {
+    //             video.muted = false
+    //             muteButton.classList = "fas fa-volume-up"
+    //         }
+    //     })
 
     render() {
         const video = this.props.video
-        const onVideoShowClick = this.props.onVideoShowClick
-        
+        const toggleVideoShowClick = this.props.toggleVideoShowClick
+        // debugger
         return (
             <li className="video-index-item">
                 <div className="video-index-button-wrapper">
@@ -52,8 +47,8 @@ class VideoIndexItem extends React.Component {
                             <button className="myList-videoShow">mylist</button>
                         </div>
                     </div>
-                    <button className="video-index-bottom" onClick={onVideoShowClick(video)}>
-                        <i className="fas fa-chevron-down fs-lg"></i>
+                    <button className="video-index-bottom" onClick={toggleVideoShowClick(video)}>
+                        <i className="fas fa-chevron-down fa-2x"></i>
                     </button>
                 </div>
                 <div className="video-index-wrapper" onClick={this.handlePlayClick}>

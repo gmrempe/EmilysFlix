@@ -20,6 +20,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-left: 50px;
 }
 
 .main-header > nav > div:first-child {
@@ -63,7 +64,7 @@
     width: 90px;
     margin-top: 25px;
     margin-right: 5px;
-    margin-left: 4%;
+    // margin-left: 4%;
     cursor: pointer;
 }
 

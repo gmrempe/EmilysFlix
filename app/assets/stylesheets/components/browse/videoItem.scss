@@ -1,6 +1,7 @@
 .video-index-item {
     min-width: 250px;
-    border: 2px solid #000; 
+    border: 2px solid #141414; 
+    position: relative;
 }
 
 .video-index-button-wrapper {
@@ -8,6 +9,7 @@
     display: flex;
     flex-direction: column;
     display: none;
+    background: transparent;
 }
 
 .video-index-buttons {
@@ -59,6 +61,7 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
+    overflow: visible;
 }
 
 @keyframes video-buttons {
@@ -71,6 +74,10 @@
     animation-name: video-buttons;
     animation-duration: 1s;
     display: block;
+}
+
+.video-index-bottom:hover > i{
+    color: red;
 }
 
 .video-index-bottom:focus .video-index-item {
