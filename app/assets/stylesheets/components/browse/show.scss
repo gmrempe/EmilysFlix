@@ -1,0 +1,137 @@
+.after-hero > ul > div > .videoShow {
+    // display: none;
+    height: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.video-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #000, transparent);
+}
+
+.video-show-buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 450px;
+}
+
+.video-show-buttons-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: 4%;
+    z-index: 2;
+}
+
+.video-show-buttons-left > h1 {
+    font-size: 45px;
+}
+
+.video-show-yr-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.video-show-yr-rating > div:first-child {
+    margin-right: 10px;
+}
+
+.video-show-buttons-left > span {
+    margin: 10px;
+    color: #999;
+}
+
+.video-show-buttons-left > nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 300px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.video-show-play {
+    background-color: #ff0a16;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 65px;
+    height: 25px;
+}
+
+.video-show-play > i {
+    margin-right: 3px;
+}
+
+.video-show-play > .video-show-play-button {
+    font-size: 9px;
+}
+
+.video-show-buttons-left > nav > .myList-videoShow {
+    font-size: 9px;
+    border: 1px solid rgba(255,255,255,.4);
+    background-color: transparent;
+    width: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.video-show-buttons-left > div:last-child {
+    color: #999;
+    font-size: 13px;
+}
+
+.video-show-buttons-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 2%;
+    z-index: 2;
+}
+
+.videoShow-close {
+    margin-top: 5%;
+    padding-top: 13px;
+}
+
+// .videoShow-close:focus .videoShow{
+//     display: none;
+//     // position: relative;
+//     // margin-bottom: 25px;
+// }
+
+.videoShow-close:hover {
+    cursor: pointer;
+} 
+
+.soundButton {
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+
+.soundButton:hover {
+    cursor: pointer;
+}
+
+.video-show-video {
+    width: 75%;
+    margin-left: 25%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+

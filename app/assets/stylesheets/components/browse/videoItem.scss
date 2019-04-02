@@ -1,0 +1,113 @@
+.video-index-item {
+    min-width: 250px;
+    border: 2px solid #141414; 
+    border-top: none;
+    position: relative;
+    background-color: #141414;
+}
+
+.video-index-button-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    background: transparent;
+}
+
+.video-index-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 385px;
+    height: 185px;
+    margin-bottom: 13px;
+}
+
+.video-index-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.video-index-bottom > i {
+    height: 20px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+}
+
+.video-index-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 3px;
+    z-index: 3;
+}
+
+.video-index-right {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: space-around;
+    z-index: 3;
+}
+
+.video-index-item:hover {
+    min-width: 400px;
+    height: auto;
+    transition-duration: 1s;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    overflow: visible;
+}
+
+@keyframes video-buttons {
+    from {opacity:0;}
+    to {opacity:1;}
+    from {z-index: 0;}
+    to {z-index:1;}
+}
+.video-index-item:hover .video-index-button-wrapper {
+    animation-name: video-buttons;
+    animation-duration: 1s;
+    display: block;
+}
+
+.video-index-bottom:hover > i{
+    color: red;
+}
+
+.video-index-bottom:focus .video-index-item {
+    border: 1px solid #fff;
+}
+
+
+.video-index-wrapper {
+    position: relative;
+}
+
+.vsc-controller {
+    display:none;
+}
+
+.fa-play-circle {
+    width: 40px;
+}
+
+.title {
+    text-shadow: 1px, 1px, #000;
+}
+
+.rating {
+    border: 1px solid #fff;
+    font-size: 13px;
+    width: 40px;
+    text-align: center;
+    background-color: rgba(0,0,0,.3)
+}
+

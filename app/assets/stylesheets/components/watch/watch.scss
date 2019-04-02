@@ -1,0 +1,52 @@
+.movie {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #000;
+  right: 0;
+  bottom: 0;
+}
+
+.movie > .back-to-browse-wrapper {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #fff;
+  z-index: 4;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.back-to-browse {
+  font-size: 10px;
+  margin-left: 15px;
+  display: none;
+}
+
+.back-to-browse-wrapper:hover .back-to-browse {
+  transition: 3s;
+  display: inline;
+  font-size: 17px;
+}
+
+.movie > video {
+  width: 100%;
+  height: auto;
+  z-index: 3;
+}
+
+.movie >  .movie-title {
+  position: relative;
+  bottom: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-size: 20px;
+}

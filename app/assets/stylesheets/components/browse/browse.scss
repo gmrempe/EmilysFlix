@@ -1,14 +1,76 @@
-.signout-button {
-    background-color: #E50914;
-}
-
-.main-header {
+#root {
     background-color: #141414;
-    width: 100%;
 }
 
-.logo-main {
-    width: 100px;
-    height: 30px;
-    margin: 20px;
+.video-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 265px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
+
+.video-list-wrapper > h2 {
+    font-size: 23px;
+    color: #e5e5e5;
+    z-index: 2;
+    text-shadow: 2px, 2px, #000;
+}
+
+.video-list {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-list > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.video-list > ul::-webkit-scrollbar {
+    display: none;
+}
+
+.video-list > .fas {
+    background: rgba(0,0,0,0.85);
+    height: 143px;
+    width: 50px;
+    z-index: 5;
+    display: none;
+    cursor: pointer;
+}
+
+.video-list:hover .slider-left {
+    transition: .3s;
+    display: block;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+}
+
+.video-list:hover .slider-right {
+    transition: .3s;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+}
+
+// .video-list:hover > .hidden {
+//     display: none;
+// }
