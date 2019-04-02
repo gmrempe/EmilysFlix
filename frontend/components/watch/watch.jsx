@@ -34,10 +34,10 @@ class Watch extends React.Component {
                 <video controls autoPlay>
                     <source src={this.props.video.videoUrl} type="video/mp4"/>
                 </video>
-                {/* <div>
+                <div className="movie-title">
                     <h3>{this.props.video.title}</h3>
-                    <button className="pause" onClick={this.handleClick}>play</button>
-                </div> */}
+                    {/* <button className="pause" onClick={this.handleClick}>play</button> */}
+                </div>
             </div>
         )
     }

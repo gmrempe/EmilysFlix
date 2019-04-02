@@ -37,3 +37,16 @@
   height: auto;
   z-index: 3;
 }
+
+.movie >  .movie-title {
+  position: relative;
+  bottom: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-size: 20px;
+}

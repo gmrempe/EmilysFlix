@@ -1,17 +1,27 @@
 .main-header {
-    background-color: transparent;
-    height: 41px;
+    background: transparent;
+    height: 65px;
+    width: 100%;
     z-index: 2;
-    position: sticky;
+    position: fixed;
+    top: 0;
 }
 
-// .main-header:visited {
-//     background-color: #000;
-// }
+.black {
+    background: #000;
+    height: 65px;
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+}
 
 .header-wrapper {
     background-color: transparent;
     height: 100%;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
 }
 
 .main-header > nav {
@@ -21,16 +31,19 @@
     justify-content: space-between;
     align-items: center;
     margin-left: 50px;
+    margin-right: 75px;
 }
 
 .main-header > nav > div:first-child {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .browse-dropdown {
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -40,7 +53,6 @@
     justify-content: flex-start;
     align-items: center;
     width: 400px; 
-    margin-top: 25px; 
     margin-left: 10px;
     flex-basis: auto;
 }
@@ -62,9 +74,7 @@
 .logo-main {
     height: 30px;
     width: 90px;
-    margin-top: 25px;
     margin-right: 5px;
-    // margin-left: 4%;
     cursor: pointer;
 }
 
@@ -75,15 +85,12 @@
     align-items: center;
     height: 100%;
     width: 500px;
-    margin-right: 4%;
-    margin-top: 3%;
 }
 
 #search-bar > i::before {
     text-shadow: 0 1px 1px rgba(0,0,0,.3);
     height: 25px;
     margin-left: 8px;
-    margin-top: 10px;
 }
 
 #search-bar {
@@ -114,13 +121,15 @@
     position: relative;
     width: 40px;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .nav-menu > img {
     width: 40px;
     height: auto;
     margin-right: 30px;
-    margin-top: 2px;
     cursor: pointer;
 }
 
@@ -177,7 +186,7 @@
 }
 
 .browse-dropdown > h3 {
-    margin-top: 32px;
+    // margin-top: 32px;
 }
 
 .browse-dropdown-header {
