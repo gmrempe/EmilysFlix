@@ -23,7 +23,7 @@ class VideoListIndex extends React.Component {
     return (
         <div className="browse-main">
             <div className='hero'>
-                <video  mute="true" loop onClick={this.handleHeroClick}
+                <video  autoPlay mute="true" loop onClick={this.handleHeroClick}
                     className="hero-video"> {/*Banner video from Pexels*/}
                     <source src={window.hero} type="video/mp4"/>
                 </video>

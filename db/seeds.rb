@@ -12,11 +12,11 @@ User.create(email: "Saitama@gmail.com", password: "#OnePunch")
 video = Video.create(title: "Bird walking", rating: "G", creator: "Herwin Hayman", yr: "2015", description: "A bird walks on grass")
 # video2 = Video.create(title: "Mountains", rating: "G", creator: nil, yr: "2018", description: "Clouds fly by")
 
-image = open("https://s3.amazonaws.com/emilysflix-dev/Screen+Shot+2019-03-29+at+11.53.28+AM.png")
+photo = open("https://s3.amazonaws.com/emilysflix-dev/Screen+Shot+2019-03-29+at+11.53.28+AM.png")
 videoUrl = open("https://s3.amazonaws.com/emilysflix-dev/Pexels+Videos+1550669.mp4")
 # videoUrl = open("")
 
 
-video.attach(io: image, filename: "bird.png")
-video.attach(io: videoUrl, filename: "bird.mp4")
-# video.attach(io: videoUrl, filename: "mountain.mp4")
+video.image.attach(io: photo, filename: "bird.png")
+video.video.attach(io: videoUrl, filename: "bird.mp4")
+# video.attach(io: videoUrl, filename: "mountain.mp4")  
