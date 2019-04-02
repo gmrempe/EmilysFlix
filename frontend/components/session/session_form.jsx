@@ -81,7 +81,7 @@ class SessionForm extends React.Component {
         return (
             <div className="session">
                 <div className="background-image-wrapper-2">
-                    <header>
+                    <header className="session-form-header">
                         <img className="logo" onClick={this.home} src={window.logo} alt="logo" />
                     </header>
 
