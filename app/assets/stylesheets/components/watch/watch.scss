@@ -8,8 +8,8 @@
 }
 
 .movie > .back-to-browse-wrapper {
-  position: absolute;
-  top: 40px;
+  position: relative;
+  top: 70px;
   left: 40px;
   color: #fff;
   z-index: 4;
@@ -33,6 +33,7 @@
 }
 
 .movie > video {
+  min-width:477px;
   width: 100%;
   height: auto;
   z-index: 3;

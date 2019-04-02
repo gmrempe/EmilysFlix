@@ -5,9 +5,10 @@ import { selectAllVideos} from "../../reducers/selectors";
 import { showVideoShow } from "../../actions/ui_actions";
 
 
-const msp = state => {
+const msp = (state, ownProps) => {
     return {
-    videos: selectAllVideos(state) || []
+    videos: selectAllVideos(state) || [],
+    listKey: ownProps.index
     }
 }
 

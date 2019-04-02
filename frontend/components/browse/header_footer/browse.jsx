@@ -45,7 +45,7 @@ class Browse extends React.Component {
                             </div>
                         </div>
                         <div className='header-icons'>
-                            <label for="search" id="search-bar-container">
+                            <label htmlFor="search" id="search-bar-container">
                                 <button id="search-bar">
                                         <i className="fas fa-search fa-lg"></i>
                                         <input id="search-bar-input" maxLength="80" type="search" name="search"

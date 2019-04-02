@@ -29,7 +29,7 @@ class VideoListIndexItems extends React.Component {
     }
 
     handleLeftSlide(e) {
-        $('.card').animate({
+        $(`.card-${this.props.listKey}`).animate({
             scrollLeft: "-=800px"
         }, "fast");
 
@@ -42,7 +42,7 @@ class VideoListIndexItems extends React.Component {
     }
     
     handleRightSlide(e) {
-        $(".card").animate({
+        $(`.card-${this.props.listKey}`).animate({
             scrollLeft: "+=800px"
         }, "fast");
 
@@ -64,7 +64,7 @@ class VideoListIndexItems extends React.Component {
                     <h2>List Title</h2>
                     <div className="video-list">
                         <i className="fas fa-chevron-left fa-lg slider-left" onClick={this.handleLeftSlide}></i>
-                        <ul className="card">
+                        <ul className={`card-${this.props.listKey}`}>
                             {videos}
                             {videos}
                             {videos}

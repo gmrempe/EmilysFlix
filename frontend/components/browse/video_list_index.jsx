@@ -30,10 +30,10 @@ class VideoListIndex extends React.Component {
             </div>
             <div className="after-hero">
                 <ul>
-                    <VideoListIndexItemsContainer/>
-                    <VideoListIndexItemsContainer/>
-                    <VideoListIndexItemsContainer/>
-                    <VideoListIndexItemsContainer/>
+                    <VideoListIndexItemsContainer index={0}/>
+                    <VideoListIndexItemsContainer index={1}/>
+                    <VideoListIndexItemsContainer index={2}/>
+                    <VideoListIndexItemsContainer index={3}/>
                 </ul>
             </div>
         </div>

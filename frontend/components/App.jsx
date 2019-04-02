@@ -13,9 +13,6 @@ class App extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = {
-            color: false
-        }
         this.handleScroll = this.handleScroll.bind(this)
     }
 
@@ -31,12 +28,12 @@ class App extends React.Component {
         let scrollTop = event.currentTarget.scrollY
         const header = document.getElementsByClassName("main-header")
         // debugger
-        if (scrollTop > 0) {
-            this.setState({ color: true})
+        if (header) {
+        if ( scrollTop > 0) {
             header[0].classList.add("black")
         } else {
             header[0].classList.remove("black")
-        }
+        }}
     }
 
     render () {
