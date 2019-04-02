@@ -5,7 +5,16 @@ import { Link, withRouter} from "react-router-dom";
 class VideoShow extends React.Component  {
     constructor(props) {
         super(props)
+        this.state = {
+            show: "true"
+        }
         this.handleVideoPlay=this.handleVideoPlay.bind(this);
+        this.handleVideoShowClose=this.handleVideoShowClose.bind(this);
+        this.handleVideoShowSound = this.handleVideoShowSound.bind(this);
+    }
+
+    handleVideoShowClose() {
+        this.setState({show: "false"})  // todo : Component only mounts once!
     }
 
     handleVideoPlay() {
@@ -15,12 +24,19 @@ class VideoShow extends React.Component  {
     handleVideoShowSound() {
         const button = document.getElementsByClassName("soundButton")
         $(button).find('i').toggleClass('fa-volume-mute fa-volume-up');
+        const video = $(".video-show-autoplay")
+        if (video.prop('muted')) {
+            video.prop('muted', false)
+        } else {
+            video.prop('muted', true)
+        }
     }
 
     render() {
     const video = this.props.video;
-    
-    return (
+
+    if (video && this.state.show === "true"){
+        return (
         <div className="videoShow">
             <div className="video-show-buttons">
                 <div className="video-show-buttons-left">
@@ -50,7 +66,7 @@ class VideoShow extends React.Component  {
                     <div>Creators: {video.creator}</div>
                 </div>
                 <div className="video-show-buttons-right">
-                    <button className="videoShow-close">
+                    <button className="videoShow-close" onClick={this.handleVideoShowClose}>
                         <i className="fas fa-times fa-2x"></i>
                     </button>
                     <button className="soundButton" onClick={this.handleVideoShowSound}>
@@ -59,13 +75,17 @@ class VideoShow extends React.Component  {
                 </div>
             </div>
             <div className="video-show-video" onClick={this.handleVideoPlay}>
-                <video autoPlay width="100%" mute="true" poster={video.imageUrl}>
+                <video autoPlay className="video-show-autoplay" width="100%" mute ="true" poster={video.imageUrl}>
                         <source src={video.videoUrl} type="video/mp4" />
                 </video>
             </div>
+            <div className="video-screen"></div>
         </div>
     )
+    } else {
+        return (<></>)
     }
+}
 }
 
 export default withRouter(VideoShow);

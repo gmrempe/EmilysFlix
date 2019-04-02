@@ -6,7 +6,7 @@ import VideoShow from "./video_show";
 const msp = (state, ownProps) => {
     // debugger
     return {
-    video: ownProps.video || {},
+    video: ownProps.video
 }
 }
 

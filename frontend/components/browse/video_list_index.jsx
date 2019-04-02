@@ -13,6 +13,7 @@ const VideoListIndex = () => (
         <div className="after-hero">
             <ul>
                 <VideoListIndexItemsContainer/>
+                <VideoListIndexItemsContainer/>
             </ul>
         </div>
     </div>

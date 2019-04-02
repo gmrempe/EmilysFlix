@@ -34,7 +34,6 @@ class VideoIndexItem extends React.Component {
     render() {
         const video = this.props.video
         const onVideoShowClick = this.props.onVideoShowClick
-        // debugger
         
         return (
             <li className="video-index-item">
