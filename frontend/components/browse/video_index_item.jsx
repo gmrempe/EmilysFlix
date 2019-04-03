@@ -38,7 +38,7 @@ class VideoIndexItem extends React.Component {
                             <i className="far fa-play-circle fa-2x"></i>
                             <div className="title">{video.title}</div>
                             <div className="rating">{video.rating}</div>
-                            <div>Genre</div>
+                            <div>genre</div>
                         </div>
                         <div className="video-index-right">
                             <i className="fas fa-volume-mute fa-lg"></i>

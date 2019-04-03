@@ -27,7 +27,6 @@ class App extends React.Component {
     handleScroll(event) {
         let scrollTop = event.currentTarget.scrollY
         const header = document.getElementsByClassName("main-header")
-        // debugger
         if (header) {
         if ( scrollTop > 0) {
             header[0].classList.add("black")

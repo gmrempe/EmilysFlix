@@ -1,4 +1,4 @@
-import * as GenreAPIUtil from "../util/genre_util";
+import * as GenreAPIUtil from "../util/genre_api_util";
 
 export const RECEIVE_ALL_GENRES = "RECEIVE_ALL_GENRES";
 

@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import * as SessionAPIUtil from "./util/session_api_util";
-
+// import * as SessionAPIUtil from "./util/session_api_util";
+// import * as GenreAPIUtil from "./util/genre_api_util";
+// import {fetchAllGenres} from "./actions/genre_actions";
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById('root');
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //TESTS
     window.getState = store.getState
-    // window.
+    // window.fetchAllGenres = GenreAPIUtil.fetchAllGenres
     // window.dispatch = store.dispatch
     // window.login = SessionAPIUtil.login
     // window.signup = SessionAPIUtil.signup
@@ -34,5 +35,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ReactDOM.render(<Root store={store} />, root)
 })
-
-//user: email = greg@gmail.com, password = starwars
