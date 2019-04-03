@@ -43,13 +43,13 @@ class VideoIndexItem extends React.Component {
                         <div className="video-index-right">
                             <i className="fas fa-volume-mute fa-lg"></i>
                             <button className="like-index-item">
-                                <i class="far fa-thumbs-up fa-lg"></i>
+                                <i className="far fa-thumbs-up fa-lg"></i>
                             </button>
                             <button className="dislike-index-item">
-                                <i class="far fa-thumbs-up fa-lg"></i>                            
+                                <i className="far fa-thumbs-up fa-lg"></i>                            
                             </button>
                             <button className="myList-videoShow">
-                                <i class="fas fa-plus fa-lg"></i>
+                                <i className="fas fa-plus fa-lg"></i>
                             </button>
                         </div>
                     </div>

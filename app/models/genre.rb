@@ -4,7 +4,7 @@ class Genre < ApplicationRecord
     belongs_to :video_genres,
     primary_key: :id,
     foreign_key: :genre_id,
-    className: "VideoGenre"
+    class_name: "VideoGenre"
 
     has_many :videos,
     through: :video_genres,

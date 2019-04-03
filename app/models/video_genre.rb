@@ -3,7 +3,7 @@ class VideoGenre < ApplicationRecord
     validates [:video_id, :genre_id] uniqueness: true  #todo check this validation
     
     has_many :genres,
-    className: "Genre",
+    class_name: "Genre",
     foreign_key: :genre_id,
     primary_key: :id
 
