@@ -35,20 +35,26 @@ class VideoIndexItem extends React.Component {
                 <div className="video-index-button-wrapper">
                     <div className="video-index-buttons">
                         <div className="video-index-left">
-                            <i className="far fa-play-circle"></i>
+                            <i className="far fa-play-circle fa-2x"></i>
                             <div className="title">{video.title}</div>
                             <div className="rating">{video.rating}</div>
                             <div>Genre</div>
                         </div>
                         <div className="video-index-right">
-                            <i className="fas fa-volume-mute"></i>
-                            <button className="like-index-item">like</button>
-                            <button className="dislike-index-item">dislike</button>
-                            <button className="myList-videoShow">mylist</button>
+                            <i className="fas fa-volume-mute fa-lg"></i>
+                            <button className="like-index-item">
+                                <i class="far fa-thumbs-up fa-lg"></i>
+                            </button>
+                            <button className="dislike-index-item">
+                                <i class="far fa-thumbs-up fa-lg"></i>                            
+                            </button>
+                            <button className="myList-videoShow">
+                                <i class="fas fa-plus fa-lg"></i>
+                            </button>
                         </div>
                     </div>
                     <button className="video-index-bottom" onClick={toggleVideoShowClick(video)}>
-                        <i className="fas fa-chevron-down fa-2x"></i>
+                        <i className="fas fa-chevron-down fa-3x"></i>
                     </button>
                 </div>
                 <div className="video-index-wrapper" onClick={this.handlePlayClick}>

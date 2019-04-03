@@ -1,5 +1,4 @@
 .after-hero > ul > div > .videoShow {
-    // display: none;
     height: 450px;
     width: 100%;
     display: flex;
@@ -8,9 +7,9 @@
 
 .video-screen {
     position: absolute;
-    width: 100%;
+    width: 42%;
     height: 100%;
-    background-image: linear-gradient(to right, #000, transparent);
+    background-image: linear-gradient(to right, #000, #000 70%, transparent);
 }
 
 .video-show-buttons {
@@ -46,6 +45,10 @@
     margin-right: 10px;
 }
 
+.rating {
+    padding: 2px;
+}
+
 .video-show-buttons-left > span {
     margin: 10px;
     color: #999;
@@ -65,8 +68,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 65px;
-    height: 25px;
+    width: 100px;
+    height: 35px;
 }
 
 .video-show-play > i {
@@ -74,14 +77,14 @@
 }
 
 .video-show-play > .video-show-play-button {
-    font-size: 9px;
+    font-size: 14px;
 }
 
 .video-show-buttons-left > nav > .myList-videoShow {
-    font-size: 9px;
+    font-size: 14px;
     border: 1px solid rgba(255,255,255,.4);
     background-color: transparent;
-    width: 80px;
+    width: 120px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -104,12 +107,6 @@
     margin-top: 5%;
     padding-top: 13px;
 }
-
-// .videoShow-close:focus .videoShow{
-//     display: none;
-//     // position: relative;
-//     // margin-bottom: 25px;
-// }
 
 .videoShow-close:hover {
     cursor: pointer;

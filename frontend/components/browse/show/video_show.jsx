@@ -45,7 +45,7 @@ class VideoShow extends React.Component  {
                     </span>
                     <nav>
                         <button className="video-show-play">
-                            <i className="fas fa-play fa-sm"></i>
+                            <i className="fas fa-play fa-lg"></i>
                             <Link className="video-show-play-button" to={`/watch/${video.id}`}>PLAY</Link>
                         </button>
                         <button className="myList-videoShow">
