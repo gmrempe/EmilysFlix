@@ -18,7 +18,7 @@ video = Video.create(title: "Bird walking", rating: "G", creator: "Herwin Hayman
 # video2 = Video.create(title: "Mountains", rating: "G", creator: nil, yr: "2018", description: "Clouds fly by")
 
 # genre = Genre.create(name: 'Animal')
-# videoGenre = VideoGenre.create(video_id: 2, genre_id: 1)
+# videoGenre = VideoGenre.create(video_id: 2, genre_id: 1)    ////ids are all different now!!!!!!!
 
 photo = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.png")
 videoUrl = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.mp4")

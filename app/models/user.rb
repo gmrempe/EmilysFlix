@@ -5,6 +5,11 @@ class User < ApplicationRecord
 
     attr_reader :password
 
+    has_one :mylist,
+    class_name: "MyList",
+    primary_key: :id,
+    foreign_key: :user_id
+
     after_initialize :ensure_session_token
 
     def ensure_session_token
