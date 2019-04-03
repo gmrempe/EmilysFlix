@@ -25,11 +25,21 @@ class VideoIndexItem extends React.Component {
     //             muteButton.classList = "fas fa-volume-up"
     //         }
     //     })
+    componentDidMount() {
+        this.props.fetchAllGenres();
+    }
 
     render() {
         const video = this.props.video
         const toggleVideoShowClick = this.props.toggleVideoShowClick
-        // debugger
+        const genres = video.genreIds.map((id, i) => {
+            for(let i=0; i< this.props.genres.length; i++) {
+                if (this.props.genres[i].id === id) {
+                    return <li key={`genre-${i}`}>{this.props.genres[i].name}</li>
+                }
+            }
+        })
+        
         return (
             <li className="video-index-item">
                 <div className="video-index-button-wrapper">
@@ -38,7 +48,7 @@ class VideoIndexItem extends React.Component {
                             <i className="far fa-play-circle fa-2x"></i>
                             <div className="title">{video.title}</div>
                             <div className="rating">{video.rating}</div>
-                            <div>Genre</div>
+                            <ul>{genres}</ul>
                         </div>
                         <div className="video-index-right">
                             <i className="fas fa-volume-mute fa-lg"></i>

@@ -58,7 +58,7 @@ class VideoListIndexItems extends React.Component {
     
     render() {
     //    debugger
-        const videos = this.props.videos.map(video => <VideoIndexItem key={video.id} video={video} toggleVideoShowClick={this.toggleVideoShowClick} className="card-content"/>)
+        const videos = this.props.videos.map(video => <VideoIndexItem key={video.id} video={video} genres={this.props.genres} fetchAllGenres={this.props.fetchAllGenres} toggleVideoShowClick={this.toggleVideoShowClick} className="card-content"/>)
         return(
             <div>
                 <section className="video-list-wrapper">
