@@ -6,6 +6,7 @@ import { showVideoShow } from "../../actions/ui_actions";
 
 
 const msp = (state, ownProps) => {
+    // debugger
     return {
     videos: selectAllVideos(state) || [],
     listKey: ownProps.index
