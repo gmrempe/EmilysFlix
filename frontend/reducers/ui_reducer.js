@@ -1,7 +1,13 @@
-import { combineReducers } from "redux";
-import uiVideoReducer from "./ui_video_reducer";
 
 
-export default combineReducers({
-    videoId: uiVideoReducer
-})
+
+export default (state = {}, action) => {
+    const prevState = Object.assign({}, state);
+
+    Object.freeze(state);
+    switch (action.type) {
+
+        default:
+            return prevState;
+    }
+}

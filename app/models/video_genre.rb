@@ -1,11 +1,14 @@
 class VideoGenre < ApplicationRecord
     validates :video_id, :genre_id, presence: true
-    validates [:video_id, :genre_id] uniqueness: true  #todo check this validation
+    validates :video_id, uniqueness: {scope: :genre_id}
     
-    has_many :genres,
+    belongs_to :genres,
     class_name: "Genre",
     foreign_key: :genre_id,
     primary_key: :id
 
-    has_many :videos
+    belongs_to :videos,
+    class_name: "Video",
+    foreign_key: :video_id,
+    primary_key: :id
 end
