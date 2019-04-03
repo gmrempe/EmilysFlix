@@ -36,7 +36,7 @@ class App extends React.Component {
     }
 
     render () {
-
+        
     return (
     <div>
         <Route exact path="/browse" component={Header} onscroll={this.handleScroll}/>

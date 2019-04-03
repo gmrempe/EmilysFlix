@@ -1,22 +1,22 @@
 import { connect } from "react-redux";
 import VideoListIndexItems from "./video_list_index_items";
 import { fetchAllVideos } from "../../actions/video_actions";
-import { selectAllVideos} from "../../reducers/selectors";
-import { showVideoShow } from "../../actions/ui_actions";
-
+import { selectAllVideos, selectAllGenres} from "../../reducers/selectors";
+import {fetchAllGenres} from "../../actions/genre_actions";
 
 const msp = (state, ownProps) => {
     // debugger
     return {
     videos: selectAllVideos(state) || [],
-    listKey: ownProps.index
+    listKey: ownProps.index,
+    genres: selectAllGenres(state) || []
     }
 }
 
 const mdp = (dispatch, ownProps) => ({
     fetchAllVideos: videos => dispatch(fetchAllVideos(videos)),
-    showVideoShow: video => dispatch(showVideoShow(video.id)),
-    onVideoShowClick: ownProps.onVideoShowClick
+    // onVideoShowClick: ownProps.onVideoShowClick,
+    fetchAllGenres: genres => dispatch(fetchAllGenres(genres))
 })
 
 export default connect(msp, mdp)(VideoListIndexItems);
