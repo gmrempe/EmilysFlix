@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require "open-uri"
+# require "open-uri"
 
 User.create(email: "Saitama@gmail.com", password: "#OnePunch")
 
@@ -15,8 +15,8 @@ video = Video.create(title: "Bird walking", rating: "G", creator: "Herwin Hayman
 genre = Genre.create(name: 'Animal')
 videoGenre = VideoGenre.create(video_id: 2, genre_id: 1)
 
-photo = open("https://s3.amazonaws.com/emilysflix-seed/bird.png")
-videoUrl = open("https://s3.amazonaws.com/emilysflix-seed/bird.mp4")
+photo = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.png")
+videoUrl = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.mp4")
 # videoUrl = open("")
 
 
