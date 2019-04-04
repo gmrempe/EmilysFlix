@@ -2,18 +2,11 @@ import { connect } from "react-redux";
 import GenreIndex from "./genre_index";
 
 
-export const msp = state => {
+export const msp = (state, ownProps) => {
     return ({
         videos: state.entities.videos,
-        genres: state.entites.genres
+        genre: state.entities.genres.filter(genre => (genre.id == ownProps.match.params.genre_id))
     })
 }
 
-export const mdp = dispatch => {
-    return ({
-
-    })
-}
-
-
-export default connect(msp, mdp)(GenreIndex);
+export default connect(msp, null)(GenreIndex);

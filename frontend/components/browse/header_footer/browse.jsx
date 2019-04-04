@@ -9,6 +9,8 @@ class Browse extends React.Component {
         this.handleLogoClick = this.handleLogoClick.bind(this)
         this.handleMyListClick = this.handleMyListClick.bind(this)
         this.handleHomeClick = this.handleHomeClick.bind(this)
+        this.handleNatureClick = this.handleNatureClick.bind(this)
+        this.handleAnimalClick = this.handleAnimalClick.bind(this)
     }
 
     handleLogoClick() {
@@ -23,20 +25,25 @@ class Browse extends React.Component {
         this.props.history.push('/browse')
     }
 
+    handleNatureClick() {
+        this.props.history.push(`/browse/genre/${this.props.genres[1].id}`)
+    }
+
+    handleAnimalClick() {
+        this.props.history.push(`/browse/genre/${this.props.genres[0].id}`)
+    }
+
     handleLogout() {
         this.props.logout();
         this.props.history.push('/')
     }
 
-    // handleHover() {
-    //     const menu = document.getElementById("header-menu").style.zIndex = 3;
-    // }
-
-    // handleHoverO() {
-    //     const menu = document.getElementById("header-menu").style.zIndex = -1;
-    // }
+    componentDidMount() {
+        this.props.fetchAllGenres
+    }
 
     render() {
+
         return (
             <div className="header-wrapper">
                 <header className='main-header'>
@@ -47,8 +54,8 @@ class Browse extends React.Component {
                                 <h3 className="browse-dropdown-header">Browse</h3>
                                 <ul className="browse-dropdown-header-content">
                                     <li onClick={this.handleHomeClick} >Home</li>
-                                    <li>TV Shows</li>
-                                    <li>Movies</li>
+                                    <li onClick={this.handleNatureClick} >Nature</li>
+                                    <li onClick={this.handleAnimalClick} >Animal</li>
                                     <li>Recently Added</li>
                                     <li onClick={this.handleMyListClick}>My List</li>
                                 </ul>

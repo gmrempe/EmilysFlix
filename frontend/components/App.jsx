@@ -7,6 +7,7 @@ import SplashContainer from "./splash/splash_container";
 import VideoListIndex from "./browse/video_list_index";
 import WatchContainer from "./watch/watch_container";
 import MyListContainer from "./browse/mylist/mylist_container.jsx";
+import GenreContainer from "./browse/genre/genre_container";
 import Header from "./browse/header_footer/browse_container";
 import Footer from './browse/header_footer/footer';
 
@@ -46,6 +47,7 @@ class App extends React.Component {
                 <AuthRoute exact path="/login" component={LoginFormContainer}/>
                 <AuthRoute exact path="/signup" component={SignupFormContainer}/>
                 <ProtectedRoute exact path="/browse/my-list" component={MyListContainer}/>
+                <ProtectedRoute exact path="/browse/genre/:genre_id" component={GenreContainer}/>
                 <ProtectedRoute exact path="/browse" component={VideoListIndex}/>
                 <ProtectedRoute exact path="/watch/:video_id" component={WatchContainer}/>
                 <LandingRoute path="/" component={SplashContainer}/>
