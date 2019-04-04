@@ -6,7 +6,7 @@ import {AuthRoute, ProtectedRoute, LandingRoute} from '../util/route_util';
 import SplashContainer from "./splash/splash_container";
 import VideoListIndex from "./browse/video_list_index";
 import WatchContainer from "./watch/watch_container";
-import MyListContainer from "./browse/mylist/mylist_container";
+import MyListContainer from "./browse/mylist/mylist_container.jsx";
 import Header from "./browse/header_footer/browse_container";
 import Footer from './browse/header_footer/footer';
 

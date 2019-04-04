@@ -1,0 +1,11 @@
+.my-list {
+    min-height: 900px;
+    display: flex;
+}
+
+.my-list > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

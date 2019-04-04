@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoIndexItemContainer from "../video_index_item_container";
+import VideoIndexItemContainer from "../video_index_item_container.js";
 import VideoShowContainer from "../show/video_show_container";
 
 class myListIndex extends React.Component {
@@ -43,7 +43,7 @@ class myListIndex extends React.Component {
             })
         }
     return (
-        <section>
+        <section className="my-list">
             <ul>
                 {videos}
             </ul>
