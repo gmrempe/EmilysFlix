@@ -22,8 +22,9 @@ class myListIndex extends React.Component {
         }
     }
 
-    componentDidMount() {
+    componentWillMount() {
         // debugger
+        // this.setState()??
         this.props.myListVideos
     }
 
