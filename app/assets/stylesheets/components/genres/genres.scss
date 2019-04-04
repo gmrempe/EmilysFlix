@@ -4,8 +4,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: 40px;
-    margin-right: 40px;
 }
 
 .genre-show > h1 {
@@ -15,6 +13,8 @@
 }
 
 .genre-show > ul {
+    margin-left: 40px;
+    margin-right: 40px;
     margin-top: 150px;
     width: 100%;
     display: flex;
