@@ -7,10 +7,20 @@ class Browse extends React.Component {
         super(props);
         this.handleLogout = this.handleLogout.bind(this)
         this.handleLogoClick = this.handleLogoClick.bind(this)
+        this.handleMyListClick = this.handleMyListClick.bind(this)
+        this.handleHomeClick = this.handleHomeClick.bind(this)
     }
 
     handleLogoClick() {
         this.props.history.push('/')
+    }
+
+    handleMyListClick() {
+        this.props.history.push('/browse/my-list')
+    }
+
+    handleHomeClick() {
+        this.props.history.push('/browse')
     }
 
     handleLogout() {
@@ -36,11 +46,11 @@ class Browse extends React.Component {
                             <div className="browse-dropdown">
                                 <h3 className="browse-dropdown-header">Browse</h3>
                                 <ul className="browse-dropdown-header-content">
-                                    <li>Home</li>
+                                    <li onClick={this.handleHomeClick} >Home</li>
                                     <li>TV Shows</li>
                                     <li>Movies</li>
                                     <li>Recently Added</li>
-                                    <li>My List</li>
+                                    <li onClick={this.handleMyListClick}>My List</li>
                                 </ul>
                             </div>
                         </div>

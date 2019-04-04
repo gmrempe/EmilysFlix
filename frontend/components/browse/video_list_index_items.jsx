@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoIndexItem from './video_index_item';
+import VideoIndexItemContainer from "./video_index_item_container";
 import VideoShowContainer from './show/video_show_container';
 
 class VideoListIndexItems extends React.Component {
@@ -58,7 +58,7 @@ class VideoListIndexItems extends React.Component {
     
     render() {
     //    debugger
-        const videos = this.props.videos.map(video => <VideoIndexItem key={video.id} video={video} genres={this.props.genres} fetchAllGenres={this.props.fetchAllGenres} toggleVideoShowClick={this.toggleVideoShowClick} className="card-content"/>)
+        const videos = this.props.videos.map(video => <VideoIndexItemContainer key={video.id} video={video} toggleVideoShowClick={this.toggleVideoShowClick} className="card-content"/>)
         return(
             <div>
                 <section className="video-list-wrapper">

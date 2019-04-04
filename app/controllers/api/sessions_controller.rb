@@ -8,7 +8,6 @@ class Api::SessionsController < ApplicationController
         else
             render json: ["Password must contain between 4 and 60 characters", "Email must be valid."], status: 401
         end
-
     end
 
     def destroy
@@ -19,6 +18,5 @@ class Api::SessionsController < ApplicationController
         else
             render json: ["No one is logged in"], status: 422
         end
-
     end
 end

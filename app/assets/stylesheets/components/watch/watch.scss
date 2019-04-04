@@ -8,8 +8,8 @@
 }
 
 .movie > .back-to-browse-wrapper {
-  position: relative;
-  top: 70px;
+  position: fixed;
+  top: 40px;
   left: 40px;
   color: #fff;
   z-index: 4;
@@ -52,20 +52,20 @@ h3 {
   font-size: 20px;
 }
 
-@media only screen and (min-width: 888px) {
-  .movie > .back-to-browse-wrapper {
-    top: 100px;
-  }
-}
+// @media only screen and (min-width: 888px) {
+//   .movie > .back-to-browse-wrapper {
+//     top: 100px;
+//   }
+// }
 
-@media only screen and (min-width: 940px) {
-  .movie > .back-to-browse-wrapper {
-    top: 130px;
-  }
-}
+// @media only screen and (min-width: 940px) {
+//   .movie > .back-to-browse-wrapper {
+//     top: 130px;
+//   }
+// }
 
-@media only screen and (min-width: 1000px) {
-  .movie > .back-to-browse-wrapper {
-    top: 150px;
-  }
-}
+// @media only screen and (min-width: 1000px) {
+//   .movie > .back-to-browse-wrapper {
+//     top: 150px;
+//   }
+// }
