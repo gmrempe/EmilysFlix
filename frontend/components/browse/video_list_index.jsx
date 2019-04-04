@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoListIndexItemsContainer from "./video_list_index_items_container";
+import SearchDisplayContainer from "../base_presentational/base";
 
 class VideoListIndex extends React.Component {
 
@@ -18,9 +19,18 @@ class VideoListIndex extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.props.filteredContent
+    }
+
     render() {
-    
-    return (
+    debugger
+    if (this.props.filteredContent) {
+        return (
+            <SearchDisplayContainer/>
+        )
+    } else {
+        return (
         <div className="browse-main">
             <div className='hero'>
                 {/* <video  autoPlay mute="true" loop onClick={this.handleHeroClick}
@@ -34,7 +44,8 @@ class VideoListIndex extends React.Component {
                 </ul>
             </div>
         </div>
-    )
+        )
+    }
     }
 }
 

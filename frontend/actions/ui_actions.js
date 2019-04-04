@@ -11,3 +11,10 @@
 //     type: SHOW_VIDEO_SHOW,
 //     videoId
 // });
+
+export const SEARCH = "SEARCH";
+
+export const search = (filteredContent) => ({
+    type: SEARCH,
+    filteredContent
+})

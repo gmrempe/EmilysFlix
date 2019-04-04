@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import SearchBarContainer from "../../search/search_container";
 
 class Browse extends React.Component {
 
@@ -55,13 +56,7 @@ class Browse extends React.Component {
                             </div>
                         </div>
                         <div className='header-icons'>
-                            <label htmlFor="search" id="search-bar-container">
-                                <button id="search-bar">
-                                        <i className="fas fa-search fa-lg"></i>
-                                        <input id="search-bar-input" maxLength="80" type="search" name="search"
-                                        placeholder="Title, genre, people"/>
-                                </button>
-                            </label>
+                            <SearchBarContainer />
                             <div className="nav-menu">
                                 <img id="avatar" src={window.avatar}/>
                                 {/* <i className="fas fa-sort-down"></i> */}
