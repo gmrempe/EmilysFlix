@@ -4,7 +4,6 @@ import { fetchAllVideos } from "../../actions/video_actions";
 import { selectAllVideos } from "../../reducers/selectors";
 
 const msp = (state, ownProps) => {
-    // debugger
     return {
     videos: selectAllVideos(state) || [],
     listKey: ownProps.index

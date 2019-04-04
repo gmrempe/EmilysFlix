@@ -37,8 +37,7 @@ class GenreIndex extends React.Component {
            )
            })
         
-        debugger
-        return (
+           return (
             <section className="genre-show">
                 <h1>{genre.name}</h1>
                 <ul>
