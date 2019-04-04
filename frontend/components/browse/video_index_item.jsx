@@ -30,16 +30,19 @@ class VideoIndexItem extends React.Component {
     }
 
     render() {
-        const video = this.props.video
+        const video = this.props.video;
+        const propsGenres = this.props.genres
         const toggleVideoShowClick = this.props.toggleVideoShowClick
-        const genres = video.genreIds.map((id, i) => {
-            for(let i=0; i< this.props.genres.length; i++) {
-                if (this.props.genres[i].id === id) {
-                    return <li key={`genre-${i}`}>{this.props.genres[i].name}</li>
+        let genres = [];
+        if (propsGenres.length > 0) {
+             genres = video.genreIds.map((id) => {
+                for(let i=0; i< propsGenres.length; i++) {
+                    if (propsGenres[i].id === id) {
+                        return <li key={`genre-${i}`}>{propsGenres[i].name}</li>
+                    }
                 }
-            }
-        })
-        
+            })
+        }
         return (
             <li className="video-index-item">
                 <div className="video-index-button-wrapper">

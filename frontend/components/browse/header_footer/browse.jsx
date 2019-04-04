@@ -7,10 +7,15 @@ class Browse extends React.Component {
         super(props);
         this.handleLogout = this.handleLogout.bind(this)
         this.handleLogoClick = this.handleLogoClick.bind(this)
+        this.handleMyListClick = this.handleMyListClick.bind(this)
     }
 
     handleLogoClick() {
         this.props.history.push('/')
+    }
+
+    handleMyListClick() {
+        this.props.history.push('/browse/my-list')
     }
 
     handleLogout() {
@@ -40,7 +45,7 @@ class Browse extends React.Component {
                                     <li>TV Shows</li>
                                     <li>Movies</li>
                                     <li>Recently Added</li>
-                                    <li>My List</li>
+                                    <li onClick={this.handleMyListClick}>My List</li>
                                 </ul>
                             </div>
                         </div>

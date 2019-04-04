@@ -13,5 +13,9 @@ class Video < ApplicationRecord
     class_name: "VideoMyList",
     primary_key: :id,
     foreign_key: :video_id
+
+    # has_one :user,
+    # through: :my_lists,
+    # source: :user
     
 end
