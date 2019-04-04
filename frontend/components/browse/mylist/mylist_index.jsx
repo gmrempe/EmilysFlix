@@ -28,9 +28,10 @@ class myListIndex extends React.Component {
     }
 
     render()  {
-        debugger
         let videos = [];
         const myListVideoIds = this.props.myListVideoIds;
+        debugger
+
         if (myListVideoIds.length > 0) {
             videos = myListVideoIds.map((id) => {
                 debugger
@@ -53,4 +54,4 @@ class myListIndex extends React.Component {
     }
 }
 
-export default myListIndex
+export default myListIndex;

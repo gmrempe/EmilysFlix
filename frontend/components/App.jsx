@@ -40,7 +40,7 @@ class App extends React.Component {
         
     return (
     <div>
-        <Route exact path="/browse" component={Header} onscroll={this.handleScroll}/>
+        <Route path="/browse" component={Header} onscroll={this.handleScroll}/>
         <div className='content-main'>
             <Switch>
                 <AuthRoute exact path="/login" component={LoginFormContainer}/>
@@ -51,7 +51,7 @@ class App extends React.Component {
                 <LandingRoute path="/" component={SplashContainer}/>
             </Switch>
         </div>
-        <Route exact path="/browse" component={Footer} />
+        <Route path="/browse" component={Footer} />
     </div>
     )
     }

@@ -1,12 +1,11 @@
 import { connect } from "react-redux";
 import myListIndex from "./mylist_index";
-import { selectAllVideos } from "../../../reducers/selectors";
 
 const msp = state => {
-    // debugger
+    debugger
     return ({
-        videos: selectAllVideos(state) || [],
-        myListVideoIds: state.entities.users[5].myListVideoIds || []  //// todo how to get user id???
+        videos: state.entities.videos || [],
+        myListVideoIds: state.entities.users[state.session.id].myListVideoIds || [] //// todo why doesn't this work?
     })
 }
 
