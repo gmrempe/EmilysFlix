@@ -8,7 +8,7 @@
 .video-screen {
     position: absolute;
     width: 42%;
-    height: 100%;
+    height: 450px;
     background-image: linear-gradient(to right, #000, #000 70%, transparent);
 }
 
@@ -123,12 +123,12 @@
 
 .video-show-video {
     width: 75%;
+    height: 100%;
     margin-left: 25%;
     right: 0;
     display: flex;
     align-items: center;
     overflow: hidden;
     cursor: pointer;
-
 }
 

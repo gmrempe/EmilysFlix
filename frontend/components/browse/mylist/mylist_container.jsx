@@ -1,16 +1,14 @@
 import { connect } from "react-redux";
-import myListIndex from "./mylist_index";
+import MyListIndex from "./mylist_index.jsx";
 
 const msp = state => {
-    debugger
     return ({
         videos: state.entities.videos || [],
-        myListVideoIds: state.entities.users[state.session.id].myListVideoIds || [] //// todo why doesn't this work?
+        myListVideoIds: state.entities.users[state.session.id].myListVideoIds || [],
     })
 }
 
 // const mdp = dispatch => ({
-//     fetchUser: () => dispatch(fetchUser())
 // })
 
-export default connect(msp, null)(myListIndex);
+export default connect(msp, null)(MyListIndex);
