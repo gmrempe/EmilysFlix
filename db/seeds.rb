@@ -10,15 +10,18 @@ VideoGenre.destroy_all
 Genre.destroy_all
 Video.destroy_all
 User.destroy_all
+MyList.destroy_all
+VideoMyList.destroy_all
 
-
-User.create(email: "Saitama@gmail.com", password: "#OnePunch")
+user = User.create(email: "Saitama@gmail.com", password: "#OnePunch")
 
 video = Video.create(title: "Bird walking", rating: "G", creator: "Herwin Hayman", yr: "2015", description: "A bird walks on grass")
 # video2 = Video.create(title: "Mountains", rating: "G", creator: nil, yr: "2018", description: "Clouds fly by")
 
-# genre = Genre.create(name: 'Animal')
-# videoGenre = VideoGenre.create(video_id: 2, genre_id: 1)    ////ids are all different now!!!!!!!
+genre = Genre.create(name: 'Animal')
+videoGenre = VideoGenre.create(video_id: video.id, genre_id: genre.id)
+myList = MyList.create(user_id: user.id)
+videoMyList = VideoMyList.create(my_list_id: myList.id, video_id: video.id)
 
 photo = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.png")
 videoUrl = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.mp4")
