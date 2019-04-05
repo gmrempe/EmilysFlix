@@ -1,4 +1,4 @@
-class VideoMyList < ApplicationRecord
+class List < ApplicationRecord
     validates :mylist_id, :video_id, presence: true
     validates :mylist_id, uniqueness: {scope: :video_id}
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_03_192755) do
+ActiveRecord::Schema.define(version: 2019_04_05_133139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(version: 2019_04_03_192755) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "lists", force: :cascade do |t|
+    t.integer "video_id", null: false
+    t.integer "mylist_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mylist_id", "video_id"], name: "index_lists_on_mylist_id_and_video_id", unique: true
+  end
+
   create_table "my_lists", force: :cascade do |t|
     t.string "user_id", null: false
     t.datetime "created_at", null: false
@@ -65,14 +73,6 @@ ActiveRecord::Schema.define(version: 2019_04_03_192755) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["video_id", "genre_id"], name: "index_video_genres_on_video_id_and_genre_id", unique: true
-  end
-
-  create_table "video_my_lists", force: :cascade do |t|
-    t.integer "video_id", null: false
-    t.integer "mylist_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["mylist_id", "video_id"], name: "index_video_my_lists_on_mylist_id_and_video_id", unique: true
   end
 
   create_table "videos", force: :cascade do |t|

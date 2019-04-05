@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import VideoShow from "./video_show";
-import * as VideoMyListAPIUtil from "../../../util/videoMyList_api_util";
+import * as ListAPIUtil from "../../../util/List_api_util";
 
 const msp = (state, ownProps) => {
     return {
@@ -11,8 +11,8 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch, ownProps) => ({
     toggleVideoShowClick: video => ownProps.toggleVideoShowClick(video),
-    createVideoMyList: videoId => VideoMyListAPIUtil.createVideoMyList(videoId),
-    deleteVideoMyList: listId => VideoMyListAPIUtil.deleteVideoMyList(listId)
+    createList: videoId => ListAPIUtil.createList(videoId),
+    deleteList: listId => ListAPIUtil.deleteList(listId)
 })
 
 export default connect(msp, mdp)(VideoShow);

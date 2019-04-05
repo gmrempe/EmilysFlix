@@ -5,7 +5,7 @@ import Root from './components/root';
 // import * as SessionAPIUtil from "./util/session_api_util";
 // import * as GenreAPIUtil from "./util/genre_api_util";
 // import {fetchAllGenres} from "./actions/genre_actions";
-import * as VideoMyListAPIUtil from "./util/videoMyList_api_util";
+import * as ListAPIUtil from "./util/List_api_util";
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById('root');
@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //TESTS
     window.getState = store.getState
-    window.createVideoMyList = VideoMyListAPIUtil.createVideoMyList
-    window.deleteVideoMyList = VideoMyListAPIUtil.deleteVideoMyList
+    window.createList = ListAPIUtil.createList
+    window.deleteList = ListAPIUtil.deleteList
     // window.fetchAllGenres = GenreAPIUtil.fetchAllGenres
     // window.dispatch = store.dispatch
     // window.login = SessionAPIUtil.login
