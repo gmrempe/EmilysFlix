@@ -37,7 +37,7 @@ videoMyList = VideoMyList.create(mylist_id: myList.id, video_id: video2.id)
 photo = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.png")
 videoUrl = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.mp4")
 
-photo4 = EzDownload.open("")
+# photo4 = EzDownload.open("")
 videoUrl4 = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/Pexels+Videos+1093652.mp4")
 
 photo3 = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/Screen+Shot+2019-04-04+at+11.02.08+PM.png")
@@ -50,7 +50,7 @@ videoUrl2 = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/Pexels+Vid
 video.image.attach(io: photo, filename: "bird.png")
 video.video.attach(io: videoUrl, filename: "bird.mp4")
 
-# video.image.attach(io: photo, filename: "bird.png")
+video.image.attach(io: photo, filename: "bird.png")
 video4.video.attach(io: videoUrl4, filename: "Pexels Videos 1093652.mp4")
 
 video3.image.attach(io: photo3, filename: "Screen Shot 2019-04-04 at 11.02.08 PM.png")
