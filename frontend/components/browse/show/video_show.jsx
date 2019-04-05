@@ -13,11 +13,11 @@ class VideoShow extends React.Component  {
 
     handleMyListClick() {
     //     debugger
-    //     if (this.props.myListVideoIds.includes(this.props.video.id)){
-    //         this.props.deleteVideoMyList(this.props.video.id)
-    //     } else {
-    //         this.props.createVideoMyList(this.props.video.id)
-    //     }
+        if (this.props.myListVideoIds.includes(this.props.video.id)){
+            this.props.deleteVideoMyList(this.props.video.id)
+        } else {
+            this.props.createVideoMyList(this.props.video.id)
+        }
     }
 
     handleVideoPlay() {
@@ -38,16 +38,16 @@ class VideoShow extends React.Component  {
     render() {
     const video = this.props.video;
     const toggleVideoShowClick = this.props.toggleVideoShowClick;
-        // debugger
     let myListIcon = <i className="fas fa-plus fa-lg"></i>
-
-        // if (this.props.myListVideoIds.includes(video.id)) {
-        //     let myListIcon = <i className="fas fa-check fa-lg"></i>
-        // } else {
-        //     let myListIcon = <i className="fas fa-plus fa-lg"></i>
-        // }
+    
+    // debugger
+    if (video)  {
+        if (this.props.myListVideoIds.includes(video.id)) {
+            myListIcon = <i className="fas fa-check fa-lg"></i>
+        } else {
+            myListIcon = <i className="fas fa-plus fa-lg"></i>
+        }
    
-        if (video)  {
         return (
         <div className="videoShow">
             <div className="video-show-buttons">
