@@ -19,7 +19,7 @@ myList = MyList.create(user_id: user.id)
 video = Video.create(title: "Bird walking", rating: "PG-13", creator: "Herwin Hayman", yr: "2015", description: "A bird walks on grass.")
 video2 = Video.create(title: "Mountains", rating: "G", creator: "Eberhard Grossgasteiger", yr: "2019", description: "Rolling through the ether.")
 video3 = Video.create(title: "Pupper", rating: "PG", creator: "Coverr", yr: "2018", description: "Cute and fluffy pupper frolicking on the beach at sunset.")
-video4 = Video.create(title: "Illusion", rating: "TV-Y7", creator: "Truth", yr: "2018", description: "Which way is the water going?")
+# video4 = Video.create(title: "Illusion", rating: "TV-Y7", creator: "Truth", yr: "2018", description: "Which way is the water going?")
 
 genre = Genre.create(name: 'Animal')
 genre2 = Genre.create(name: 'Nature')
@@ -28,7 +28,7 @@ genre2 = Genre.create(name: 'Nature')
 videoGenre = VideoGenre.create(video_id: video.id, genre_id: genre.id)
 videoGenre2 = VideoGenre.create(video_id: video2.id, genre_id: genre2.id)
 videoGenre3 = VideoGenre.create(video_id: video3.id, genre_id: genre.id)
-videoGenre4 = VideoGenre.create(video_id: video4.id, genre_id: genre2.id)
+# videoGenre4 = VideoGenre.create(video_id: video4.id, genre_id: genre2.id)
 
 
 videoMyList = VideoMyList.create(mylist_id: myList.id, video_id: video2.id)
@@ -38,7 +38,7 @@ photo = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.png")
 videoUrl = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.mp4")
 
 # photo4 = EzDownload.open("")
-videoUrl4 = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/Pexels+Videos+1093652.mp4")
+# videoUrl4 = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/Pexels+Videos+1093652.mp4")
 
 photo3 = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/Screen+Shot+2019-04-04+at+11.02.08+PM.png")
 videoUrl3 = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/Pexels+Videos+2716.mp4")
@@ -50,13 +50,11 @@ videoUrl2 = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/Pexels+Vid
 video.image.attach(io: photo, filename: "bird.png")
 video.video.attach(io: videoUrl, filename: "bird.mp4")
 
-video.image.attach(io: photo, filename: "bird.png")
-video4.video.attach(io: videoUrl4, filename: "Pexels Videos 1093652.mp4")
+# video.image.attach(io: photo, filename: "bird.png")
+# video4.video.attach(io: videoUrl4, filename: "Pexels+Videos+1093652.mp4")
 
-video3.image.attach(io: photo3, filename: "Screen Shot 2019-04-04 at 11.02.08 PM.png")
-video3.video.attach(io: videoUrl3, filename: "Pexels Videos 2716.mp4")
+video3.image.attach(io: photo3, filename: "Screen+Shot+2019-04-04+at+11.02.08+PM.png")
+video3.video.attach(io: videoUrl3, filename: "Pexels+Videos+2716.mp4")
 
-video2.image.attach(io: photo2, filename: "Screen Shot 2019-04-04 at 11.01.00 PM.png")
-video2.video.attach(io: videoUrl2, filename: "Pexels Videos 4703.mp4")
-
-# video.attach(io: videoUrl, filename: "mountain.mp4")  
+video2.image.attach(io: photo2, filename: "Screen+Shot+2019-04-04+at+11.01.00+PM.png")
+video2.video.attach(io: videoUrl2, filename: "Pexels+Videos+4703.mp4")
