@@ -5,9 +5,7 @@ import { selectAllVideos } from "../../reducers/selectors";
 
 const msp = state => {
     return {
-        videos: selectAllVideos(state) || [],
-        filteredContent: state.ui.filteredContent || [],
-        activeSearch: state.ui.activeSearch
+        videos: selectAllVideos(state) || []
     }
 }
 

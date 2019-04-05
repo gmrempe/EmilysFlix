@@ -1,6 +1,5 @@
 import React from 'react';
 import VideoListIndexItemsContainer from "./video_list_index_items_container";
-import SearchDisplayContainer from "../search/search_display_container";
 
 class VideoListIndex extends React.Component {
 
@@ -20,12 +19,7 @@ class VideoListIndex extends React.Component {
     }
 
     render() {
-        
-    if (this.props.activeSearch) {
-        return (
-            <SearchDisplayContainer/>
-        )
-    } else {
+
         return (
         <div className="browse-main">
             <div className='hero'>
@@ -41,7 +35,6 @@ class VideoListIndex extends React.Component {
             </div>
         </div>
         )
-    }
     }
 }
 

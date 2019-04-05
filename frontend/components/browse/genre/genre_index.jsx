@@ -24,14 +24,19 @@ class GenreIndex extends React.Component {
         }
     }
 
+    // componentDidMount() {
+    //     // this.props.fetchAllVideos();
+    //     // this.props.fetchAllGenres();
+    // }
 
 
     render() {
         const videos = this.props.videos;
         const genre = this.props.genre[0];
         const filteredVideos = videos.filter( video => video.genreIds.includes(genre.id));
-        let genreVideos = [];
-        genreVideos = filteredVideos.map((video, i) => {
+        // let genreVideos = [];
+        // debugger
+        const genreVideos = filteredVideos.map((video, i) => {
            return(
                 <VideoIndexItemContainer key={`genreVideo-${i}`} video={video} toggleVideoShowClick={this.toggleVideoShowClick} />
            )

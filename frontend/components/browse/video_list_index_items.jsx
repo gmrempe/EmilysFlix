@@ -48,7 +48,6 @@ class VideoListIndexItems extends React.Component {
 
         // const card = $(".card");
         // const cardWidth = (card[0].offsetWidth);
-        // // debugger
         // if (card[0].scrollLeft >= (cardWidth)) {
         //     e.target.classList.add("hidden")
         // } else {
@@ -57,7 +56,6 @@ class VideoListIndexItems extends React.Component {
     }
     
     render() {
-    //    debugger
         const videos = this.props.videos.map(video => <VideoIndexItemContainer key={video.id} video={video} toggleVideoShowClick={this.toggleVideoShowClick} className="card-content"/>)
         return(
             <div>

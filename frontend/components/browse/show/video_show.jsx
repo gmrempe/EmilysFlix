@@ -28,7 +28,6 @@ class VideoShow extends React.Component  {
     render() {
     const video = this.props.video;
     const toggleVideoShowClick = this.props.toggleVideoShowClick;
-        // debugger
    
         if (video)  {
         return (
