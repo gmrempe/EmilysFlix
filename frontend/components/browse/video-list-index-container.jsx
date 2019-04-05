@@ -4,10 +4,10 @@ import { fetchAllVideos } from "../../actions/video_actions";
 import { selectAllVideos } from "../../reducers/selectors";
 
 const msp = state => {
-    debugger
     return {
         videos: selectAllVideos(state) || [],
-        filteredContent: state.ui.filteredContent || []
+        filteredContent: state.ui.filteredContent || [],
+        activeSearch: state.ui.activeSearch
     }
 }
 

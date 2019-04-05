@@ -1,6 +1,6 @@
 import React from 'react';
 import VideoListIndexItemsContainer from "./video_list_index_items_container";
-import SearchDisplayContainer from "../base_presentational/base";
+import SearchDisplayContainer from "../search/search_display_container";
 
 class VideoListIndex extends React.Component {
 
@@ -19,13 +19,9 @@ class VideoListIndex extends React.Component {
         }
     }
 
-    componentDidMount() {
-        this.props.filteredContent
-    }
-
     render() {
-    debugger
-    if (this.props.filteredContent) {
+        
+    if (this.props.activeSearch) {
         return (
             <SearchDisplayContainer/>
         )

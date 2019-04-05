@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import Search from "./search";
 import {selectAllGenres, selectAllVideos} from "../../reducers/selectors";
-import {search} from "../../actions/ui_actions";
+import {search, clearSearch} from "../../actions/ui_actions";
 
 const msp = state => ({
     videos: selectAllVideos(state),
@@ -9,7 +9,8 @@ const msp = state => ({
 })
 
 const mdp = dispatch => ({
-    search: filteredContent => dispatch(search(filteredContent))
+    search: filteredContent => dispatch(search(filteredContent)),
+    clearSearch: () => dispatch(clearSearch())
 })
 
 export default connect(msp, mdp)(Search);

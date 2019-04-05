@@ -22,14 +22,10 @@ class Base extends React.Component {
         }
     }
 
-    // componentWillMount() {
-
-    // }
-
     render() {
         let videos = [];
         const contentIds = this.props.contentIds;
-
+        
         if (contentIds.length > 0) {
             videos = contentIds.map((id) => {
                 for (let i = 0; i < this.props.videos.length; i++) {
@@ -41,12 +37,12 @@ class Base extends React.Component {
         }
         return (
             <section className="base">
+                <h1>{this.props.title}</h1>
                 <ul>
                     {videos}
                 </ul>
                 <VideoShowContainer video={this.state.video} toggleVideoShowClick={this.toggleVideoShowClick} />
             </section>
-
         )
     }
 }

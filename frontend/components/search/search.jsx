@@ -11,28 +11,16 @@ class Search extends React.Component {
             filteredContent: []
         }
         this.handleChange = this.handleChange.bind(this)
-        this.filteredContent = this.filteredContent.bind(this)
+        this.filterContent = this.filterContent.bind(this)
     }
 
     handleChange(e) {
         this.setState({
             contentFilter: e.target.value
-        })
-        this.filteredContent(event.target.value)
+        }, () => this.filterContent(event.target.value))
     }
 
-    // componentWillMount() {
-    //     this.setState({
-    //         genres,
-    //         // titles,
-    //         // people,
-    //         filteredGenres: genres,
-    //         // filteredTitles: titles,
-    //         // filteredPeople: people,
-    //     })
-    // }
-
-    filteredContent(contentFilter) {
+    filterContent(contentFilter) {
         let filteredGenres = this.props.genres
         filteredGenres = filteredGenres.filter((genre) => {
             let genreName = genre.name.toLowerCase()
@@ -63,16 +51,19 @@ class Search extends React.Component {
             filteredCreators
         })
 
-        filteredContent = filteredCreators.concat(filteredTitles).concat(filteredGenres)
-        filteredIds = filteredContent.map(content => {
-            content.id
+        this.state.filteredContent = filteredCreators.concat(filteredTitles).concat(filteredGenres)
+        const filteredIds = this.state.filteredContent.map(content => {
+            return content.id
         })
+        
+        if (this.state.contentFilter.trim() === '') {
+            this.setState({
+                filteredContent: []
+            })
+            return this.props.clearSearch();
+        }
 
-        this.setState({
-            filteredContent: filteredIds
-        })
-
-        this.props.search(filteredContent)
+        this.props.search(filteredIds)
     }
     
     render() {
