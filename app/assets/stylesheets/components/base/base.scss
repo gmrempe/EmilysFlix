@@ -1,0 +1,11 @@
+.base {
+    min-height: 900px;
+    display: flex;
+}
+
+.base > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

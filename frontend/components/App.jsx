@@ -4,7 +4,7 @@ import SignupFormContainer from './session/signup_container';
 import {Route, Switch} from "react-router-dom";
 import {AuthRoute, ProtectedRoute, LandingRoute} from '../util/route_util';
 import SplashContainer from "./splash/splash_container";
-import VideoListIndex from "./browse/video_list_index";
+import VideoListIndexContainer from "./browse/video-list-index-container";
 import WatchContainer from "./watch/watch_container";
 import MyListContainer from "./browse/mylist/mylist_container.jsx";
 import GenreContainer from "./browse/genre/genre_container";
@@ -48,7 +48,7 @@ class App extends React.Component {
                 <AuthRoute exact path="/signup" component={SignupFormContainer}/>
                 <ProtectedRoute exact path="/browse/my-list" component={MyListContainer}/>
                 <ProtectedRoute exact path="/browse/genre/:genre_id" component={GenreContainer}/>
-                <ProtectedRoute exact path="/browse" component={VideoListIndex}/>
+                <ProtectedRoute exact path="/browse" component={VideoListIndexContainer}/>
                 <ProtectedRoute exact path="/watch/:video_id" component={WatchContainer}/>
                 <LandingRoute path="/" component={SplashContainer}/>
             </Switch>
