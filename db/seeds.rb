@@ -31,7 +31,7 @@ videoGenre3 = VideoGenre.create(video_id: video3.id, genre_id: genre.id)
 videoGenre4 = VideoGenre.create(video_id: video4.id, genre_id: genre2.id)
 
 
-videoMyList = VideoMyList.create(my_list_id: myList.id, video_id: video2.id)
+videoMyList = VideoMyList.create(mylist_id: myList.id, video_id: video2.id)
 
 
 photo = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.png")
