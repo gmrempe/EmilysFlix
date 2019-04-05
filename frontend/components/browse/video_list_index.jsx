@@ -23,14 +23,16 @@ class VideoListIndex extends React.Component {
         return (
         <div className="browse-main">
             <div className='hero'>
-                {/* <video  autoPlay mute="true" loop onClick={this.handleHeroClick}
-                    className="hero-video"> {/*Banner video from Pexels*
+                <video  autoPlay mute="true" loop onClick={this.handleHeroClick}
+                    className="hero-video"> {/*Banner video from Pexels*/}
                     <source src={window.hero} type="video/mp4"/>
-                </video> */}
+                </video>
             </div>
             <div className="after-hero">
                 <ul>
                     <VideoListIndexItemsContainer index={0}/>
+                    <VideoListIndexItemsContainer index={1}/>
+                    <VideoListIndexItemsContainer index={2}/>
                 </ul>
             </div>
         </div>
