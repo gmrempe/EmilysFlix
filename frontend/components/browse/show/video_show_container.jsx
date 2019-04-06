@@ -12,7 +12,7 @@ const msp = (state, ownProps) => {
 const mdp = (dispatch, ownProps) => ({
     toggleVideoShowClick: video => ownProps.toggleVideoShowClick(video),
     createList: videoId => ListAPIUtil.createList(videoId),
-    deleteList: listId => ListAPIUtil.deleteList(listId)
+    deleteList: videoId => ListAPIUtil.deleteList(videoId)
 })
 
 export default connect(msp, mdp)(VideoShow);

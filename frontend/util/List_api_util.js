@@ -2,7 +2,7 @@ export const createList = videoId => (
     $.ajax({
         method: "POST",
         url: "/api/lists",
-        data: { videoId }
+        data: {videoId}
     })
 )
 

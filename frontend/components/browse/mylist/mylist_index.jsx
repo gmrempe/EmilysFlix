@@ -22,6 +22,10 @@ class MyListIndex extends React.Component {
         }
     }
 
+    // componentDidMount() {
+    //     this.props.videos
+    // }
+
     render()  {
         const myListVideoIds = this.props.myListVideoIds;
         const videos = this.props.videos;
@@ -36,6 +40,7 @@ class MyListIndex extends React.Component {
                 }
             })
         }
+        
     return (
         <section className="my-list">
             <h1>MyList</h1>

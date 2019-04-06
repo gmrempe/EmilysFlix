@@ -6,17 +6,21 @@ import { userInfo } from "os";
 class VideoShow extends React.Component  {
     constructor(props) {
         super(props)
+        this.state = {
+            myList: false
+        }
         this.handleVideoPlay=this.handleVideoPlay.bind(this);
         this.handleVideoShowSound = this.handleVideoShowSound.bind(this);
         this.handleMyListClick = this.handleMyListClick.bind(this);
     }
 
     handleMyListClick() {
-    //     debugger
-        if (this.props.myListVideoIds.includes(this.props.video.id)){
-            this.props.deleteVideoMyList(this.props.video.id)
+        if (this.state.myList === true){
+            this.props.deleteList(this.props.video.id)
+            this.setState({myList: false})
         } else {
-            this.props.createVideoMyList(this.props.video.id)
+            this.props.createList(this.props.video.id)
+            this.setState({myList: true})
         }
     }
 
@@ -35,14 +39,27 @@ class VideoShow extends React.Component  {
         }
     }
 
+    componentDidMount() {
+        if (this.props.video) {
+            if (this.props.myListVideoIds.includes(this.props.video.id)) {
+                this.setState({
+                    myList: true
+                })
+            } else {
+                this.setState({
+                    myList: false
+                })
+            }
+        }
+    }
+
     render() {
     const video = this.props.video;
     const toggleVideoShowClick = this.props.toggleVideoShowClick;
     let myListIcon = <i className="fas fa-plus fa-lg"></i>
     
-    // debugger
     if (video)  {
-        if (this.props.myListVideoIds.includes(video.id)) {
+        if (this.state.myList === true) {
             myListIcon = <i className="fas fa-check fa-lg"></i>
         } else {
             myListIcon = <i className="fas fa-plus fa-lg"></i>
