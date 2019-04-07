@@ -4,8 +4,7 @@ import * as SessionAPIUtil from "../util/session_api_util";
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
-export const REMOVE_MY_LIST_VIDEO_ID = 'REMOVE_MY_LIST_VIDEO_ID';
-export const ADD_MY_LIST_VIDEO_ID = 'ADD_MY_LIST_VIDEO_ID';
+
 
 export const receiveCurrentUser = (currentUser) => ({
     type: RECEIVE_CURRENT_USER,
@@ -21,15 +20,6 @@ export const receiveSessionErrors = (errors) => ({
     errors
 });
 
-export const removeMyListVideoId = videoId => ({
-    type: REMOVE_MY_LIST_VIDEO_ID,
-    videoId
-})
-
-export const addMyListVideoId = videoId => ({
-    type: ADD_MY_LIST_VIDEO_ID,
-    videoId
-})
 
 //asynch thunk actions
 
@@ -50,5 +40,5 @@ export const logout = () => dispatch => (
 );
 
 export const fetchUser = () => dispatch => (
-    userAPIUtil.fetchUser().then(user => dispatch(receiveCurrentUser(user)))
+    SessionAPIUtil.fetchUser().then(user => dispatch(receiveCurrentUser(user)))
 )

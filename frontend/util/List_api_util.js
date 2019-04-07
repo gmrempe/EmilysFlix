@@ -12,3 +12,10 @@ export const deleteList = videoId => (
         url: `/api/lists/${videoId}`
     })
 )
+
+// export const fetchList = () => {
+//     $.ajax({
+//         method: "GET",
+//         url: `/api/lists`
+//     })
+// }

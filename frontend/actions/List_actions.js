@@ -1,20 +1,21 @@
 // import * as ListAPIUtil from "../util/List_api_util";
 
+// export const REMOVE_MY_LIST_VIDEO_ID = 'REMOVE_MY_LIST_VIDEO_ID';
+// export const ADD_MY_LIST_VIDEO_ID = 'ADD_MY_LIST_VIDEO_ID';
 
-// export const RECEIVE_LIST = 'RECEIVE_MY_LIST';
-// export const REMOVE_LIST = 'REMOVE_LIST';
 
-// export const receiveList = (List) => ({
-//     type: RECEIVE_LIST,
-//     List
-// });
+// export const removeMyListVideoId = videoId => ({
+//     type: REMOVE_MY_LIST_VIDEO_ID,
+//     videoId
+// })
 
-// export const removeList = (listId) => ({
-//     type: REMOVE_LIST,
-//     listId
-// });
+// export const addMyListVideoId = videoId => ({
+//     type: ADD_MY_LIST_VIDEO_ID,
+//     videoId
+// })
 
-// //asynch thunk actions
+
+// //asynch
 // export const createList = (videoId) => dispatch => (
 //     ListAPIUtil.createList(videoId).then(
 //         List => dispatch(receiveList(List))

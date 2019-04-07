@@ -1,6 +1,10 @@
 
 class Api::ListsController < ApplicationController
 
+    # def index
+
+    # end
+
     def create
         @list = List.new(mylist_id: current_user.mylist.id, video_id: params[:videoId])
         if @list.save
