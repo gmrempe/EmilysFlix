@@ -10,7 +10,7 @@ class Video < ApplicationRecord
     class_name: "VideoGenre"
 
     has_many :my_lists,
-    class_name: "VideoMyList",
+    class_name: "List",
     primary_key: :id,
     foreign_key: :video_id
 

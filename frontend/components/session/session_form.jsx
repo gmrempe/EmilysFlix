@@ -137,10 +137,10 @@ class SessionForm extends React.Component {
                                     onFocus={this.handleFocus}
                                     onInput={this.handleInput}
                                     pattern=".{6,60}"
-                                    title="Your password must contain between 4 and 60 characters."
+                                    title="Your password must contain between 6 and 60 characters."
                                     id="password"
                                     />
-                                    <div className="form-password-message">Your password must contain between 4 and 60 characters.</div>
+                                    <div className="form-password-message">Your password must contain between 6 and 60 characters.</div>
                                 </label>
                                     {this.renderErrors("P")}
 

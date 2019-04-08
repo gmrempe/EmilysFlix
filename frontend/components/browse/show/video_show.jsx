@@ -7,8 +7,18 @@ class VideoShow extends React.Component  {
         super(props)
         this.handleVideoPlay=this.handleVideoPlay.bind(this);
         this.handleVideoShowSound = this.handleVideoShowSound.bind(this);
+        this.handleMyListClick = this.handleMyListClick.bind(this);
     }
 
+    handleMyListClick() {
+        if (this.props.myListVideoIds.includes(this.props.video.id)) {
+            this.props.deleteList(this.props.video.id)
+            .then( () => {this.props.fetchUser()})
+        } else {
+            this.props.createList(this.props.video.id)
+            .then( () => {this.props.fetchUser()})
+        }
+    }
 
     handleVideoPlay() {
         this.props.history.push(`/watch/${this.props.video.id}`)
@@ -25,11 +35,21 @@ class VideoShow extends React.Component  {
         }
     }
 
+    componentDidUpdate() {
+        this.props.myListVideoIds
+    }
+
     render() {
     const video = this.props.video;
     const toggleVideoShowClick = this.props.toggleVideoShowClick;
-   
-        if (video)  {
+    let myListIcon = <></>
+
+    if (video)  {
+        if (this.props.myListVideoIds.includes(this.props.video.id)) {
+            myListIcon = <i className="fas fa-check fa-lg"></i>
+        } else {
+            myListIcon = <i className="fas fa-plus fa-lg"></i>
+        }
         return (
         <div className="videoShow">
             <div className="video-show-buttons">
@@ -47,8 +67,8 @@ class VideoShow extends React.Component  {
                             <i className="fas fa-play fa-lg"></i>
                             <Link className="video-show-play-button" to={`/watch/${video.id}`}>PLAY</Link>
                         </button>
-                        <button className="myList-videoShow">
-                            <i className="fas fa-plus fa-lg"></i>
+                            <button className="myList-videoShow" onClick={this.handleMyListClick}>
+                                {myListIcon}
                             MY LIST</button>
                         <button className="like-videoShow">
                             <i className="far fa-thumbs-up fa-lg"></i>

@@ -5,6 +5,7 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
+
 export const receiveCurrentUser = (currentUser) => ({
     type: RECEIVE_CURRENT_USER,
     currentUser
@@ -18,6 +19,7 @@ export const receiveSessionErrors = (errors) => ({
     type: RECEIVE_SESSION_ERRORS,
     errors
 });
+
 
 //asynch thunk actions
 
@@ -38,5 +40,5 @@ export const logout = () => dispatch => (
 );
 
 export const fetchUser = () => dispatch => (
-    userAPIUtil.fetchUser().then(user => dispatch(receiveCurrentUser(user)))
+    SessionAPIUtil.fetchUser().then(currentUser => dispatch(receiveCurrentUser(currentUser)))
 )

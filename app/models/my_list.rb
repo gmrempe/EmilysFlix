@@ -3,7 +3,7 @@ class MyList < ApplicationRecord
     validates :user_id, uniqueness: true
 
     has_many :videos,
-    class_name: "VideoMyList",
+    class_name: "List",
     primary_key: :id,
     foreign_key: :mylist_id
 

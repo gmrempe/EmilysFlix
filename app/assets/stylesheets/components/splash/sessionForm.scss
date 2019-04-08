@@ -109,13 +109,9 @@
 }
 
 
-.email > #email {
-    &:invalid:not(:placeholder-shown) {
-        & ~ .form-email-message{
-            display: inline;
-            margin: 3px 0px 3px 0px;
-        }
-    }
+#email:invalid ~ .form-email-message{
+    display: inline;
+    margin: 3px 0px 3px 0px;
 }
 
 .email > input:invalid,
@@ -123,14 +119,12 @@
     border-bottom: 3px solid rgb(238, 133, 14);
 }
 
-.password > #password {
-    &:invalid {
-        & ~ .form-password-message{
-            display: inline;
-            margin: 3px 0px 3px 0px;
-        }
-    }
+#password:invalid  ~ .form-password-message{
+    display: inline;
+    margin: 3px 0px 3px 0px;
 }
+
+
 
 #email-placeholder,
 #password-placeholder {

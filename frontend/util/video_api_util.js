@@ -1,7 +1,7 @@
 export const fetchAllVideos = () => (
     $.ajax({
         method: "GET",
-        url: "api/videos",
+        url: "/api/videos",
     })
 )
 
@@ -9,6 +9,6 @@ export const fetchVideo = (videoId) => {
     return (
     $.ajax({
         method: "GET",
-        url: `api/videos/${videoId}`
+        url: `/api/videos/${videoId}`
     })
 )}
