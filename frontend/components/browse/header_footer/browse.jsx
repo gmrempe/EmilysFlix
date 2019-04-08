@@ -9,6 +9,14 @@ class Browse extends React.Component {
         this.handleLogoClick = this.handleLogoClick.bind(this)
         this.handleMyListClick = this.handleMyListClick.bind(this)
         this.handleHomeClick = this.handleHomeClick.bind(this)
+        this.handleSearchSelect = this.handleSearchSelect.bind(this)
+    }
+
+    handleSearchSelect(e) {
+        e.preventDefault();
+        debugger
+        e.target.focus();
+        e.target.select();
     }
 
     handleLogoClick() {
@@ -27,14 +35,6 @@ class Browse extends React.Component {
         this.props.logout();
         this.props.history.push('/')
     }
-
-    // handleHover() {
-    //     const menu = document.getElementById("header-menu").style.zIndex = 3;
-    // }
-
-    // handleHoverO() {
-    //     const menu = document.getElementById("header-menu").style.zIndex = -1;
-    // }
 
     render() {
         return (
@@ -55,9 +55,9 @@ class Browse extends React.Component {
                             </div>
                         </div>
                         <div className='header-icons'>
-                            <label htmlFor="search" id="search-bar-container">
-                                <button id="search-bar">
-                                        <i className="fas fa-search fa-lg"></i>
+                            <label htmlFor="search" id="search-bar-container" >
+                                <button id="search-bar" >
+                                        <i className="fas fa-search fa-lg" ></i>
                                         <input id="search-bar-input" maxLength="80" type="search" name="search"
                                         placeholder="Title, genre, people"/>
                                 </button>

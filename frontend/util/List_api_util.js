@@ -13,9 +13,9 @@ export const deleteList = videoId => (
     })
 )
 
-// export const fetchList = () => {
-//     $.ajax({
-//         method: "GET",
-//         url: `/api/lists`
-//     })
-// }
+export const fetchUser = () => (
+    $.ajax({
+        method: "GET",
+        url: "/api/user"
+    })
+)

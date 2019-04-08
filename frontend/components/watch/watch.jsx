@@ -4,7 +4,7 @@ import {Link, withRouter} from 'react-router-dom';
 class Watch extends React.Component {
     constructor(props) {
         super(props)
-        this.handleClick = this.handleClick.bind(this);
+        // this.handleClick = this.handleClick.bind(this);
         this.handleBackClick = this.handleBackClick.bind(this);
     }
 
@@ -12,17 +12,17 @@ class Watch extends React.Component {
         this.props.history.push('/browse');
     }
 
-    handleClick() {
-        // const video = document.getElementById("-")
-        // const pause = document.getElementById("pause")
+    // handleClick() {
+    //     // const video = document.getElementById("-")
+    //     // const pause = document.getElementById("pause")
         
-        if(video.paused) {
-            video.play();
+    //     if(video.paused) {
+    //         video.play();
 
-        } else {
-            video.pause();
-        }
-    }
+    //     } else {
+    //         video.pause();
+    //     }
+    // }
 
     render() {
         return (
@@ -34,10 +34,10 @@ class Watch extends React.Component {
                 <video controls autoPlay>
                     <source src={this.props.video.videoUrl} type="video/mp4"/>
                 </video>
-                <div className="movie-title">
+                {/* <div className="movie-title">
                     <h3>{this.props.video.title}</h3>
-                    {/* <button className="pause" onClick={this.handleClick}>play</button> */}
-                </div>
+                    {/* <button className="pause" onClick={this.handleClick}>play</button> *
+                </div> */}
             </div>
         )
     }

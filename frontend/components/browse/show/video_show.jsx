@@ -1,38 +1,22 @@
 import React from "react";
 import { Link, withRouter} from "react-router-dom";
-import { userInfo } from "os";
 
 
 class VideoShow extends React.Component  {
     constructor(props) {
         super(props)
-        this.state = {
-            myList: null
-        }
         this.handleVideoPlay=this.handleVideoPlay.bind(this);
         this.handleVideoShowSound = this.handleVideoShowSound.bind(this);
         this.handleMyListClick = this.handleMyListClick.bind(this);
     }
 
     handleMyListClick() {
-        if (this.state.myList === true) {
-        // if (this.props.myListVideoIds.includes(this.props.video.id)) {
-                // this.setState({myList: true})
-            // } else {
-                //     this.setState({myist: false})
-                // }
-                // if (this.state.myList === true){ 
-        this.props.deleteList(this.props.video.id)
-        .then(
-        this.props.fetchUser())
-        .then(
-        this.setState({myList: false}))
+        if (this.props.myListVideoIds.includes(this.props.video.id)) {
+            this.props.deleteList(this.props.video.id)
+            .then( () => {this.props.fetchUser()})
         } else {
-        this.props.createList(this.props.video.id)
-        .then(
-        this.props.fetchUser())
-        .then(
-        this.setState({myList: true}))
+            this.props.createList(this.props.video.id)
+            .then( () => {this.props.fetchUser()})
         }
     }
 
@@ -51,46 +35,21 @@ class VideoShow extends React.Component  {
         }
     }
 
-    // componentWillUpdate(nextProps) {
-    //     if (this.props.video) {
-    //         debugger
-    //         if (nextProps.myListVideoIds.includes(this.props.video.id)) {
-    //             this.state.myList = true
-    //         } else {
-    //             this.state.myList = false
-    //         }
-    //     }
-    // }
-
-    // componentDidUpdate(prevProps, prevState) {
-    //     this.props.video
-    //     if (this.props.video) {
-    //         // debugger
-    //         if (this.props.myListVideoIds.includes(this.props.video.id)) {
-    //             this.state.myList = true
-    //         } else {
-    //             this.state.myList = false
-    //         }
-    //     }
-    // }
-
-    
+    componentDidUpdate() {
+        this.props.myListVideoIds
+    }
 
     render() {
     const video = this.props.video;
     const toggleVideoShowClick = this.props.toggleVideoShowClick;
     let myListIcon = <></>
+
     if (video)  {
-        // debugger
-        // if (this.props.myListVideoIds.includes(this.props.video.id)) {
-        //     this.state.myList = true
-        // }
-        if (this.state.myList === true) {
+        if (this.props.myListVideoIds.includes(this.props.video.id)) {
             myListIcon = <i className="fas fa-check fa-lg"></i>
         } else {
             myListIcon = <i className="fas fa-plus fa-lg"></i>
         }
-        // debugger
         return (
         <div className="videoShow">
             <div className="video-show-buttons">
