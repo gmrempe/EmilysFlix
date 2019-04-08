@@ -6,27 +6,29 @@ class VideoIndexItem extends React.Component {
     constructor(props) {
         super(props)
         this.handlePlayClick = this.handlePlayClick.bind(this)
-        // this.handleHover = this.handleHover.bind(this)
-        // this.handleSoundClick = this.handleSoundClick.bind(this)
+        this.handleMyListMiniClick = this.handleMyListMiniClick.bind(this);
     }
 
     handlePlayClick() {
         this.props.history.push(`/watch/${this.props.video.id}`);
     }
 
-    // handleSoundClick() {
-    //     const video = document.getElementById(this.props.video.id)
-    //     const muteButton = addEventListener("click", () => {
-    //         if (video.muted === false) {
-    //             video.muted = true
-    //             muteButton.classList = "fas fa-volume-mute"
-    //         } else {
-    //             video.muted = false
-    //             muteButton.classList = "fas fa-volume-up"
-    //         }
-    //     })
+    handleMyListMiniClick() {
+        if (this.props.myListVideoIds.includes(this.props.video.id)) {
+            this.props.deleteList(this.props.video.id)
+                .then(() => { this.props.fetchUser() })
+        } else {
+            this.props.createList(this.props.video.id)
+                .then(() => { this.props.fetchUser() })
+        }
+    }
+
     componentDidMount() {
         this.props.fetchAllGenres();
+    }
+
+    componentDidUpdate() {
+        this.props.myListVideoIds;
     }
 
     render() {
@@ -43,6 +45,14 @@ class VideoIndexItem extends React.Component {
                 }
             })
         }
+
+        let myListIconMini = <></>
+        if (this.props.myListVideoIds.includes(this.props.video.id)) {
+            myListIconMini = <i className="fas fa-check fa-lg"></i>
+        } else {
+            myListIconMini = <i className="fas fa-plus fa-lg"></i>
+        }
+
         return (
             <li className="video-index-item">
                 <div className="video-index-button-wrapper">
@@ -54,15 +64,15 @@ class VideoIndexItem extends React.Component {
                             <ul>{genres}</ul>
                         </div>
                         <div className="video-index-right">
-                            <i className="fas fa-volume-mute fa-lg"></i>
+                            {/* <i className="fas fa-volume-mute fa-lg"></i> */}
                             <button className="like-index-item">
                                 <i className="far fa-thumbs-up fa-lg"></i>
                             </button>
                             <button className="dislike-index-item">
                                 <i className="far fa-thumbs-up fa-lg"></i>                            
                             </button>
-                            <button className="myList-videoShow">
-                                <i className="fas fa-plus fa-lg"></i>
+                            <button className="myList-videoShow" onClick={this.handleMyListMiniClick}>
+                                {myListIconMini}
                             </button>
                         </div>
                     </div>

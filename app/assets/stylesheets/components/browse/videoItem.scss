@@ -50,12 +50,15 @@
     height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     margin-top: 20px;
     margin-right: 10px;
     z-index: 3;
-    padding-top: 10px;
+}
+
+.video-index-right > button{
+    margin-top: 20px;
 }
 
 .video-index-item:hover {
