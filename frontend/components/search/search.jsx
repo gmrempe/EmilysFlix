@@ -21,7 +21,9 @@ class Search extends React.Component {
     }
 
     filterContent(contentFilter) {
-        let filteredGenres = this.props.genres
+        this.props.clearSearch();
+
+        let filteredGenres = this.props.genres;
         filteredGenres = filteredGenres.filter((genre) => {
             let genreName = genre.name.toLowerCase()
             return genreName.indexOf(contentFilter.toLowerCase()) !== -1
@@ -62,7 +64,7 @@ class Search extends React.Component {
             })
             return this.props.clearSearch();
         }
-
+        
         this.props.search(filteredIds)
     }
     
