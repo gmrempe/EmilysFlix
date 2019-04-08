@@ -24,25 +24,26 @@ class GenreIndex extends React.Component {
         }
     }
 
-    // componentDidMount() {
-    //     // this.props.fetchAllVideos();
-    //     // this.props.fetchAllGenres();
-    // }
+    componentDidMount() {
+        this.props.fetchAllVideos()
+        .then( () => {this.props.fetchGenre(this.props.match.params.genre_id)});
+    }
 
 
     render() {
         const videos = this.props.videos;
-        const genre = this.props.genre[0];
-        const filteredVideos = videos.filter( video => video.genreIds.includes(genre.id));
-        // let genreVideos = [];
-        // debugger
-        const genreVideos = filteredVideos.map((video, i) => {
-           return(
-                <VideoIndexItemContainer key={`genreVideo-${i}`} video={video} toggleVideoShowClick={this.toggleVideoShowClick} />
-           )
-           })
+        const genre = this.props.genre;
         
-           return (
+        if (genre) {
+            const filteredVideos = videos.filter( video => video.genreIds.includes(genre.id));
+
+            const genreVideos = filteredVideos.map((video, i) => {
+            return(
+                    <VideoIndexItemContainer key={`genreVideo-${i}`} video={video} toggleVideoShowClick={this.toggleVideoShowClick} />
+            )
+            })
+            
+            return (
             <section className="genre-show">
                 <h1>{genre.name}</h1>
                 <ul>
@@ -50,7 +51,10 @@ class GenreIndex extends React.Component {
                 </ul>
                 <VideoShowContainer className="genre-video-show" video={this.state.video} toggleVideoShowClick={this.toggleVideoShowClick} />
             </section>
-        )
+            )
+        } else {
+            return (<section className="genre-show"></section>)
+        }
     }
 }
 

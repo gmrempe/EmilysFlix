@@ -22,9 +22,9 @@ class MyListIndex extends React.Component {
         }
     }
 
-    // componentDidMount() {
-    //     this.props.videos
-    // }
+    componentDidMount() {
+        this.props.fetchAllVideos();
+    }
 
     render()  {
         const myListVideoIds = this.props.myListVideoIds;

@@ -1,19 +1,19 @@
 import { connect } from "react-redux";
 import genreIndex from "./genre_index";
-import { selectAllGenres, selectAllVideos} from "../../../reducers/selectors";
-// import { fetchAllGenres } from "../../../actions/genre_actions";
-// import { fetchAllVideos } from "../../../actions/video_actions";
+import { selectAllVideos } from "../../../reducers/selectors";
+import { fetchGenre } from "../../../actions/genre_actions";
+import { fetchAllVideos } from "../../../actions/video_actions";
 
-export const msp = (state, ownProps) => {
+export const msp = (state) => {
     return ({
         videos: selectAllVideos(state),
-        genre: state.entities.genres.filter(genre => (genre.id == ownProps.match.params.genre_id))
+        genre: state.entities.genre
     })
 }
 
-// export const mdp = dispatch => ({
-//     // fetchAllGenres: () => dispatch(fetchAllGenres),  //make a fetchGenre action!
-//     // fetchAllVideos: () => dispatch(fetchAllVideos)
-// })
+export const mdp = dispatch => ({
+    fetchGenre: (genreId) => dispatch(fetchGenre(genreId)),
+    fetchAllVideos: () => dispatch(fetchAllVideos())
+})
 
-export default connect(msp, null)(genreIndex);
+export default connect(msp, mdp)(genreIndex);

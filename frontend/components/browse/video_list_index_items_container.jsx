@@ -10,7 +10,7 @@ const msp = (state, ownProps) => {
     }
 }
 
-const mdp = (dispatch, ownProps) => ({
+const mdp = (dispatch) => ({
     fetchAllVideos: videos => dispatch(fetchAllVideos(videos))
 })
 
