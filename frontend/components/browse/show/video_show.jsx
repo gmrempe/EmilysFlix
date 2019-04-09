@@ -65,6 +65,10 @@ class VideoShow extends React.Component  {
         this.props.myDislikeVideoIds
     }
 
+    componentWillUnmount() {
+        this.props.video
+    }
+
     render() {
     const video = this.props.video;
     const toggleVideoShowClick = this.props.toggleVideoShowClick;

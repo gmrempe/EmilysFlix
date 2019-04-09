@@ -29,6 +29,9 @@ class GenreIndex extends React.Component {
         .then( () => {this.props.fetchGenre(this.props.match.params.genre_id)});
     }
 
+    componentWillUnmount() {
+        this.props.genre
+    }
 
     render() {
         const videos = this.props.videos;
