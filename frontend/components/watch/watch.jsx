@@ -12,11 +12,12 @@ class Watch extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchVideo(this.props.match.params.video_id)
+        this.props.fetchVideo(this.props.match.params.video_id);
     }
 
     render() {
-        if (this.props.video) {
+        
+        if (this.props.video.length > 0) {
         return (
             <div className="movie">
                 <div className="back-to-browse-wrapper" onClick={this.handleBackClick}>
@@ -24,7 +25,7 @@ class Watch extends React.Component {
                     <Link className="back-to-browse" to="/browse">Back to Browse</Link>
                 </div>
                 <video controls autoPlay>
-                    <source src={this.props.video.videoUrl} type="video/mp4"/>
+                    <source src={this.props.video[0].videoUrl} type="video/mp4"/>
                 </video>
                 {/* <div className="movie-title">
                     <h3>{this.props.video.title}</h3>
@@ -32,7 +33,7 @@ class Watch extends React.Component {
             </div>
         )
         } else {
-            return (<></>)
+            return (<>Video is not supported in your browser</>)
         }
     }
 }

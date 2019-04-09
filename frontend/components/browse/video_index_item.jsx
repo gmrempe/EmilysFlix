@@ -45,13 +45,9 @@ class VideoIndexItem extends React.Component {
         }
     }
 
-    componentDidMount() {
-        this.props.fetchAllGenres();
-    }
 
     componentDidUpdate() {
         this.props.myListVideoIds;
-        // this.state.video;
     }
 
     render() {
@@ -59,6 +55,7 @@ class VideoIndexItem extends React.Component {
         const propsGenres = this.props.genres
         const toggleVideoShowClick = this.props.toggleVideoShowClick
         let genres = [];
+        
         if (propsGenres.length > 0) {
              genres = video.genreIds.map((id) => {
                 for(let i=0; i< propsGenres.length; i++) {

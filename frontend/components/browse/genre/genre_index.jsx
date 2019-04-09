@@ -26,12 +26,12 @@ class GenreIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchAllVideos()
-        .then( () => {this.props.fetchAllGenres()});
     }
 
     render() {
         const videos = this.props.videos;
         let genre = this.props.genre;
+        
         if (videos.length > 0 && genre.length > 0) {
             genre = genre[0];
             const filteredVideos = videos.filter( video => video.genreIds.includes(genre.id));

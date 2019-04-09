@@ -8,6 +8,7 @@ import { deleteLike, createLike } from "../../util/like_api_util";
 
 
 const msp = (state, ownProps) => {
+    // debugger
     return ({
         video: ownProps.video,
         genres: selectAllGenres(state) || [],
