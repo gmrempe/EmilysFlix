@@ -12,6 +12,7 @@ Video.destroy_all
 User.destroy_all
 MyList.destroy_all
 List.destroy_all
+Like.destroy_all
 
 user = User.create(email: "Saitama@gmail.com", password: "#OnePunch")
 myList = MyList.create(user_id: user.id)
@@ -30,6 +31,7 @@ videoGenre3 = VideoGenre.create(video_id: video3.id, genre_id: genre.id)
 # videoGenre4 = VideoGenre.create(video_id: video4.id, genre_id: genre2.id)
 
 List.create(video_id: video.id, user_id: user.id)
+Like.create(video_id: video_id, user_id: user.id, response: true)
 
 photo = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.png")
 videoUrl = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/bird.mp4")

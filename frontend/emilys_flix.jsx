@@ -5,7 +5,8 @@ import Root from './components/root';
 // import * as SessionAPIUtil from "./util/session_api_util";
 // import * as GenreAPIUtil from "./util/genre_api_util";
 // import {fetchAllGenres} from "./actions/genre_actions";
-import * as ListAPIUtil from "./util/List_api_util";
+// import * as ListAPIUtil from "./util/List_api_util";
+import * as LikeAPIUtil from "./util/Like_api_util";
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById('root');
@@ -27,8 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //TESTS
     window.getState = store.getState
-    window.createList = ListAPIUtil.createList
-    window.deleteList = ListAPIUtil.deleteList
+    window.createLike = LikeAPIUtil.createLike
+    window.deleteLike = LikeAPIUtil.deleteLike
+    // window.createList = ListAPIUtil.createList
+    // window.deleteList = ListAPIUtil.deleteList
     // window.fetchAllGenres = GenreAPIUtil.fetchAllGenres
     // window.dispatch = store.dispatch
     // window.login = SessionAPIUtil.login
