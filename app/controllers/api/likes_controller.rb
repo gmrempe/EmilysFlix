@@ -1,7 +1,7 @@
 class Api::LikesController < ApplicationController
 
     def create
-        @like = Like.new(user_id: current_user.id, video_id: params[:videoId], response: params[:response]) # todo
+        @like = Like.new(user_id: current_user.id, video_id: params[:videoId], response: params[:response])
         if @like.save
             render json: {}
         else

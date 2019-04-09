@@ -51,6 +51,7 @@ class VideoIndexItem extends React.Component {
 
     componentDidUpdate() {
         this.props.myListVideoIds;
+        // this.state.video;
     }
 
     render() {

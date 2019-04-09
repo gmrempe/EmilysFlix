@@ -26,6 +26,10 @@ class MyListIndex extends React.Component {
         this.props.fetchAllVideos();
     }
 
+    // componentDidUpdate() {
+    //     this.state.video;
+    // }
+
     render()  {
         const myListVideoIds = this.props.myListVideoIds;
         const videos = this.props.videos;

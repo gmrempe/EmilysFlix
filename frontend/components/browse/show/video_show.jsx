@@ -23,7 +23,7 @@ class VideoShow extends React.Component  {
     }
 
     handleLikeClick() {
-        debugger
+        
         if (this.props.likeVideoIds.includes(this.props.video.id)) {
             this.props.deleteLike(this.props.video.id)
             .then( () => {this.props.fetchUser()})
@@ -34,7 +34,7 @@ class VideoShow extends React.Component  {
     }
 
     handleDislikeClick() {
-        debugger
+        
         if (this.props.dislikeVideoIds.includes(this.props.video.id)) {
             this.props.deleteLike(this.props.video.id)
             .then( () => {this.props.fetchUser()})
@@ -59,14 +59,18 @@ class VideoShow extends React.Component  {
         }
     }
 
+    componentDidMount() {
+        this.props.video;
+    }
+
     componentDidUpdate() {
-        this.props.myListVideoIds
-        this.props.myLikeVideoIds
-        this.props.myDislikeVideoIds
+        this.props.myListVideoIds;
+        // this.props.myLikeVideoIds
+        // this.props.myDislikeVideoIds
     }
 
     componentWillUnmount() {
-        this.props.video
+        this.props.video;
     }
 
     render() {

@@ -32,31 +32,16 @@ class VideoListIndexItems extends React.Component {
         $(`.card-${this.props.listKey}`).animate({
             scrollLeft: "-=800px"
         }, "fast");
-
-        // const card = $(".card");
-        // if (card[0].scrollLeft === 0) {
-        //     e.target.classList.add("hidden")
-        // } else {
-        //     e.target.classList.remove("hidden")
-        // }
     }
     
     handleRightSlide(e) {
         $(`.card-${this.props.listKey}`).animate({
             scrollLeft: "+=800px"
         }, "fast");
-
-        // const card = $(".card");
-        // const cardWidth = (card[0].offsetWidth);
-        // if (card[0].scrollLeft >= (cardWidth)) {
-        //     e.target.classList.add("hidden")
-        // } else {
-        //     e.target.classList.remove("hidden")
-        // }
     }
     
     render() {
-        const videos = this.props.videos.map(video => <VideoIndexItemContainer key={video.id} video={video} toggleVideoShowClick={this.toggleVideoShowClick} className="card-content"/>)
+        const videos = this.props.videos.map((video, i) => <VideoIndexItemContainer key={`${video.id}-${i}`} video={video} toggleVideoShowClick={this.toggleVideoShowClick} className="card-content"/>)
         return(
             <div>
                 <section className="video-list-wrapper">
