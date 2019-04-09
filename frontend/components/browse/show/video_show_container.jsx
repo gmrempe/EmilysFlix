@@ -13,7 +13,7 @@ const mdp = (dispatch, ownProps) => ({
     toggleVideoShowClick: video => ownProps.toggleVideoShowClick(video),
     createList: videoId => (createList(videoId)),
     deleteList: videoId => (deleteList(videoId)),
-    fetchUser: () => dispatch(fetchUser()),
+    fetchUser: () => dispatch(fetchUser())
 })
 
 export default connect(msp, mdp)(VideoShow);

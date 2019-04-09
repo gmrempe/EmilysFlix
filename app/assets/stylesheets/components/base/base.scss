@@ -1,9 +1,19 @@
+// .base-wrapper {
+//     min-height: 900px;
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;  
+// }
+
 .base {
     min-height: 900px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    // margin-left: 40px;
+    // margin-right: 40px;
 }
 
 .base > h1 {
