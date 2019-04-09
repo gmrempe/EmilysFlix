@@ -3,6 +3,8 @@ import VideoIndexItem from "./video_index_item";
 import { fetchAllGenres } from "../../actions/genre_actions";
 import { selectAllGenres } from "../../reducers/selectors";
 import { fetchUser } from "../../actions/session_actions";
+import { createList, deleteList } from "../../util/List_api_util";
+
 
 const msp = (state, ownProps) => {
     return ({
