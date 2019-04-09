@@ -7,6 +7,8 @@ class VideoIndexItem extends React.Component {
         super(props)
         this.handlePlayClick = this.handlePlayClick.bind(this)
         this.handleMyListMiniClick = this.handleMyListMiniClick.bind(this);
+        this.handleDislikeMiniClick = this.handleDislikeMiniClick.bind(this);
+        this.handleLikeMiniClick = this.handleLikeMiniClick.bind(this);
     }
 
     handlePlayClick() {
@@ -19,6 +21,26 @@ class VideoIndexItem extends React.Component {
                 .then(() => { this.props.fetchUser() })
         } else {
             this.props.createList(this.props.video.id)
+                .then(() => { this.props.fetchUser() })
+        }
+    }
+
+    handleLikeMiniClick() {
+        if (this.props.likeVideoIds.includes(this.props.video.id)) {
+            this.props.deleteLike(this.props.video.id)
+                .then(() => { this.props.fetchUser() })
+        } else {
+            this.props.createLike(this.props.video.id, "true")
+                .then(() => { this.props.fetchUser() })
+        }
+    }
+
+    handleDislikeMiniClick() {
+        if (this.props.dislikeVideoIds.includes(this.props.video.id)) {
+            this.props.deleteLike(this.props.video.id)
+                .then(() => { this.props.fetchUser() })
+        } else {
+            this.props.createLike(this.props.video.id, "false")
                 .then(() => { this.props.fetchUser() })
         }
     }
@@ -53,6 +75,17 @@ class VideoIndexItem extends React.Component {
             myListIconMini = <i className="fas fa-plus fa-lg"></i>
         }
 
+        let likeIcon = <></>;
+        let dislikeIcon = <></>;
+        if (this.props.likeVideoIds.includes(this.props.video.id)) {
+            likeIcon = <i className="far fa-thumbs-up fa-lg"></i>;
+        } else if (this.props.dislikeVideoIds.includes(this.props.video.id)) {
+            dislikeIcon = <i className="far fa-thumbs-down fa-lg"></i>;
+        } else {
+            likeIcon = <i className="far fa-thumbs-up fa-lg"></i>;
+            dislikeIcon = <i className="far fa-thumbs-down fa-lg"></i>;
+        }
+
         return (
             <li className="video-index-item">
                 <div className="video-index-button-wrapper">
@@ -65,11 +98,11 @@ class VideoIndexItem extends React.Component {
                         </div>
                         <div className="video-index-right">
                             {/* <i className="fas fa-volume-mute fa-lg"></i> */}
-                            <button className="like-index-item">
-                                <i className="far fa-thumbs-up fa-lg"></i>
+                            <button className="like-index-item" onClick={this.handleLikeMiniClick}>
+                                {likeIcon}
                             </button>
-                            <button className="dislike-index-item">
-                                <i className="far fa-thumbs-up fa-lg"></i>                            
+                            <button className="dislike-index-item" onClick={this.handleDislikeMiniClick}>
+                                {dislikeIcon}                         
                             </button>
                             <button className="myList-videoShow" onClick={this.handleMyListMiniClick}>
                                 {myListIconMini}

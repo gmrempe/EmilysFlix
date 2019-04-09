@@ -11,7 +11,6 @@ class Api::LikesController < ApplicationController
 
     def destroy
         @likes = current_user.likes
-        # debugger
         if @likes.find_by(video_id: params[:id]).destroy
             render json: {}
         else
