@@ -8,6 +8,8 @@ class VideoShow extends React.Component  {
         this.handleVideoPlay=this.handleVideoPlay.bind(this);
         this.handleVideoShowSound = this.handleVideoShowSound.bind(this);
         this.handleMyListClick = this.handleMyListClick.bind(this);
+        this.handleDislikeClick = this.handleDislikeClick.bind(this);
+        this.handleLikeClick = this.handleLikeClick.bind(this);
     }
 
     handleMyListClick() {
@@ -16,6 +18,28 @@ class VideoShow extends React.Component  {
             .then( () => {this.props.fetchUser()})
         } else {
             this.props.createList(this.props.video.id)
+            .then( () => {this.props.fetchUser()})
+        }
+    }
+
+    handleLikeClick() {
+        debugger
+        if (this.props.likeVideoIds.includes(this.props.video.id)) {
+            this.props.deleteLike(this.props.video.id)
+            .then( () => {this.props.fetchUser()})
+        } else {
+            this.props.createLike(this.props.video.id, "true")
+            .then( () => {this.props.fetchUser()})
+        }
+    }
+
+    handleDislikeClick() {
+        debugger
+        if (this.props.dislikeVideoIds.includes(this.props.video.id)) {
+            this.props.deleteLike(this.props.video.id)
+            .then( () => {this.props.fetchUser()})
+        } else {
+            this.props.createLike(this.props.video.id, "false")
             .then( () => {this.props.fetchUser()})
         }
     }
@@ -37,12 +61,16 @@ class VideoShow extends React.Component  {
 
     componentDidUpdate() {
         this.props.myListVideoIds
+        this.props.myLikeVideoIds
+        this.props.myDislikeVideoIds
     }
 
     render() {
     const video = this.props.video;
     const toggleVideoShowClick = this.props.toggleVideoShowClick;
-    let myListIcon = <></>
+    let myListIcon = <></>;
+    let likeIcon = <></>;
+    let dislikeIcon = <></>;
 
     if (video)  {
         if (this.props.myListVideoIds.includes(this.props.video.id)) {
@@ -50,6 +78,16 @@ class VideoShow extends React.Component  {
         } else {
             myListIcon = <i className="fas fa-plus fa-lg"></i>
         }
+
+        if (this.props.likeVideoIds.includes(this.props.video.id)) {
+            likeIcon = <i className="far fa-thumbs-up fa-lg"></i>;
+        } else if (this.props.dislikeVideoIds.includes(this.props.video.id)) {
+            dislikeIcon = <i className="far fa-thumbs-down fa-lg"></i>;
+        } else {
+            likeIcon = <i className="far fa-thumbs-up fa-lg"></i>;
+            dislikeIcon = <i className="far fa-thumbs-down fa-lg"></i>;
+        }
+        
         return (
         <div className="videoShow">
             <div className="video-show-buttons">
@@ -70,11 +108,11 @@ class VideoShow extends React.Component  {
                             <button className="myList-videoShow" onClick={this.handleMyListClick}>
                                 {myListIcon}
                             MY LIST</button>
-                        <button className="like-videoShow">
-                            <i className="far fa-thumbs-up fa-lg"></i>
+                        <button className="like-videoShow" onClick={this.handleLikeClick}>
+                            {likeIcon}
                         </button>
-                        <button className="dislike-videoShow">
-                            <i className="far fa-thumbs-down fa-lg"></i>
+                        <button className="dislike-videoShow" onClick={this.handleDislikeClick}>
+                            {dislikeIcon}
                         </button>
                     </nav>
                     <div>Creators: {video.creator}</div>

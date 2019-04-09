@@ -14,8 +14,10 @@ class Video < ApplicationRecord
     primary_key: :id,
     foreign_key: :video_id
 
-    # has_one :user,
-    # through: :my_lists,
-    # source: :user
-    
+    has_many :likes,
+    class_name: "Like",
+    foreign_key: :video_id,
+    primary_key: :id
+
+
 end
