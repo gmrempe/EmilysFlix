@@ -1,11 +1,15 @@
 import { connect } from "react-redux";
-import MyListIndex from "./mylist_index.jsx";
+import {selectAllVideos} from "../../../reducers/selectors";
 import {fetchAllVideos} from "../../../actions/video_actions";
+import Base from "../../base_presentational/base";
 
 const msp = state => {
+
     return ({
-        videos: state.entities.videos || [],
-        myListVideoIds: state.entities.users[state.session.id].myListVideoIds || [],
+        videos: selectAllVideos(state) || [],
+        contentIds: state.entities.users[state.session.id].myListVideoIds || [],
+        title: "MyList",
+        keyAddOn: "myList"
     })
 }
 
@@ -13,4 +17,4 @@ const mdp = dispatch => ({
     fetchAllVideos: () => dispatch(fetchAllVideos())
 })
 
-export default connect(msp, mdp)(MyListIndex);
+export default connect(msp, mdp)(Base);

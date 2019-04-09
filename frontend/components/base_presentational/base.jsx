@@ -22,28 +22,50 @@ class Base extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.props.fetchAllVideos();
+    }
+
+    componentDidUpdate() {
+        this.state.video;
+    }
+
     render() {
-        let videos = [];
         const contentIds = this.props.contentIds;
+        let videos = this.props.videos;
         
-        if (contentIds.length > 0) {
+        if (videos.length > 0) {
             videos = contentIds.map((id) => {
                 for (let i = 0; i < this.props.videos.length; i++) {
                     if (this.props.videos[i].id === id) {
-                        return <VideoIndexItemContainer key={`listVideo-${i}`} video={this.props.videos[i]} toggleVideoShowClick={this.toggleVideoShowClick} />
+                        return <VideoIndexItemContainer key={`${this.props.keyAddOn}-${i}`} video={this.props.videos[i]} toggleVideoShowClick={this.toggleVideoShowClick} />
                     }
                 }
             })
         }
-        return (
-            <section className="base">
-                <h1>{this.props.title}</h1>
-                <ul>
-                    {videos}
-                </ul>
-                <VideoShowContainer video={this.state.video} toggleVideoShowClick={this.toggleVideoShowClick} />
-            </section>
-        )
+
+        if (videos.length > 0) {
+            return (
+                <div className="base-wrapper">
+                    <section className="base">
+                        <h1>{this.props.title}</h1>
+                        <ul>
+                            {videos}
+                        </ul>
+                        <VideoShowContainer video={this.state.video} toggleVideoShowClick={this.toggleVideoShowClick} />
+                    </section>
+                </div>
+            )
+        } else {
+            return (
+                <div className="base-wrapper">
+                    <section className="base">
+                        <h1>{this.props.title}</h1>
+                        <p>No Matching Results</p>
+                    </section>
+                </div>
+            )
+        }
     }
 }
 
