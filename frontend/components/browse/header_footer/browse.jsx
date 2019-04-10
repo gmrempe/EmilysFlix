@@ -63,7 +63,7 @@ class Browse extends React.Component {
                                     <li onClick={this.handleHomeClick} >Home</li>
                                     <li onClick={this.handleNatureClick} >Nature</li>
                                     <li onClick={this.handleAnimalClick} >Animal</li>
-                                    <li>Recently Added</li>
+                                    {/* <li>Recently Added</li> */}
                                     <li onClick={this.handleMyListClick}>My List</li>
                                 </ul>
                             </div>
@@ -76,8 +76,8 @@ class Browse extends React.Component {
                                 <div className="header-dropdown-items">
                                     <i className="fas fa-sort-up"></i>
                                     <ul id="header-menu" className="header-dropdown">
-                                        <li>Manage Profiles</li>
-                                        <li>Account</li>
+                                        {/* <li>Manage Profiles</li>
+                                        <li>Account</li> */}
                                         <li className='Sign out' onClick={this.handleLogout}>Sign Out of Emilysflix</li>
                                     </ul>
                                 </div>

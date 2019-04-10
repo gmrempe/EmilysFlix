@@ -45,10 +45,19 @@ class VideoListIndexItems extends React.Component {
         return(
             <div>
                 <section className="video-list-wrapper">
-                    <h2>List Title</h2>
+                    <h2>{this.props.title}</h2>
                     <div className="video-list">
                         <i className="fas fa-chevron-left fa-lg slider-left" onClick={this.handleLeftSlide}></i>
                         <ul className={`card-${this.props.listKey}`}>
+                            {videos}
+                            {videos}
+                            {videos}
+                            {videos}
+                            {videos}
+                            {videos}
+                            {videos}
+                            {videos}
+                            {videos}
                             {videos}
                         </ul>
                         <i className="fas fa-chevron-right fa-lg slider-right" onClick={this.handleRightSlide}></i>

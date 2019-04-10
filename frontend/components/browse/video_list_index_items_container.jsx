@@ -6,7 +6,8 @@ import { selectAllVideos } from "../../reducers/selectors";
 const msp = (state, ownProps) => {
     return {
     videos: selectAllVideos(state) || [],
-    listKey: ownProps.index
+    listKey: ownProps.index,
+    title: ownProps.title
     }
 }
 
