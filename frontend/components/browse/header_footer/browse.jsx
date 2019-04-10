@@ -15,26 +15,32 @@ class Browse extends React.Component {
     }
 
     handleLogoClick() {
+        this.props.clearSearch();
         this.props.history.push('/')
     }
-
+    
     handleMyListClick() {
+        this.props.clearSearch();
         this.props.history.push('/browse/my-list')
     }
-
+    
     handleHomeClick() {
+        this.props.clearSearch();
         this.props.history.push('/browse')
     }
-
+    
     handleNatureClick() {
+        this.props.clearSearch();
         this.props.history.push(`/browse/genre/${this.props.genres[1].id}`)
     }
-
+    
     handleAnimalClick() {
+        this.props.clearSearch();
         this.props.history.push(`/browse/genre/${this.props.genres[0].id}`)
     }
-
+    
     handleLogout() {
+        this.props.clearSearch();
         this.props.logout();
         this.props.history.push('/')
     }
