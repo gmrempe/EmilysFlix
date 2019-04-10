@@ -43,10 +43,11 @@ class App extends React.Component {
         if(this.props.activeSearch) {
             return (
                 <div>
-                    <ProtectedRoute path="/browse" component={Header} onscroll={this.handleScroll} />
+                    <Route path="/browse" component={Header} onscroll={this.handleScroll} />
                     <div className='content-main'>
                         <SearchDisplayContainer/>
                     </div>
+                    <Route path="/browse" component={Footer} />
                 </div>
             )
         } else {

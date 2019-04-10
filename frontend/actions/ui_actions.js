@@ -1,9 +1,10 @@
 export const SEARCH = "SEARCH";
 export const CLEAR_SEARCH = "CLEAR_SEARCH";
 
-export const search = (filteredContent) => ({
+export const search = (filteredContent, contentFilter) => ({
     type: SEARCH,
-    filteredContent
+    filteredContent,
+    contentFilter
 })
 
 export const clearSearch = () => ({

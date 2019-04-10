@@ -21,7 +21,7 @@ class Search extends React.Component {
         }, () => this.filterContent(event.target.value))
     }
 
-    // handleSearchCLick(e) {
+    // handleSearchCLick(e) {  //move css into component state, set ui activeSearch in function on focus, focus input field
     //     e.preventDefault();
     //     debugger
     //     e.target.Focus();
@@ -67,7 +67,7 @@ class Search extends React.Component {
             return content.id
         })
 
-        this.props.clearSearch();
+        // this.props.clearSearch();
         // debugger
         
         if (this.state.contentFilter.trim() === '') {
@@ -84,7 +84,7 @@ class Search extends React.Component {
             }
         })
         // debugger
-        this.props.search(uniqueIds)
+        this.props.search(uniqueIds, contentFilter)
     }
     
     render() {
