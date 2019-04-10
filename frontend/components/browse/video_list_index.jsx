@@ -1,20 +1,25 @@
 import React from 'react';
 import VideoListIndexItemsContainer from "./video_list_index_items_container";
+import VideoShowContainer from './show/video_show_container';
+
 
 class VideoListIndex extends React.Component {
 
     constructor(props) {
         super(props)
-        this.handleHeroClick = this.handleHeroClick.bind(this)
+        this.state = {
+            video: this.props.video
+        }
+        this.toggleVideoShowClick = this.toggleVideoShowClick.bind(this)
     }
 
-    handleHeroClick() {
-        const hero = document.getElementsByClassName("hero")
-        const video = $(hero).find('video')
-        if (video.prop('muted')) {
-            video.prop('muted', false)
-        } else {
-            video.prop('muted', true)
+    toggleVideoShowClick(video) {
+        return (e) => {
+            if (video) {
+                return this.setState({ video: video });
+            } else {
+                return this.setState({ video: null });
+            }
         }
     }
 
@@ -23,14 +28,11 @@ class VideoListIndex extends React.Component {
         return (
         <div className="browse-main">
             <div className='hero'>
-                {/* <video  autoPlay mute="true" loop onClick={this.handleHeroClick}
-                    className="hero-video"> {/*Banner video from Pexels*
-                    <source src={window.hero} type="video/mp4"/>
-                </video> */}
+                <VideoShowContainer video={this.props.videos[0]} toggleVideoShowClick={this.toggleVideoShowClick}/>
             </div>
             <div className="after-hero">
                 <ul>
-                    <VideoListIndexItemsContainer index={0}/>
+                    <VideoListIndexItemsContainer index={0} title="Recently Added"/>
                 </ul>
             </div>
         </div>

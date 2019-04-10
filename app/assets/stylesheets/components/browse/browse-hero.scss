@@ -10,3 +10,49 @@
 .after-hero {
     margin-top: 400px;
 }
+
+.hero > .videoShow > .video-show-video {
+width: 100%;
+margin-left: 0px;
+
+}
+
+.hero > .videoShow > .video-screen {
+    display: none;
+}
+
+.hero > .videoShow > .video-show-buttons > .video-show-buttons-right {
+    display: none;
+}
+
+.hero > .videoShow > .video-show-buttons > .video-show-buttons-left > div {
+    display: none;
+}
+
+.hero > .videoShow > .video-show-buttons > .video-show-buttons-left > span {
+    display: none;
+}
+
+.hero > .videoShow > .video-show-buttons > .video-show-buttons-left > nav > .video-show-play {
+    background-color: rgba(51,51,51,0.4);
+    border: none;
+    border-radius: 3px;
+}
+
+.hero > .videoShow > .video-show-buttons > .video-show-buttons-left > nav > .myList-videoShow {
+    background-color: rgba(51,51,51,0.4);
+    border: none;
+    border-radius: 3px;
+}
+
+.hero > .videoShow > .video-show-buttons > .video-show-buttons-left > nav > .dislike-videoShow {
+    display: none;
+}
+
+.hero > .videoShow > .video-show-buttons > .video-show-buttons-left > nav > .like-videoShow {
+    display: none;
+}
+
+.hero > .videoShow > .video-show-buttons > .video-show-buttons-left > h1 {
+    text-align: center;
+}

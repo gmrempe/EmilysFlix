@@ -113,9 +113,9 @@ class VideoShow extends React.Component  {
                             <i className="fas fa-play fa-lg"></i>
                             <Link className="video-show-play-button" to={`/watch/${video.id}`}>PLAY</Link>
                         </button>
-                            <button className="myList-videoShow" onClick={this.handleMyListClick}>
-                                {myListIcon}
-                            MY LIST</button>
+                        <button className="myList-videoShow" onClick={this.handleMyListClick}>
+                            {myListIcon}
+                        MY LIST</button>
                         <button className="like-videoShow" onClick={this.handleLikeClick}>
                             {likeIcon}
                         </button>
