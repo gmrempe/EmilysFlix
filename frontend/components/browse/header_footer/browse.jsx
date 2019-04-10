@@ -40,7 +40,7 @@ class Browse extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchAllGenres();  //todo test if needed
+        this.props.fetchAllGenres();  //todo can fetch in individual components
     }
 
     render() {

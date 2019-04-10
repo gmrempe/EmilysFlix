@@ -6,7 +6,6 @@
     z-index: 2;
     position: fixed;
     top: 0;
-    box-sizing: border-box;
 }
 
 .black {
@@ -168,7 +167,6 @@
     background-color: rgba(0, 0, 0, 0.3);
     width: 175px;
     font-size: 12px;
-    // outline: 1px, solid, #fff;
     border: .5px solid #fff;
     display: flex;
     flex-direction: column;
@@ -211,10 +209,6 @@
     cursor: pointer;
 }
 
-.browse-dropdown > h3 {
-    // margin-top: 32px;
-}
-
 .browse-dropdown-header {
     display: block;
     margin-left: 10px;
@@ -253,6 +247,7 @@
 .browse-dropdown:hover .browse-dropdown-header-content{
     border-top: 1px solid #fff;
     display: block;
+    z-index: 3;
 }
 
 }
