@@ -6,7 +6,6 @@ class Splash extends React.Component {
         super(props);
         this.handleLogin = this.handleLogin.bind(this);
     }
-
     
     handleLogin() {
         const user = { email: "Saitama@gmail.com", password: "#OnePunch" };
@@ -36,7 +35,16 @@ class Splash extends React.Component {
                     </div>
                 </div>
                 <footer className="splash-footer">
-                        <div>Questions? Call 1-555-555-5555</div>
+                    <a href="https://github.com/gmrempe">
+                        <img src={window.github} alt="Github link" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/gregory-rempe-4372b3107/">
+                        <img width="35" height="auto" src={window.linkedin} alt="Linkedin link" />
+                    </a>
+                    {/* <a> */}
+                    <img width="35" height="auto" src={window.personalsite} alt="Personal Site" />
+                    {/* </a> */}
+                        {/* <div>Questions? Call 1-555-555-5555</div>
                         <ul>
                             <li>FAQ</li>
                             <li>Investor Relations</li>
@@ -55,7 +63,7 @@ class Splash extends React.Component {
                             <li>Cookie Preferences</li>
                             <li>Legal Notices</li>
                         </ul>
-                        <div>English</div>
+                        <div>English</div> */}
                 </footer>
             </div>
         )

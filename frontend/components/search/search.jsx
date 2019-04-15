@@ -23,7 +23,6 @@ class Search extends React.Component {
 
     // handleSearchFocus(e) {
     //     e.preventDefault();
-    //     debugger
     //     // e.target.children[1].focus();
     // }
 

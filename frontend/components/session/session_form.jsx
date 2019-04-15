@@ -151,14 +151,23 @@ class SessionForm extends React.Component {
                             {this.props.link}
                         </section>  
                     </div>
-                        <div className="session-footer">
-                            <div>Questions? Call 1-555-555-5555</div>
+                        <div className="splash-footer">
+                            <a href="https://github.com/gmrempe">
+                                <img src={window.github} alt="Github link" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/gregory-rempe-4372b3107/">
+                                <img width="35" height="auto" src={window.linkedin} alt="Linkedin link" />
+                            </a>
+                            {/* <a> */}
+                            <img width="35" height="auto" src={window.personalsite} alt="Personal Site" />
+                            {/* </a> */}
+                            {/* <div>Questions? Call 1-555-555-5555</div>
                             <nav>
                                 <div>Gift Card Terms</div>
                                 <div>Terms of Use</div>
                                 <div>Privacy Statement</div>
                             </nav>
-                            <div>English</div>
+                            <div>English</div> */}
                         </div>
                 </div>
             </div>

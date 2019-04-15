@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     //TESTS
-    window.getState = store.getState
+    // window.getState = store.getState
     // window.createLike = LikeAPIUtil.createLike
     // window.deleteLike = LikeAPIUtil.deleteLike
     // window.createList = ListAPIUtil.createList

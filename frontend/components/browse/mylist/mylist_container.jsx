@@ -8,7 +8,7 @@ const msp = state => {
     return ({
         videos: selectAllVideos(state) || [],
         contentIds: state.entities.users[state.session.id].myListVideoIds || [],
-        title: "MyList",
+        title: "My List",
         keyAddOn: "myList"
     })
 }

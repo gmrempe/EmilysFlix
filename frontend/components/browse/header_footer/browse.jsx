@@ -12,6 +12,28 @@ class Browse extends React.Component {
         this.handleHomeClick = this.handleHomeClick.bind(this)
         this.handleNatureClick = this.handleNatureClick.bind(this)
         this.handleAnimalClick = this.handleAnimalClick.bind(this)
+        this.handleScroll = this.handleScroll.bind(this)
+    }
+
+    componentDidMount() {
+        this.props.fetchAllGenres();  //todo can fetch in individual components
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll(event) {
+        let scrollTop = event.currentTarget.scrollY
+        const header = document.getElementsByClassName("main-header")
+        if (header) {
+            if (scrollTop > 0) {
+                header[0].classList.add("black")
+            } else {
+                header[0].classList.remove("black")
+            }
+        }
     }
 
     handleLogoClick() {
@@ -43,10 +65,6 @@ class Browse extends React.Component {
         this.props.clearSearch();
         this.props.logout();
         this.props.history.push('/')
-    }
-
-    componentDidMount() {
-        this.props.fetchAllGenres();  //todo can fetch in individual components
     }
 
     render() {
