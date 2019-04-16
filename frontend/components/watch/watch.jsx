@@ -15,6 +15,11 @@ class Watch extends React.Component {
         this.props.fetchVideo(this.props.match.params.video_id);
     }
 
+    componentWillUnmount() {
+        this.props.video;
+        // this.props.video = [];
+    }
+
     render() {
         
         if (this.props.video.length > 0) {
