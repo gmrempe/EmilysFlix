@@ -8,7 +8,6 @@ class Watch extends React.Component {
     }
 
     handleBackClick() {
-        this.props.video = [];
         this.props.history.push('/browse');
     }
 
@@ -16,9 +15,9 @@ class Watch extends React.Component {
         this.props.fetchVideo(this.props.match.params.video_id);
     }
 
-    // componentWillUnmount() {
-    //     this.props.video;
-    // }
+    componentWillUnmount() {
+        this.props.clearVideo();
+    }
 
     render() {
         
