@@ -20,8 +20,7 @@ class SessionForm extends React.Component {
     }
     
     componentWillUnmount() {
-        const user = Object.assign({}, this.state);
-        this.props.clearErrors(user);
+        this.props.clearErrors();
     }
 
     home() {
@@ -103,7 +102,7 @@ class SessionForm extends React.Component {
                             <h1>{this.props.formType}</h1>
 
 
-                            <form noValidate onSubmit={this.handleSubmit}>
+                            <form noValidate onSubmit={this.handleSubmit} >
                                     
                                 <label htmlFor="email" className="email"> 
                                     <span id="email-placeholder">Email</span>
