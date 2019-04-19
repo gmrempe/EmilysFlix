@@ -17,7 +17,7 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
         loggedIn ? (
             <Component {...props} />
         ) : (
-            <Redirect to="/this-is-emilysflix" />
+            <Redirect to="/" />
         )
     )} />
 );

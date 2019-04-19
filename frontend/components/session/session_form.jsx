@@ -160,13 +160,6 @@ class SessionForm extends React.Component {
                             {/* <a> */}
                             <img width="35" height="auto" src={window.personalsite} alt="Personal Site" />
                             {/* </a> */}
-                            {/* <div>Questions? Call 1-555-555-5555</div>
-                            <nav>
-                                <div>Gift Card Terms</div>
-                                <div>Terms of Use</div>
-                                <div>Privacy Statement</div>
-                            </nav>
-                            <div>English</div> */}
                         </div>
                 </div>
             </div>

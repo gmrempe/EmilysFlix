@@ -42,7 +42,7 @@ class App extends React.Component {
                         <ProtectedRoute exact path="/browse/genre/:genre_id" component={GenreContainer}/>
                         <ProtectedRoute exact path="/browse" component={VideoListIndexContainer}/>
                         <ProtectedRoute exact path="/watch/:video_id" component={WatchContainer}/>
-                        <Route path="/" component={SplashContainer}/>
+                        <LandingRoute path="/" component={SplashContainer}/>
                     </Switch>
                 </div>
                 <Route path="/browse" component={Footer} />

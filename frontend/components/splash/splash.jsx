@@ -10,7 +10,6 @@ class Splash extends React.Component {
     handleLogin() {
         const user = { email: "Saitama@gmail.com", password: "#OnePunch" };
         this.props.login(user);
-        this.props.history.push('/browse');
     }
     
 
@@ -44,26 +43,6 @@ class Splash extends React.Component {
                     {/* <a> */}
                     <img width="35" height="auto" src={window.personalsite} alt="Personal Site" />
                     {/* </a> */}
-                        {/* <div>Questions? Call 1-555-555-5555</div>
-                        <ul>
-                            <li>FAQ</li>
-                            <li>Investor Relations</li>
-                            <li>Ways to Watch</li>
-                            <li>Corporate Information</li>
-                            <li>Help Center</li>
-                            <li>Jobs</li>
-                            <li>Terms of Use</li>
-                            <li>Contact Us</li>
-                            <li>Account</li>
-                            <li>Redeem Gift Cards</li>
-                            <li>Privacy</li>
-                            <li>Speed Test</li>
-                            <li>Media Center</li>
-                            <li>Buy Gift Cards</li>
-                            <li>Cookie Preferences</li>
-                            <li>Legal Notices</li>
-                        </ul>
-                        <div>English</div> */}
                 </footer>
             </div>
         )

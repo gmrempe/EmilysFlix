@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, withRouter} from "react-router-dom";
+import { withRouter} from "react-router-dom";
 
 class VideoIndexItem extends React.Component {
 
@@ -11,7 +11,8 @@ class VideoIndexItem extends React.Component {
         this.handleLikeMiniClick = this.handleLikeMiniClick.bind(this);
     }
 
-    handlePlayClick() {
+    handlePlayClick(e) {
+        e.preventDefault();
         this.props.history.push(`/watch/${this.props.video.id}`);
     }
 
@@ -89,7 +90,7 @@ class VideoIndexItem extends React.Component {
                 <div className="video-index-button-wrapper">
                     <div className="video-index-buttons">
                         <div className="video-index-left">
-                            <i className="far fa-play-circle fa-2x"></i>
+                            <i className="far fa-play-circle fa-2x" onClick={this.handlePlayClick}></i>
                             <div className="title">{video.title}</div>
                             <div className="rating">{video.rating}</div>
                             <ul>{genres}</ul>
