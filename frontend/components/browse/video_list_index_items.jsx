@@ -14,10 +14,6 @@ class VideoListIndexItems extends React.Component {
         this.toggleVideoShowClick = this.toggleVideoShowClick.bind(this)
     }
 
-    componentDidMount() {
-        this.props.fetchAllVideos();
-    }
-
     toggleVideoShowClick(video) {
         return (e) => {
             if (video) {

@@ -16,7 +16,7 @@ class Browse extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchAllGenres();  //todo can fetch in individual components
+        this.props.fetchAllGenres();
         window.addEventListener('scroll', this.handleScroll);
     }
 

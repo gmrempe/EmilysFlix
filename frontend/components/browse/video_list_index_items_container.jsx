@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import VideoListIndexItems from "./video_list_index_items";
-import { fetchAllVideos } from "../../actions/video_actions";
 import { selectAllVideos } from "../../reducers/selectors";
 
 const msp = (state, ownProps) => {
@@ -11,11 +10,7 @@ const msp = (state, ownProps) => {
     }
 }
 
-const mdp = (dispatch) => ({
-    fetchAllVideos: videos => dispatch(fetchAllVideos(videos))
-})
-
-export default connect(msp, mdp)(VideoListIndexItems);
+export default connect(msp, null)(VideoListIndexItems);
 
 
 

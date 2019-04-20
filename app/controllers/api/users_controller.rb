@@ -3,6 +3,7 @@ class Api::UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
+            MyList.create(user_id: @user.id)
             login(@user)
             render "api/users/show"
         else

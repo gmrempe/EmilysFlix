@@ -22,6 +22,10 @@ class VideoListIndex extends React.Component {
             }
         }
     }
+    
+    componentDidMount() {
+        this.props.fetchAllVideos();
+    }
 
     render() {
 
