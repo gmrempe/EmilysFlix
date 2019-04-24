@@ -50,11 +50,6 @@ videoUrl3 = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/Pexels+Vid
 photo2 = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/Screen+Shot+2019-04-04+at+11.01.00+PM.png")
 videoUrl2 = EzDownload.open("https://s3.amazonaws.com/emilysflix-seed/Pexels+Videos+4703.mp4")
 
-#for dev db
-# photo5 = EzDownload.open("https://s3.amazonaws.com/emilysflix-dev/Screen+Shot+2019-04-24+at+10.20.10+AM.png")
-# videoUrl5 = EzDownload.open("https://s3.amazonaws.com/emilysflix-dev/hero.mp4")
-
-
 video.image.attach(io: photo, filename: "bird.png")
 video.video.attach(io: videoUrl, filename: "bird.mp4")
 
@@ -67,5 +62,15 @@ video3.video.attach(io: videoUrl3, filename: "Pexels+Videos+2716.mp4")
 video2.image.attach(io: photo2, filename: "Screen+Shot+2019-04-04+at+11.01.00+PM.png")
 video2.video.attach(io: videoUrl2, filename: "Pexels+Videos+4703.mp4")
 
+#for dev db
+# photo = EzDownload.open("https://s3.amazonaws.com/emilysflix-dev/Screen+Shot+2019-03-29+at+11.53.28+AM.png")
+# videoUrl = EzDownload.open("https://s3.amazonaws.com/emilysflix-dev/Pexels+Videos+1550669.mp4")
+
+# photo5 = EzDownload.open("https://s3.amazonaws.com/emilysflix-dev/Screen+Shot+2019-04-24+at+10.20.10+AM.png")
+# videoUrl5 = EzDownload.open("https://s3.amazonaws.com/emilysflix-dev/hero.mp4")
+
 # video5.image.attach(io: photo5, filename: "Screen+Shot+2019-04-24+at+10.20.10+AM.png")
 # video5.video.attach(io: videoUrl5, filename: "hero.mp4")
+
+# video.image.attach(io: photo, filename: "Screen+Shot+2019-03-29+at+11.53.28+AM.png")
+# video.video.attach(io: videoUrl, filename: "Pexels+Videos+1550669.mp4")
