@@ -6,6 +6,17 @@
 
 Try [EmilysFLix](https://emilysflix.herokuapp.com/#/this-is-emilysflix) yourself!
 
+
+ ## Technologies Used
+  * PostgreSQL
+  * Ruby on Rails
+  * AWS S3
+  * Javascript ES6
+  * React
+  * Redux
+  * HTML
+  * CSS
+
 ## Getting Started
 
   Create an account or log in as the demo user to access the site. 
@@ -19,17 +30,6 @@ Try [EmilysFLix](https://emilysflix.herokuapp.com/#/this-is-emilysflix) yourself
 
   ![Search Bar](https://github.com/gmrempe/EmilysFlix/blob/master/app/assets/images/Screen%20Shot%202019-04-05%20at%2010.35.59%20AM.png)
 
-
-
- ## Technologies Used
-  * PostgreSQL
-  * Ruby on Rails
-  * AWS S3
-  * Javascript ES6
-  * React
-  * Redux
-  * HTML
-  * CSS
 
  ## Video Show
   While browsing, a user may preview a movie by pressing the down chevron arrow. This triggers a re-render of the parent component which triggers a render of the video show component below the arrow button.
@@ -70,9 +70,3 @@ To display the form validation while the user is typing is solved in a way simil
 }
 ```
 ```:invalid``` when the browser returns invalid on the form validation in the password input, the ```.form-password-message``` is displayed. The ```.form-password-message``` is a sibling of the password input so we need a ~ to select it.
-
-
- ## RoadMap
-   * Users will be able to add/remove movies from MyList
-   * Users will be able to like/dislike movies
-   * User account will support multiple profiles
