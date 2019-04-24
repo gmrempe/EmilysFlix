@@ -15,7 +15,6 @@ List.destroy_all
 Like.destroy_all
 
 user = User.create(email: "Saitama@gmail.com", password: "#OnePunch")
-myList = MyList.create(user_id: user.id)
 
 video = Video.create(title: "Bird walking", rating: "PG-13", creator: "Herwin Hayman", yr: "2015", description: "A bird walks on grass.")
 video2 = Video.create(title: "Mountains", rating: "G", creator: "Eberhard Grossgasteiger", yr: "2019", description: "Rolling through the ether.")
