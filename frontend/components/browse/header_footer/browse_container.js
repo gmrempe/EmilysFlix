@@ -8,8 +8,7 @@ import { clearSearch } from "../../../actions/ui_actions";
 const msp = state => {
     return ({
         genres: state.entities.genres,
-        filteredContent: state.ui.filteredContent || [],
-        activeSearch: state.ui.activeSearch
+        filteredContent: state.ui.filteredContent || []
     })
 }
 

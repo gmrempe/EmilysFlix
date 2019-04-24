@@ -45,6 +45,7 @@ class VideoShow extends React.Component  {
     }
 
     handleVideoPlay() {
+        this.props.clearSearch();
         this.props.history.push(`/watch/${this.props.video.id}`)
     }
 
@@ -65,8 +66,6 @@ class VideoShow extends React.Component  {
 
     componentDidUpdate() {
         this.props.myListVideoIds;
-        // this.props.myLikeVideoIds
-        // this.props.myDislikeVideoIds
     }
 
     componentWillUnmount() {
@@ -111,7 +110,7 @@ class VideoShow extends React.Component  {
                     <nav>
                         <button className="video-show-play">
                             <i className="fas fa-play fa-lg"></i>
-                            <Link className="video-show-play-button" to={`/watch/${video.id}`}>PLAY</Link>
+                            <div className="video-show-play-button" onClick={this.handleVideoPlay}>PLAY</div>
                         </button>
                         <button className="myList-videoShow" onClick={this.handleMyListClick}>
                             {myListIcon}

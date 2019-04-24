@@ -5,6 +5,7 @@ import { selectAllGenres } from "../../reducers/selectors";
 import { fetchUser } from "../../actions/session_actions";
 import { createList, deleteList } from "../../util/List_api_util";
 import { deleteLike, createLike } from "../../util/like_api_util";
+import { clearSearch } from "../../actions/ui_actions";
 
 
 const msp = (state, ownProps) => {
@@ -23,7 +24,8 @@ const mdp = dispatch => ({
     createLike: (videoId, response) => (createLike(videoId, response)),
     deleteLike: videoId => (deleteLike(videoId)),
     fetchUser: () => dispatch(fetchUser()),
-    fetchAllGenres: genres => dispatch(fetchAllGenres(genres))
+    fetchAllGenres: genres => dispatch(fetchAllGenres(genres)),
+    clearSearch: () => dispatch(clearSearch())
 })
 
 export default connect(msp, mdp)(VideoIndexItem);

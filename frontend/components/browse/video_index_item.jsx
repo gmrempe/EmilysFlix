@@ -13,6 +13,7 @@ class VideoIndexItem extends React.Component {
 
     handlePlayClick(e) {
         e.preventDefault();
+        this.props.clearSearch();
         this.props.history.push(`/watch/${this.props.video.id}`);
     }
 

@@ -12,7 +12,6 @@ class Search extends React.Component {
         }
         this.handleChange = this.handleChange.bind(this)
         this.filterContent = this.filterContent.bind(this)
-        // this.handleSearchFocus = this.handleSearchFocus.bind(this)
     }
 
     handleChange(e) {
@@ -20,11 +19,6 @@ class Search extends React.Component {
             contentFilter: e.target.value
         }, () => this.filterContent(event.target.value))
     }
-
-    // handleSearchFocus(e) {
-    //     e.preventDefault();
-    //     // e.target.children[1].focus();
-    // }
 
     filterContent(contentFilter) {
 

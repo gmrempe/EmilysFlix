@@ -3,6 +3,8 @@ import VideoShow from "./video_show";
 import {fetchUser} from "../../../actions/session_actions";
 import {createList, deleteList} from "../../../util/List_api_util";
 import {deleteLike, createLike} from "../../../util/like_api_util";
+import { clearSearch } from "../../../actions/ui_actions";
+
 
 const msp = (state, ownProps) => {
     return {
@@ -20,6 +22,7 @@ const mdp = (dispatch, ownProps) => ({
     deleteLike: videoId => (deleteLike(videoId)),
     createLike: (videoId, response) => (createLike(videoId, response)),
     fetchUser: () => dispatch(fetchUser()),
+    clearSearch: () => dispatch(clearSearch())
 })
 
 export default connect(msp, mdp)(VideoShow);
