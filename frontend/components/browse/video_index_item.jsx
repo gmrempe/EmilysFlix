@@ -47,11 +47,6 @@ class VideoIndexItem extends React.Component {
         }
     }
 
-
-    componentDidUpdate() {
-        this.props.myListVideoIds;
-    }
-
     render() {
         const video = this.props.video;
         const propsGenres = this.props.genres

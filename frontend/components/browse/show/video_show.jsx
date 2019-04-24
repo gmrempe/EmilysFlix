@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter} from "react-router-dom";
+import { withRouter} from "react-router-dom";
 
 
 class VideoShow extends React.Component  {
@@ -60,18 +60,6 @@ class VideoShow extends React.Component  {
         }
     }
 
-    componentDidMount() {
-        this.props.video;
-    }
-
-    componentDidUpdate() {
-        this.props.myListVideoIds;
-    }
-
-    componentWillUnmount() {
-        this.props.video;
-    }
-
     render() {
     const video = this.props.video;
     const toggleVideoShowClick = this.props.toggleVideoShowClick;
@@ -94,7 +82,7 @@ class VideoShow extends React.Component  {
             likeIcon = <i className="far fa-thumbs-up fa-lg"></i>;
             dislikeIcon = <i className="far fa-thumbs-down fa-lg"></i>;
         }
-        
+
         return (
         <div className="videoShow">
             <div className="video-show-buttons">
@@ -134,7 +122,7 @@ class VideoShow extends React.Component  {
                 </div>
             </div>
             <div className="video-show-video" onClick={this.handleVideoPlay}>
-                <video autoPlay className="video-show-autoplay" width="100%" mute ="true" poster={video.imageUrl}>
+                <video autoPlay key={video.videoUrl} className="video-show-autoplay" width="100%" mute ="true" poster={video.imageUrl}>
                         <source src={video.videoUrl} type="video/mp4" />
                 </video>
             </div>

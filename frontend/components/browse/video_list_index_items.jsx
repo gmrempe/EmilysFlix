@@ -46,15 +46,6 @@ class VideoListIndexItems extends React.Component {
                         <i className="fas fa-chevron-left fa-lg slider-left" onClick={this.handleLeftSlide}></i>
                         <ul className={`card-${this.props.listKey}`}>
                             {videos}
-                            {videos}
-                            {videos}
-                            {videos}
-                            {videos}
-                            {videos}
-                            {videos}
-                            {videos}
-                            {videos}
-                            {videos}
                         </ul>
                         <i className="fas fa-chevron-right fa-lg slider-right" onClick={this.handleRightSlide}></i>
                     </div>
