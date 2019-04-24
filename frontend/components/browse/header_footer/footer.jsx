@@ -13,7 +13,7 @@ export default () => {
             <a href="https://www.linkedin.com/in/gregory-rempe-4372b3107/">
                 <img width="32" height="auto" src={window.linkedin} alt="Linkedin link" />
             </a>
-            <a style={{ width: "40px" }} href="#">
+            <a style={{ width: "40px" }} href="http://gregory-rempe.com/">
                 <img width="32" height="auto" src={window.personalsite} alt="Personal Site" />
             </a>
             <a href="https://angel.co/gregory-rempe-1">
